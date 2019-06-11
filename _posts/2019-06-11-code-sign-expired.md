@@ -1,9 +1,11 @@
 ---
-title: Code signature expired!
 layout: article
+title: Code signature expired!
+aside:
+  toc: true
 sidebar:
   nav: layouts
-tags: plugin
+tags: plugin  
 ---
 
 It seems like some 4D plugins have stopped working since yesterday, possibly because of ``codesign`` issues.
