@@ -4,7 +4,7 @@ title: Imebra
 tags: plugin graphic v17
 ---
 
-Simple DICOM reader using [``Imebra``](https://imebra.com) with some [LibGD](https://libgd.github.io) filters.
+Simple DICOM reader using [Imebra](https://imebra.com) with some [LibGD](https://libgd.github.io) filters.
 
 <!--more-->
 
