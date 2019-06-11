@@ -25,7 +25,7 @@ So far, the list includes:
 - [x] 4d-plugin-mecab-v2  
 - [x] 4d-plugin-notes  
 - [x] 4d-plugin-prevent-app-nap  
-- [ ] 4d-plugin-purge  
+- [x] 4d-plugin-purge  
 - [x] 4d-plugin-tesseract-v2  
 - [x] 4d-plugin-text-convert  
 - [x] 4d-plugin-virtual-key  
