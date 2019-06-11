@@ -22,7 +22,7 @@ So far, the list includes:
 - [x] 4d-plugin-custom-window  
 - [x] 4d-plugin-float  
 - [x] 4d-plugin-jwt  
-- [ ] 4d-plugin-mecab-v2  
+- [x] 4d-plugin-mecab-v2  
 - [ ] 4d-plugin-notes  
 - [x] 4d-plugin-prevent-app-nap  
 - [ ] 4d-plugin-purge  
