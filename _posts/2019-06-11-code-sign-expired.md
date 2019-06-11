@@ -31,5 +31,5 @@ So far, the list includes:
 - [x] 4d-plugin-text-convert  
 - [ ] 4d-plugin-virtual-key  
 - [ ] 4d-plugin-xdoc2txt  
-- [ ] 4d-plugin-xslt  
+- [x] 4d-plugin-xslt  
 - [x] 4d-plugin-zip  
