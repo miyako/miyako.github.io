@@ -1,10 +1,6 @@
 ---
-layout: article
+layout: simple
 title: Code signature expired!
-aside:
-  toc: true
-sidebar:
-  nav: layouts
 tags: plugin  
 ---
 
