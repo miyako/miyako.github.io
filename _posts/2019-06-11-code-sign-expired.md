@@ -1,6 +1,5 @@
 ---
 title: Code signature expired!
-layout: page
 tags: plugin
 ---
 
