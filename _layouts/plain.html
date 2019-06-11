@@ -51,8 +51,9 @@ layout: base
 {%- endif -%}
 
     {%- assign _page_main_class = 'page__main js-page-main' -%}
-
-
+    {%- if _page_mode == 'immersive' -%}
+      {%- assign _page_main_class = _page_main_class | append: ' page__main--immersive' -%}
+    {%- endif -%}
     {%- unless page.sidebar -%}
       {%- assign _page_main_class = _page_main_class | append: ' page__viewport' -%}
     {%- endunless -%}
@@ -60,7 +61,7 @@ layout: base
       {%- assign _page_main_class = _page_main_class | append: ' hide-footer' -%}
     {%- endif -%}
     {%- if page.aside -%}
-      {%- assign _page_main_class = _page_main_class | append: ' has-aside' -%}
+
     {%- elsif _full_width -%}
       {%- assign _page_main_class = _page_main_class | append: ' full-width' -%}
     {%- endif -%}
