@@ -93,6 +93,15 @@ red|LONGINT|for ``color``
 green|LONGINT|for ``color``
 blue|LONGINT|for ``color``
 alpha|LONGINT|for ``color``
+angle|LONGINT|for ``rotate``
+dstW|LONGINT|for ``rotate``
+dstH|LONGINT|for ``rotate``
+dstX|LONGINT|for ``rotate``
+dstY|LONGINT|for ``rotate``
+srcW|LONGINT|for ``rotate``
+srcH|LONGINT|for ``rotate``
+srcX|LONGINT|for ``rotate``
+srcY|LONGINT|for ``rotate``
 
 filters are applied in the order they appear int the collection
 
@@ -122,9 +131,13 @@ the following filters take 3 params
 - ``convolution``: matrix, div, offset
 - ``scatterColor``: sub, plus, colors
 
-the following filter take 4 params
+the following filter takes 4 params
 
 - ``color``: red, green, blue, alpha
+
+the following filter takes 9 params
+
+- ``rotate``: angle, dstW, dstH, dstX, dstY, srcW, srcH, srcX, srcY
 
 #### Images
 
