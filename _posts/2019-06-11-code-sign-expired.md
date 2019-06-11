@@ -21,7 +21,7 @@ So far, the list includes:
 - [x] 4d-plugin-curl-v2  
 - [x] 4d-plugin-custom-window  
 - [x] 4d-plugin-float  
-- [ ] 4d-plugin-jwt  
+- [x] 4d-plugin-jwt  
 - [ ] 4d-plugin-mecab-v2  
 - [ ] 4d-plugin-notes  
 - [ ] 4d-plugin-prevent-app-nap  
