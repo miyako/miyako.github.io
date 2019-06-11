@@ -24,7 +24,7 @@ So far, the list includes:
 - [x] 4d-plugin-jwt  
 - [ ] 4d-plugin-mecab-v2  
 - [ ] 4d-plugin-notes  
-- [ ] 4d-plugin-prevent-app-nap  
+- [x] 4d-plugin-prevent-app-nap  
 - [ ] 4d-plugin-purge  
 - [ ] 4d-plugin-source-highlight  
 - [x] 4d-plugin-tesseract-v2  
