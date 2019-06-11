@@ -27,7 +27,7 @@ So far, the list includes:
 - [ ] 4d-plugin-prevent-app-nap  
 - [ ] 4d-plugin-purge  
 - [ ] 4d-plugin-source-highlight  
-- [ ] 4d-plugin-tesseract-v2  
+- [x] 4d-plugin-tesseract-v2  
 - [ ] 4d-plugin-text-convert  
 - [ ] 4d-plugin-virtual-key  
 - [ ] 4d-plugin-xdoc2txt  
