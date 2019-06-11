@@ -16,7 +16,7 @@ So far, the list includes:
 - [ ] 4d-plugin-apple-window-title-bar  
 - [ ] 4d-plugin-bookmark-manager  
 - [x] 4d-plugin-curl-ftp  
-- [ ] [](miyako/4d-plugin-curl-http)
+- [ ] miyako/4d-plugin-curl-http#3
 - [ ] 4d-plugin-curl-v2  
 - [ ] 4d-plugin-custom-window  
 - [ ] 4d-plugin-float  
