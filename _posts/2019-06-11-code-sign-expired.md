@@ -13,7 +13,7 @@ It seems like some 4D plugins have stopped working since yesterday, possibly bec
 So far, the list includes:
 
 - [x] 4d-plugin-address-book 
-- [ ] 4d-plugin-apple-file-promises   
+- [x] 4d-plugin-apple-file-promises   
 - [x] 4d-plugin-apple-window-title-bar  
 - [ ] 4d-plugin-bookmark-manager  
 - [x] 4d-plugin-curl-ftp  
