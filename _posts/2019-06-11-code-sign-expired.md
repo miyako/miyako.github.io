@@ -29,6 +29,6 @@ So far, the list includes:
 - [ ] 4d-plugin-source-highlight  
 - [x] 4d-plugin-tesseract-v2  
 - [x] 4d-plugin-text-convert  
-- [ ] 4d-plugin-virtual-key  
+- [x] 4d-plugin-virtual-key  
 - [x] 4d-plugin-xslt  
 - [x] 4d-plugin-zip  
