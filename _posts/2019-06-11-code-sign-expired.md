@@ -1,5 +1,8 @@
 ---
 title: Code signature expired!
+layout: article
+sidebar:
+  nav: layouts
 tags: plugin
 ---
 
