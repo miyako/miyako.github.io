@@ -19,8 +19,8 @@ So far, the list includes:
 - [x] 4d-plugin-curl-ftp  
 - [x] 4d-plugin-curl-http
 - [x] 4d-plugin-curl-v2  
-- [ ] 4d-plugin-custom-window  
-- [ ] 4d-plugin-float  
+- [x] 4d-plugin-custom-window  
+- [x] 4d-plugin-float  
 - [ ] 4d-plugin-jwt  
 - [ ] 4d-plugin-mecab-v2  
 - [ ] 4d-plugin-notes  
