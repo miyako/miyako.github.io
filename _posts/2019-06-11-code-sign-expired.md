@@ -31,3 +31,7 @@ So far, the list includes:
 - [x] 4d-plugin-virtual-key  
 - [x] 4d-plugin-xslt  
 - [x] 4d-plugin-zip  
+
+I think the real cause of the problem might have been that the certificates were revoked (by me), since expired certificates are not supposed to prevent apps from running.
+
+<i class="fa fa-external-link" aria-hidden="true"></i> [https://manytricks.com/blog/?p=4431](https://manytricks.com/blog/?p=4431)
