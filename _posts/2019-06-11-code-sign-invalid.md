@@ -1,6 +1,6 @@
 ---
 layout: simple
-title: Code signature expired!
+title: Code signature invalid!
 tags: plugin  
 ---
 
@@ -33,4 +33,4 @@ So far, the list includes:
 - [x] 4d-plugin-xslt  
 - [x] 4d-plugin-zip  
 
-I think the real cause of the problem might have been that the certificates were revoked (by me), since expired certificates are not supposed to prevent code execution.
+I think the cause of the problem might have been that the certificates were revoked (by me), since expired certificates are not supposed to prevent code execution.
