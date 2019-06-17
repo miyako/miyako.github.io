@@ -25,7 +25,13 @@ Apart from "iOS Development" and "iOS Distribution" which are obviously not for 
 A new "Apple Development" certificate is available in Xcode 11.0 and later, replacing "iOS Development" and "Mac Development". Likewise, "Apple Distribution" corresponds to "iOS Distribution" and "Mac App Distribution".
 {:.info}
 
+"Mac Development" is a certificate used during development, to sign an app that needs permission to use an app service or technology. 4D does not use any of the [advanced app capabilities](https://developer.apple.com/support/app-capabilities/) offered by Apple, but notarization checks for the [entitlements](https://developer.apple.com/documentation/bundleresources/entitlements?language=objc) related to the "Hardened Runtime" service. A 4D app may be signed using this type of certificate for testing.
 
+"Mac App Distribution" is a certificate used to sign the app before distribution through the Mac App Store. Most 4D apps are not distributed through the store, so we can rule this one out.
+
+"Developer ID Application" is a certificate used to sign the app before distribution outside the Mac App Store. A 4D app may be signed using this type of certificate for deployment.
+
+"Developer ID Installer" is a certificate used to sign an installer containing an app sign using a "Developer ID Application" certificate. The installer is either a disk image (.dmg) or a package (.pkg). A simple zip archive is not a legitimate form of distribution. A signed 4D app may be packaged and signed using this type of certificate for deployment over a network (AirDrop, HTTP, FTP, etc.). Copying an app from a connected external drive does not require an installer.
 
 ### Manage multiple versions of Xcode 
 
