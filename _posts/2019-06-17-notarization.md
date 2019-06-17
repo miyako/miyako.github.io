@@ -53,25 +53,22 @@ There are several kinds of entitlements that control the "Hardened Runtime" capa
 
 <i class="fa fa-external-link" aria-hidden="true"></i>[Hardened Runtime Entitlements](https://developer.apple.com/documentation/security/hardened_runtime_entitlements?language=objc)
 
-* Allow Execution of JIT-compiled Code Entitlement
-* Allow Unsigned Executable Memory Entitlement
-* Allow DYLD Environment Variables Entitlement 
-
+* Allow Execution of JIT-compiled Code Entitlement: No information available for 4D apps. 
+* Allow Unsigned Executable Memory Entitlement: No information available for 4D apps. 
+* Allow DYLD Environment Variables Entitlement: Probably not necessary for 4D apps.
 * Disable Library Validation Entitlement: Normally, an app built using Xcode has the ``com.apple.security.get-task-allow`` entitlement during development, to facilitate debugging by circumventing certain security checks. Xcode automatically removes this entitlement for deployment during the export phase. This is already done for the 4D app itself. Plugins, on the other hand, might need the ``com.apple.security.get-task-allow`` entitlement in order to be debugged in the context of a host executable. To allow this, you need to enable the ``com.apple.security.cs.disable-library-validation`` entitlement (you enable it to disable the protection).
-
-* Disable Executable Memory Protection Entitlement
-* Debugging Tool Entitlement
-* Location Entitlement
-* Photos Library Entitlement
+* Disable Executable Memory Protection Entitlement: No information available for 4D apps. 
+* Debugging Tool Entitlement: Probably not necessary for 4D apps.
+* Location Entitlement: There are no native 4D commands to access location services, but you may need this if you use plugins that do.
+* Photos Library Entitlement:There are no native 4D commands to access photos, but you may need this if you use plugins that do.
 * Audio Input Entitlement: There are no native 4D commands to record audio, but you may need this if you use plugins that do.
-
 * Camera Entitlement: There are no native 4D commands to record video, but you may need this if you use plugins that do.
-
 * Address Book Entitlement: There are no native 4D commands to access contacts, but you may need this if you use plugins that do.
-
 * Calendars Entitlement: There are no native 4D commands to access calendars, but you may need this if you use plugins that do.
-
 * Apple Events Entitlement: If the app runs AppleScript via ``osascript``, this entitlement should not be necessary, but you may need this if [ScriptingBridge](https://developer.apple.com/documentation/scriptingbridge?language=objc) or [NSAppleScript](https://developer.apple.com/documentation/foundation/nsapplescript?language=objc) is used by a plugin.
+
+You should normally grant the least number of entitlements for your 4D app to operate. Imagine, for example, a malicious user who installs an unauthorised plugin that exploits the user's trust and attempts to access resources that are not necessary for your app. Notarization is designed to prevent such activity.
+{:.warning}
 
 ### Select the appropriate type of certificate
 
@@ -125,7 +122,6 @@ graph TB;
 ```
 
 The purpose of the certificate can be deducted from its name. "Distribution" implies distribution through the Mac App Store. "Developer ID" implies distribution outside the Mac App Store. A separate certificate is used for the app and its installer. A "Development" certificate is only used for testing.
-
 {:.success}
 
 ---
