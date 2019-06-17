@@ -71,41 +71,41 @@ Normally, an app built using Xcode has the ``com.apple.security.get-task-allow``
 
 There are no native 4D commands that records audio, but you may need this if you use plugins that do.
 
- * [4d-plugin-sfml-audio](https://github.com/miyako/4d-plugin-sfml-audio)
+    - [4d-plugin-sfml-audio](https://github.com/miyako/4d-plugin-sfml-audio)
 
 * Camera Entitlement: ``true`` or ``false``
 
 There are no native 4D commands that records video, but you may need this if you use plugins that do.
 
- * [4d-plugin-capture](https://github.com/miyako/4d-plugin-capture)
+    - [4d-plugin-capture](https://github.com/miyako/4d-plugin-capture)
 
 * Location Entitlement: ``true`` or ``false``
 
 * Address Book Entitlement: ``true`` or ``false``
 
-[4d-plugin-address-book)](https://github.com/miyako/4d-plugin-address-book)
+There are no native 4D commands that access contacts, but you may need this if you use plugins that do.
+
+    - [4d-plugin-address-book)](https://github.com/miyako/4d-plugin-address-book)
 
 * Calendars Entitlement: ``true`` or ``false``
 
-[4d-plugin-ical](https://github.com/miyako/4d-plugin-ical)
+There are no native 4D commands that access calendars, but you may need this if you use plugins that do.
 
-[4d-plugin-event-kit)](https://github.com/miyako/4d-plugin-event-kit)
+    - [4d-plugin-ical](https://github.com/miyako/4d-plugin-ical)
+    - [4d-plugin-event-kit)](https://github.com/miyako/4d-plugin-event-kit)
 
 * Photos Library Entitlement: ``true`` or ``false``
 
 * Apple Events Entitlement: ``true`` or ``false``
 
-[4d-plugin-notes](https://github.com/miyako/4d-plugin-notes)
+If the app runs AppleScript via ``osascript``, this entitlement should not be necessary. If [ScriptingBridge](https://developer.apple.com/documentation/scriptingbridge?language=objc) or [NSAppleScript](https://developer.apple.com/documentation/foundation/nsapplescript?language=objc) is used by a plugin, you might want to enable this entitlement.
 
-[4d-plugin-apple-file-promises)](https://github.com/miyako/4d-plugin-apple-file-promises)
-
-[4d-plugin-photos-v1](https://github.com/miyako/4d-plugin-photos-v1)
-
-[4d-plugin-outlook-applescript](https://github.com/miyako/4d-plugin-outlook-applescript)
-
-[4d-plugin-messages](https://github.com/miyako/4d-plugin-messages)
-
-[4d-plugin-mail-applescript](https://github.com/miyako/4d-plugin-mail-applescript)
+    - [4d-plugin-notes](https://github.com/miyako/4d-plugin-notes)
+    - [4d-plugin-apple-file-promises)](https://github.com/miyako/4d-plugin-apple-file-promises)
+    - [4d-plugin-photos-v1](https://github.com/miyako/4d-plugin-photos-v1)
+    - [4d-plugin-outlook-applescript](https://github.com/miyako/4d-plugin-outlook-applescript)
+    - [4d-plugin-messages](https://github.com/miyako/4d-plugin-messages)
+    - [4d-plugin-mail-applescript](https://github.com/miyako/4d-plugin-mail-applescript)
 
 ### Select the appropriate type of certificate
 
