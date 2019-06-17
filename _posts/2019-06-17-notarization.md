@@ -57,7 +57,7 @@ There are several kinds of entitlements that control the "Hardened Runtime" capa
 * Allow Unsigned Executable Memory Entitlement
 * Allow DYLD Environment Variables Entitlement 
 
-* Disable Library Validation Entitlement: Normally, an app built using Xcode has the ``com.apple.security.get-task-allow`` entitlement during development, to facilitate debugging by circumventing certain security checks. Xcode automatically removes this entitlement for deployment during the export phase. This is already done for the 4D app itself. Plugins, on the other hand, might need the ``com.apple.security.get-task-allow`` entitlement in order to be debugged in the context of a host executable. To allow this, you may want to enable the ``com.apple.security.cs.disable-library-validation`` entitlement (you enable it to disable the protection).
+* Disable Library Validation Entitlement: Normally, an app built using Xcode has the ``com.apple.security.get-task-allow`` entitlement during development, to facilitate debugging by circumventing certain security checks. Xcode automatically removes this entitlement for deployment during the export phase. This is already done for the 4D app itself. Plugins, on the other hand, might need the ``com.apple.security.get-task-allow`` entitlement in order to be debugged in the context of a host executable. To allow this, you need to enable the ``com.apple.security.cs.disable-library-validation`` entitlement (you enable it to disable the protection).
 
 * Disable Executable Memory Protection Entitlement
 * Debugging Tool Entitlement
