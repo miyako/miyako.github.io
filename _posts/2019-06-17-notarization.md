@@ -160,6 +160,52 @@ The purpose of the certificate can be deducted from its name. "Distribution" imp
 
 {:.success}
 
+---
+
+
+### The command line workflow
+
+Notarization is integrated in Xcode. When an app is built with 4D, notarization is done using command line tools.
+
+- Build the app 
+
+```
+BUILD APPLICATION
+```
+
+- Remove extended attributes
+
+```
+xattr -cr .
+```
+
+- Sign the app
+
+```
+codesign --verbose --deep --force --options=runtime --timestamp --entitlements entitlements.plist --sign {identity_app}
+```
+
+Once the app is signed with ``--options=runtime`` it is not possible to launch it until notarization is complete.
+{:.warning}
+
+- Create a ZIP archive 
+
+```
+/usr/bin/ditto -c -k --keepParent  sample.app sample.zip
+```
+
+or a disk image (UDIF format)
+
+```
+hdiutil create -srcfolder sample.app sample.dmg
+```
+
+or a signed flat installer package
+
+```
+pkgbuild --component /Applications/sample.app --sign  --sign {identity_installer} /Users/miyako/Desktop/sample.pkg
+```
+
 ### Managing multiple versions of Xcode 
 
 Unlike ``stapler``, ``altool`` is a command line developer tool installed inside Xcode, invoked via ``xcrun``.
