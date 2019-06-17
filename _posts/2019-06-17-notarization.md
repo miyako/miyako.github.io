@@ -68,37 +68,37 @@ Normally, an app built using Xcode has the ``com.apple.security.get-task-allow``
 * Location Entitlement: ?
 * Photos Library Entitlement: ?
 
-* Audio Input Entitlement: ``true`` or ``false``
+* Audio Input Entitlement:
 
 There are no native 4D commands that records audio, but you may need this if you use plugins that do.
 
    * [4d-plugin-sfml-audio](https://github.com/miyako/4d-plugin-sfml-audio)
 
-* Camera Entitlement: ``true`` or ``false``
+* Camera Entitlement: 
 
 There are no native 4D commands that records video, but you may need this if you use plugins that do.
 
    * [4d-plugin-capture](https://github.com/miyako/4d-plugin-capture)
 
-* Address Book Entitlement: ``true`` or ``false``
+* Address Book Entitlement: 
 
 There are no native 4D commands that access contacts, but you may need this if you use plugins that do.
 
-   * [4d-plugin-address-book)](https://github.com/miyako/4d-plugin-address-book)
+   * [4d-plugin-address-book](https://github.com/miyako/4d-plugin-address-book)
 
-* Calendars Entitlement: ``true`` or ``false``
+* Calendars Entitlement: 
 
 There are no native 4D commands that access calendars, but you may need this if you use plugins that do.
 
    * [4d-plugin-ical](https://github.com/miyako/4d-plugin-ical)
-   * [4d-plugin-event-kit)](https://github.com/miyako/4d-plugin-event-kit)
+   * [4d-plugin-event-kit](https://github.com/miyako/4d-plugin-event-kit)
 
-* Apple Events Entitlement: ``true`` or ``false``
+* Apple Events Entitlement: 
 
 If the app runs AppleScript via ``osascript``, this entitlement should not be necessary. If [ScriptingBridge](https://developer.apple.com/documentation/scriptingbridge?language=objc) or [NSAppleScript](https://developer.apple.com/documentation/foundation/nsapplescript?language=objc) is used by a plugin, you might want to enable this entitlement.
 
    * [4d-plugin-notes](https://github.com/miyako/4d-plugin-notes)
-   * [4d-plugin-apple-file-promises)](https://github.com/miyako/4d-plugin-apple-file-promises)
+   * [4d-plugin-apple-file-promises](https://github.com/miyako/4d-plugin-apple-file-promises)
    * [4d-plugin-photos-v1](https://github.com/miyako/4d-plugin-photos-v1)
    * [4d-plugin-photos-v2](https://github.com/miyako/4d-plugin-photos-v2)
    * [4d-plugin-outlook-applescript](https://github.com/miyako/4d-plugin-outlook-applescript)
