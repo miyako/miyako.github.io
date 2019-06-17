@@ -68,7 +68,7 @@ There are several kinds of entitlements that control the "Hardened Runtime" capa
 * Apple Events Entitlement: If the app runs AppleScript via ``osascript``, this entitlement should not be necessary, but you may need this if [ScriptingBridge](https://developer.apple.com/documentation/scriptingbridge?language=objc) or [NSAppleScript](https://developer.apple.com/documentation/foundation/nsapplescript?language=objc) is used by a plugin.
 
 You should normally grant the least number of entitlements for your 4D app to operate. Imagine, for example, a malicious user who installs an unauthorised plugin that exploits the user's trust in your app and attempts to access sensitive information. Notarization is designed to prevent such abuse.
-{:.warning}
+{:.info}
 
 ### Select the appropriate type of certificate
 
