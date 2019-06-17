@@ -12,6 +12,21 @@ Certificates are used to sign an application. Certificates can be created <i cla
 
 Apple recommends <i class="fa fa-external-link" aria-hidden="true"></i> [automatic signing](https://help.apple.com/xcode/mac/current/#/dev80cc24546) by Xcode. For an app built with 4D, most of the work must be performed manually, that is, using command line tools.
 
+For instance, we can use Xcode to <i class="fa fa-external-link" aria-hidden="true"></i> [create a certificate](https://help.apple.com/xcode/mac/current/#/dev154b28f09?sub=dev23755c6c6), but we need to specify the appropriate type of certificate to create.
+
+Apart from "iOS Development" and "iOS Distribution" which are obviously not for 4D, there are 5 different certificates types to choose from:
+
+- Mac Development
+- Mac App Distribution
+- Mac Installer Distribution
+- Developer ID Application
+- Developer ID Installer
+
+A new Apple Development certificate is available in Xcode 11.0 and later, replacing iOS Development and Mac Development. Likewise, Apple Distribution corresponds to iOS Distribution or Mac App Distribution.
+{: .notice--info}
+
+
+
 ### Manage multiple versions of Xcode 
 
 Unlike ``stapler`` which is installed under ``/usr/bin/``, ``altool`` (not to be confused with ``actool``) is a command line developer tool installed inside Xcode, invoked via ``xcrun``.
