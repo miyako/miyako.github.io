@@ -70,7 +70,7 @@ There are several kinds of entitlements that control the "Hardened Runtime" capa
 * Apple Events Entitlement: If the app runs AppleScript via ``osascript``, this entitlement should not be necessary, but you may need this if [ScriptingBridge](https://developer.apple.com/documentation/scriptingbridge?language=objc) or [NSAppleScript](https://developer.apple.com/documentation/foundation/nsapplescript?language=objc) is used by a plugin.
 
 You should normally grant the least number of entitlements for your 4D app to operate. Imagine, for example, a malicious user who installs an unauthorised plugin that exploits the user's trust in your app and attempts to access sensitive information. Notarization is designed to prevent such abuse.
-{:.success}
+{:.info}
 
 ### Find an appropriate certificate
 
@@ -89,7 +89,7 @@ Apart from "iOS Development" and "iOS Distribution" which are obviously not for 
 - Developer ID Installer
 
 A new "Apple Development" certificate is available in Xcode 11.0 and later, replacing "iOS Development" and "Mac Development". Likewise, "Apple Distribution" corresponds to "iOS Distribution" and "Mac App Distribution".
-{:.success}
+{:.info}
 
 "Mac Development" is a certificate used during development, to sign an app that needs permission to use an app service or technology. 4D does not use any of the [advanced app capabilities](https://developer.apple.com/support/app-capabilities/) offered by Apple, but notarization checks for the [entitlements](https://developer.apple.com/documentation/bundleresources/entitlements?language=objc) related to the "Hardened Runtime" service. A 4D app may be signed using this type of certificate for testing.
 
@@ -124,7 +124,7 @@ graph TB;
 ```
 
 The nature of a certificate can be deducted from its name. "Distribution" implies distribution through the Mac App Store. "Developer ID" implies distribution outside the Mac App Store. A separate certificate is used for the app and its installer. A "Development" certificate is only used for testing.
-{:.success}
+{:.info}
 
 ---
 
@@ -151,7 +151,7 @@ codesign --verbose --deep --force --options=runtime --timestamp --entitlements e
 ```
 
 Once the app is signed with ``--options=runtime`` it is not possible to launch it until notarization is complete.
-{:.success}
+{:.info}
 
 - Create a ZIP archive 
 
