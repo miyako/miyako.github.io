@@ -51,9 +51,61 @@ An app must be entitled to take advantage of certain services. Some entitlements
 
 There are several kinds of entitlements that control the "Hardened Runtime" capability.
 
+<i class="fa fa-external-link" aria-hidden="true"></i>[Hardened Runtime Entitlements](https://developer.apple.com/documentation/security/hardened_runtime_entitlements?language=objc)
+
+* Allow Execution of JIT-compiled Code Entitlement: ?
+
+* Allow Unsigned Executable Memory Entitlement: ?
+
+* Allow DYLD Environment Variables Entitlement: ?
+
 * Disable Library Validation Entitlement: ``true``
 
 Normally, an app built using Xcode has the ``com.apple.security.get-task-allow`` entitlement during development, to facilitate debugging by circumventing certain security checks. Xcode automatically removes this entitlement for deployment during the export phase. This is already done for the 4D app itself. Plugins, on the other hand, might need the ``com.apple.security.get-task-allow`` entitlement in order to be debugged in the context of a host executable. To allow this, you may want to enable the ``com.apple.security.cs.disable-library-validation`` entitlement (you enable it to disable the protection).
+
+* Disable Executable Memory Protection Entitlement: ?
+
+* Debugging Tool Entitlement: ?
+
+* Audio Input Entitlement: ``true`` or ``false``
+
+There are no native 4D commands that records audio, but you may need this if you use plugins that do.
+
+[4d-plugin-sfml-audio](https://github.com/miyako/4d-plugin-sfml-audio)
+
+* Camera Entitlement: ``true`` or ``false``
+
+There are no native 4D commands that records video, but you may need this if you use plugins that do.
+
+[4d-plugin-capture](https://github.com/miyako/4d-plugin-capture)
+
+* Location Entitlement: ``true`` or ``false``
+
+* Address Book Entitlement: ``true`` or ``false``
+
+[4d-plugin-address-book)](https://github.com/miyako/4d-plugin-address-book)
+
+* Calendars Entitlement: ``true`` or ``false``
+
+[4d-plugin-ical](https://github.com/miyako/4d-plugin-ical)
+
+[4d-plugin-event-kit)](https://github.com/miyako/4d-plugin-event-kit)
+
+* Photos Library Entitlement: ``true`` or ``false``
+
+* Apple Events Entitlement: ``true`` or ``false``
+
+[4d-plugin-notes](https://github.com/miyako/4d-plugin-notes)
+
+[4d-plugin-apple-file-promises)](https://github.com/miyako/4d-plugin-apple-file-promises)
+
+[4d-plugin-photos-v1](https://github.com/miyako/4d-plugin-photos-v1)
+
+[4d-plugin-outlook-applescript](https://github.com/miyako/4d-plugin-outlook-applescript)
+
+[4d-plugin-messages](https://github.com/miyako/4d-plugin-messages)
+
+[4d-plugin-mail-applescript](https://github.com/miyako/4d-plugin-mail-applescript)
 
 ### Select the appropriate type of certificate
 
