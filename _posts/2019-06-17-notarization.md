@@ -150,9 +150,6 @@ xattr -cr .
 codesign --verbose --deep --force --options=runtime --timestamp --entitlements entitlements.plist --sign {identity_app}
 ```
 
-Once the app is signed with ``--options=runtime`` it will not be possible to launch it until notarization is complete.
-{:.info}
-
 - Create a ZIP archive 
 
 ```
