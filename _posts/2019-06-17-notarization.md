@@ -31,7 +31,7 @@ It seems that in most parts of the world, 4D developers have a very good busines
 
 ### Prerequisites for notarization
 
-Notarization is integrated in Xcode. When an app is built with 4D, notarization is done using command line tools.
+Notarization requires the following:
  
 - ``Xcode``: 10 or later 
 - ``macOS``: 10.13.6 or later
