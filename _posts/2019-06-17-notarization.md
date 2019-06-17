@@ -29,6 +29,8 @@ It seems that in most parts of the world, 4D developers have a very good busines
 1. deployment without any human interaction may be required to create more business opportunities
 1. Apple may make it mandatory to sign and notarize apps in the future
 
+---
+
 ### Prerequisites for notarization
  
 - ``Xcode``: ``10`` or later (launch once, or run ``xcode-select --install`` to install command line tools)
@@ -125,7 +127,6 @@ The nature of a certificate can be deducted from its name. "Distribution" implie
 {:.success}
 
 ---
-
 
 ### The command line workflow
 
