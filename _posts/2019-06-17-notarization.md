@@ -1,0 +1,11 @@
+With the public release of macOS 10.14.5, all developers creating a Developer ID certificate for the first time are required to notarize their apps
+
+<i class="fa fa-external-link" aria-hidden="true"></i> [New Notarization Requirements](https://developer.apple.com/news/?id=04102019a)
+
+<!--more-->
+
+---
+
+### Manage multiple versions of Xcode 
+
+It is quite common for a 4D developer to maintain multiple copies of Xcode on their development Mac. For instance, I keep ``9.4.1`` for 32-bit support. 
