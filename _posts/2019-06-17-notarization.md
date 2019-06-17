@@ -34,7 +34,7 @@ It seems that in most parts of the world, 4D developers have a very good busines
 ### Prerequisites for notarization
  
 - ``Xcode``: ``10`` or later (launch once, or run ``xcode-select --install`` to install command line tools)
-- ``macOS``: ``10.13.6`` or later better to use ``10.4`` to avoid [stapler issues](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution/resolving_common_notarization_issues?language=objc#3087731)
+- ``macOS``: ``10.13.6`` or later, better to use ``10.4`` to avoid [stapler issues](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution/resolving_common_notarization_issues?language=objc#3087731)
 - ``Entitlement``: "Hardened Runtime" capability
 - ``Certificate``: "Developer ID Application", "Developer ID Installer"
 - Code Signature: all executables must be signed *
