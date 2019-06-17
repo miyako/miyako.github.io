@@ -6,6 +6,26 @@ With the public release of macOS 10.14.5, all developers creating a Developer ID
 
 ---
 
+### What is notarization?
+
+The Apple notary service is an automated system that scans software for malicious content. 
+
+<i class="fa fa-external-link" aria-hidden="true"></i> [Notarizing Your App Before Distribution](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution?language=objc)
+
+### Why do we need notarization?
+
+Prior to notarization, [Gatekeeper](https://support.apple.com/en-us/HT202491) checked the source of a downloaded app (either the App Store, a registered developer, or an unidentified developer) and acted as a bouncer to allow or reject their launch. By default, security and privacy preferences are set to allow apps from the App Store and identified developers only. The setting can be further tightened to allow apps downloaded from the App Store only.
+
+macOS 10.12 Sierra removed the option to allow apps from an unidentified developer (signed with a Mac Development certificate, which is available with a free Apple Developer ID for testing, or not signed at all). 
+
+As of 10.14.5, this change can be overridden with the following code:
+
+```
+sudo spctl --master-disable
+```  
+
+A more prudent way, of course, would be to manage such apps would be to let Gatekeeper report them first and grant permission on a case-by-case basis.
+
 ### Select the appropriate type of certificate
 
 Certificates are used to sign an application. Certificates can be created <i class="fa fa-external-link" aria-hidden="true"></i>[online](https://developer.apple.com/account), or from <i class="fa fa-external-link" aria-hidden="true"></i>[Xcode](https://help.apple.com/xcode/mac/current/#/dev154b28f09).
