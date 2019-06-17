@@ -156,7 +156,7 @@ Once the app is signed with ``--options=runtime`` it will not be possible to lau
 - Create a ZIP archive 
 
 ```
-/usr/bin/ditto -c -k --keepParent  sample.app sample.zip
+ditto -c -k --keepParent  sample.app sample.zip
 ```
 
 or a disk image (UDIF format)
