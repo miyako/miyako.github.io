@@ -35,6 +35,28 @@ A new "Apple Development" certificate is available in Xcode 11.0 and later, repl
 
 "Developer ID Installer" is a certificate used to sign an installer containing an app sign using a "Developer ID Application" certificate. The installer is either a disk image (.dmg) or a package (.pkg). A simple zip archive is not considered to be a safe form of distribution, since its content can be altered during transport. A signed 4D app may be packaged and signed using this type of certificate for deployment over a network (AirDrop, HTTP, FTP, etc.). Copying an app from a connected external drive does not require an installer.
 
+```mermaid
+graph TB;
+    A[Development or deployment?]
+    B[Mac Development]
+    C[Submit to Mac App Store?]
+    D[Sign what?]
+    H[Mac App Distribution]
+    I[Mac Installer Distribution]
+    E[Sign what?]
+    F[Developer ID Application]
+    G[Developer ID Installer]
+
+    A--development-->B;
+    A--deployment-->C;
+    C--yes-->D;
+    C--no-->E;
+    E--app-->F;    
+    E--installer-->G;
+    D--app-->H;    
+    D--installer-->I;
+```
+
 ### Manage multiple versions of Xcode 
 
 Unlike ``stapler`` which is installed under ``/usr/bin/``, ``altool`` (not to be confused with ``actool``) is a command line developer tool installed inside Xcode, invoked via ``xcrun``.
