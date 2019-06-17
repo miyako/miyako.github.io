@@ -29,6 +29,22 @@ It seems that in most parts of the world, 4D developers have a very good busines
 1. deployment without any human interaction may be required to create more business opportunities
 1. Apple may make it mandatory to sign and notarize apps in the future
 
+### Prerequisites for notarization
+
+Notarization is integrated in Xcode. When an app is built with 4D, notarization is done using command line tools.
+ 
+- ``Xcode``: 10 or later 
+- ``macOS``: 10.13.6 or later
+- ``Entitlement``: "Hardened Runtime" capability
+- ``Certificate``: "Developer ID Application", "Developer ID Installer"
+- Code Signature: all executables must be signed *
+- Internet Connection: required, to include a secure timestamp with the signature
+- SDK: 10.9 or later * 
+
+**\*** Executables include framework, plugin, PHP, JavaScript, HTML, JSON files, as well as tools invoked via ``LAUNCH EXTERNAL PROCESS``.
+
+<i class="fa fa-external-link" aria-hidden="true"></i>[Notarizing Your App Before Distribution](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution?language=objc)
+
 ### Select the appropriate type of certificate
 
 Certificates are used to sign an application. Certificates can be created <i class="fa fa-external-link" aria-hidden="true"></i>[online](https://developer.apple.com/account), or from <i class="fa fa-external-link" aria-hidden="true"></i>[Xcode](https://help.apple.com/xcode/mac/current/#/dev154b28f09).
