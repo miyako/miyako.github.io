@@ -16,9 +16,9 @@ For instance, we can use Xcode to <i class="fa fa-external-link" aria-hidden="tr
 
 Apart from "iOS Development" and "iOS Distribution" which are obviously not for 4D, there are 5 different certificates types to choose from:
 
-- Mac Development
-- Mac App Distribution
-- Mac Installer Distribution
+- Mac Development (Mac Developer)
+- Mac App Distribution (3rd Party Mac Developer Application)
+- Mac Installer Distribution (3rd Party Mac Developer Installer)
 - Developer ID Application
 - Developer ID Installer
 
