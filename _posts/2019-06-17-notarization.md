@@ -16,7 +16,7 @@ The Apple notary service is an automated system that scans software for maliciou
 
 Prior to notarization, [Gatekeeper](https://support.apple.com/en-us/HT202491) checked the source of a downloaded app (either the App Store, a registered developer, or an unidentified developer) and acted as a bouncer to allow or reject their execution. By default, security and privacy preferences are set to allow apps from the App Store and identified developers only. The setting can be further tightened to allow apps downloaded from the App Store only.
 
-macOS 10.12 Sierra removed the option to allow apps from an unidentified developer (signed with a Mac Development certificate, which is available with a free Apple Developer ID for testing, or not signed at all).  As of 10.14.5, this change can be overridden with the following code: ``sudo spctl --master-disable``. Of course, a more prudent way, would be to manage such apps would be to let Gatekeeper report them first and grant permission on a case-by-case basis.
+macOS 10.12 Sierra removed the option to allow apps from an unidentified developer (signed with a Mac Development certificate, which is available with a free Apple Developer ID for testing, or not signed at all).  As of 10.14.5, this change can be overridden with the following code: ``sudo spctl --master-disable``. Of course, a more prudent way to manage such apps would be to let Gatekeeper report them first and grant permission on a case-by-case basis.
 {:.info}
 
 ### Select the appropriate type of certificate
