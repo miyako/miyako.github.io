@@ -21,6 +21,14 @@ macOS 10.12 Sierra removed the option to allow apps from an unidentified develop
 
 Gatekeeper verifies the signature and identify of an app's developer to ensure that it hasn’t been tampered with or altered. But what if the original app was already designed to do bad things? Developers are invited to have their app notarized by Apple, in order to give their users the assurance that the app has passed a security check by Apple before distribution. When an app is notarized, the line "Apple checked it for malicious software and none was detected" is added to the Gatekeeper dialog message. 
 
+### What notarization means to apps built with 4D
+
+It seems that in most parts of the world, 4D developers have a very good business relation with their end user. Customers trust them to install and configure their unsigned app, regardless of Gatekeeper settings. Notarization, or code signature for that matter, is less important as a security measure where such level of trust already exists. That said, a 4D developer may still consider signing, and notarizing their app, for several reasons:
+
+1. access to certain app services (automation, photo contacts, calendar, notes, etc.) may be restricted for unsigned apps
+1. deployment without any human interaction may be required to create more business opportunities
+1. Apple may make it mandatory to sign and notarize apps in the future
+
 ### Select the appropriate type of certificate
 
 Certificates are used to sign an application. Certificates can be created <i class="fa fa-external-link" aria-hidden="true"></i>[online](https://developer.apple.com/account), or from <i class="fa fa-external-link" aria-hidden="true"></i>[Xcode](https://help.apple.com/xcode/mac/current/#/dev154b28f09).
