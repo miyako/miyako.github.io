@@ -19,7 +19,7 @@ Prior to notarization, [Gatekeeper](https://support.apple.com/en-us/HT202491) ch
 macOS 10.12 Sierra removed the option to allow apps from an unidentified developer (signed with a Mac Development certificate, which is available with a free Apple Developer ID for testing, or not signed at all).  As of 10.14.5, this change can be overridden with the following code: ``sudo spctl --master-disable``. Of course, a more prudent way to manage such apps would be to let Gatekeeper report them first and grant permission on a case-by-case basis.
 {:.info}
 
-Gatekeeper verifies the signature and identify of an app's developer to ensure that it hasn’t been tampered with or altered. But what if the original app was already designed to engage in shady business? Developers are invited to have their app notarized by Apple, in order to give their users the assurance that the app has passed a security check by Apple before distribution. When an app is notarized, the line "Apple checked it for malicious software and none was detected" is added to the Gatekeeper dialog message. 
+Gatekeeper verifies the signature and identify of an app's developer to ensure that it hasn’t been tampered with or altered. But what if the original app was already designed to engage in shady business? Developers are invited to have their app notarized by Apple, in order to give their users the assurance that the app has passed a security check by Apple before distribution. When an app is notarized, the line "**Apple checked it for malicious software and none was detected**" is added to the Gatekeeper dialog message. 
 
 ### What notarization means to apps built with 4D
 
@@ -35,8 +35,8 @@ It seems that in most parts of the world, 4D developers have a very good busines
  
 - ``Xcode``: ``10`` or later (launch once, or run ``xcode-select --install`` to install command line tools)
 - ``macOS``: ``10.13.6`` or later, better to use ``10.4`` to avoid [stapler issues](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution/resolving_common_notarization_issues?language=objc#3087731)
-- ``Entitlement``: "Hardened Runtime" capability
-- ``Certificate``: "Developer ID Application", "Developer ID Installer"
+- ``Entitlement``: **Hardened Runtime** capability
+- ``Certificate``: **Developer ID Application** and **Developer ID Installer**
 - Code Signature: all executables must be signed *
 - Internet Connection: required, to include a secure timestamp with the signature
 - SDK: 10.9 or later ** 
@@ -49,25 +49,25 @@ It seems that in most parts of the world, 4D developers have a very good busines
 
 ### Grant the appropriate entitlements 
 
-An app must have the right set of entitlements in order to take advantage of certain services. Some entitlements are embedded with the signature. Other entitlements are associated with the App ID and embedded in its provisioning profile. The "Hardened Runtime" [entitlement](https://developer.apple.com/documentation/bundleresources/entitlements?language=objc) required for notarization falls into the former category.
+An app must have the right set of **entitlements** in order to take advantage of certain services. Some entitlements are embedded with the signature. Other entitlements are associated with the App ID and embedded in its provisioning profile. The "Hardened Runtime" [entitlement](https://developer.apple.com/documentation/bundleresources/entitlements?language=objc) required for notarization falls into the former category.
 
-There are several kinds of entitlements that control the "Hardened Runtime" capability.
+There are several kinds of entitlements that control the **Hardened Runtime** capability.
 
 <i class="fa fa-external-link" aria-hidden="true"></i>[Hardened Runtime Entitlements](https://developer.apple.com/documentation/security/hardened_runtime_entitlements?language=objc)
 
-* Allow Execution of JIT-compiled Code Entitlement: No information available for 4D apps. 
-* Allow Unsigned Executable Memory Entitlement: No information available for 4D apps. 
-* Allow DYLD Environment Variables Entitlement: Probably not necessary for 4D apps.
-* Disable Library Validation Entitlement: Normally, an app built using Xcode has the ``com.apple.security.get-task-allow`` entitlement during development, to facilitate debugging by circumventing certain security checks. Xcode automatically removes this entitlement for deployment during the export phase. This is already done for the 4D app itself. Plugins, on the other hand, might need the ``com.apple.security.get-task-allow`` entitlement in order to be debugged in the context of a host executable. To allow this, you need to enable the ``com.apple.security.cs.disable-library-validation`` entitlement (you enable it to disable the protection).
-* Disable Executable Memory Protection Entitlement: No information available for 4D apps. 
-* Debugging Tool Entitlement: Probably not necessary for 4D apps.
-* Location Entitlement: There are no native 4D commands to access location services, but you may need this if you use plugins that do.
-* Photos Library Entitlement:There are no native 4D commands to access photos, but you may need this if you use plugins that do.
-* Audio Input Entitlement: There are no native 4D commands to record audio, but you may need this if you use plugins that do.
-* Camera Entitlement: There are no native 4D commands to record video, but you may need this if you use plugins that do.
-* Address Book Entitlement: There are no native 4D commands to access contacts, but you may need this if you use plugins that do.
-* Calendars Entitlement: There are no native 4D commands to access calendars, but you may need this if you use plugins that do.
-* Apple Events Entitlement: If the app runs AppleScript via ``osascript``, this entitlement should not be necessary, but you may need this if [ScriptingBridge](https://developer.apple.com/documentation/scriptingbridge?language=objc) or [NSAppleScript](https://developer.apple.com/documentation/foundation/nsapplescript?language=objc) is used by a plugin.
+* **Allow Execution of JIT-compiled Code Entitlement**: No information available for 4D apps. 
+* **Allow Unsigned Executable Memory Entitlement**: No information available for 4D apps. 
+* **Allow DYLD Environment Variables Entitlement**: Probably not necessary for 4D apps.
+* **Disable Library Validation Entitlement**: Normally, an app built using Xcode has the ``com.apple.security.get-task-allow`` entitlement during development, to facilitate debugging by circumventing certain security checks. Xcode automatically removes this entitlement for deployment during the export phase. This is already done for the 4D app itself. Plugins, on the other hand, might need the ``com.apple.security.get-task-allow`` entitlement in order to be debugged in the context of a host executable. To allow this, you need to enable the ``com.apple.security.cs.disable-library-validation`` entitlement (you enable it to disable the protection).
+* **Disable Executable Memory Protection Entitlement**: No information available for 4D apps. 
+* **Debugging Tool Entitlement**: Probably not necessary for 4D apps.
+* **Location Entitlement**: There are no native 4D commands to access location services, but you may need this if you use plugins that do.
+* **Photos Library Entitlement**: There are no native 4D commands to access photos, but you may need this if you use plugins that do.
+* **Audio Input Entitlement**: There are no native 4D commands to record audio, but you may need this if you use plugins that do.
+* **Camera Entitlement**: There are no native 4D commands to record video, but you may need this if you use plugins that do.
+* **Address Book Entitlement**: There are no native 4D commands to access contacts, but you may need this if you use plugins that do.
+* **Calendars Entitlement**: There are no native 4D commands to access calendars, but you may need this if you use plugins that do.
+* **Apple Events Entitlement**: If the app runs AppleScript via ``osascript``, this entitlement should not be necessary, but you may need this if [ScriptingBridge](https://developer.apple.com/documentation/scriptingbridge?language=objc) or [NSAppleScript](https://developer.apple.com/documentation/foundation/nsapplescript?language=objc) is used by a plugin.
 
 You should grant the least number of entitlements for your 4D app to operate. Imagine, for example, a malicious user who installs an unauthorised plugin that exploits the user's trust in your app and attempts to access sensitive information. Notarization is designed to prevent such abuse.
 {:.info}
@@ -80,7 +80,7 @@ Apple recommends <i class="fa fa-external-link" aria-hidden="true"></i>[automati
 
 For instance, we can use Xcode to <i class="fa fa-external-link" aria-hidden="true"></i>[create a certificate](https://help.apple.com/xcode/mac/current/#/dev154b28f09?sub=dev23755c6c6), but we need to specify the appropriate type of certificate to create.
 
-Apart from "iOS Development" and "iOS Distribution" which are obviously not for 4D, there are 5 different certificates types to choose from:
+Apart from **iOS Development** and **iOS Distribution** which are obviously not for 4D, there are 5 different certificates types to choose from:
 
 - Mac Development (Mac Developer)
 - Mac App Distribution (3rd Party Mac Developer Application)
@@ -88,18 +88,18 @@ Apart from "iOS Development" and "iOS Distribution" which are obviously not for 
 - Developer ID Application
 - Developer ID Installer
 
-A new "Apple Development" certificate is available in Xcode 11.0 and later, replacing "iOS Development" and "Mac Development". Likewise, "Apple Distribution" corresponds to "iOS Distribution" and "Mac App Distribution".
+A new **Apple Development** certificate is available in Xcode 11.0 and later, replacing **iOS Development** and **Mac Development**. Likewise, **Apple Distribution** corresponds to **iOS Distribution** and **Mac App Distribution**.
 {:.info}
 
-"Mac Development" is a certificate used during development, to sign an app that needs permission to use an app service or technology. 4D does not use any of the [advanced app capabilities](https://developer.apple.com/support/app-capabilities/) offered by Apple, but notarization checks for the [entitlements](https://developer.apple.com/documentation/bundleresources/entitlements?language=objc) related to the "Hardened Runtime" service. A 4D app may be signed using this type of certificate for testing.
+**Mac Development** is a certificate used during development, to sign an app that needs permission to use an app service or technology. 4D does not use any of the [advanced app capabilities](https://developer.apple.com/support/app-capabilities/) offered by Apple, but notarization checks for the [entitlements](https://developer.apple.com/documentation/bundleresources/entitlements?language=objc) related to the **Hardened Runtime** capability. A 4D app may be signed using this type of certificate for testing.
 
-"Mac App Distribution" is a certificate used to sign the app before distribution through the Mac App Store. Most 4D apps are not distributed through the store, so we can rule this one out.
+**Mac App Distribution** is a certificate used to sign the app before distribution through the Mac App Store. Most 4D apps are not distributed through the store, so we can rule this one out.
 
-"Mac Installer Distribution" is a certificate used to sign an installer package containing an app sign using a "Mac App Distribution" certificate, for distribution through the Mac App Store. Most 4D apps are not distributed through the store, so we can rule this one out too.
+**Mac Installer Distribution** is a certificate used to sign an installer package containing an app sign using a **Mac App Distribution** certificate, for distribution through the Mac App Store. Most 4D apps are not distributed through the store, so we can rule this one out too.
 
-"Developer ID Application" is a certificate used to sign the app before distribution outside the Mac App Store. A 4D app may be signed using this type of certificate for deployment.
+**Developer ID Application** is a certificate used to sign the app before distribution outside the Mac App Store. A 4D app may be signed using this type of certificate for deployment.
 
-"Developer ID Installer" is a certificate used to sign an installer containing an app sign using a "Developer ID Application" certificate. The installer is either a disk image (.dmg) or a package (.pkg). A simple zip archive is not considered to be a safe form of distribution, since its content can be altered during transport. A signed 4D app may be packaged and signed using this type of certificate for deployment over a network (AirDrop, HTTP, FTP, etc.). Copying an app from a connected external drive does not require an installer.
+**Developer ID Installer** is a certificate used to sign an installer containing an app sign using a "Developer ID Application" certificate. The installer is either a disk image (.dmg) or a package (.pkg). A simple zip archive is not considered to be a safe form of distribution, since its content can be altered during transport. A signed 4D app may be packaged and signed using this type of certificate for deployment over a network (AirDrop, HTTP, FTP, etc.). Copying an app from a connected external drive does not require an installer.
 
 ```mermaid
 graph TB;
@@ -150,7 +150,7 @@ xattr -cr .
 codesign --verbose --deep --force --options=runtime --timestamp --entitlements entitlements.plist --sign {identity_app}
 ```
 
-Once the app is signed with ``--options=runtime`` it is not possible to launch it until notarization is complete.
+Once the app is signed with ``--options=runtime`` it will not be possible to launch it until notarization is complete.
 {:.info}
 
 - Create a ZIP archive 
