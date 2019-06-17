@@ -10,7 +10,7 @@ With the public release of macOS 10.14.5, all developers creating a Developer ID
 
 Certificates are used to sign an application. Certificates can be created <i class="fa fa-external-link" aria-hidden="true"></i> [online](https://developer.apple.com/account), or from <i class="fa fa-external-link" aria-hidden="true"></i> [Xcode](https://help.apple.com/xcode/mac/current/#/dev154b28f09).
 
-Apple recommends <i class="fa fa-external-link" aria-hidden="true"></i> [automatic signing](https://help.apple.com/xcode/mac/current/#/dev80cc24546) by Xcode. For an app built with 4D, most of the task must be performed manually, that is, using command line tools.
+Apple recommends <i class="fa fa-external-link" aria-hidden="true"></i> [automatic signing](https://help.apple.com/xcode/mac/current/#/dev80cc24546) by Xcode. For an app built with 4D, most of the work must be performed manually, that is, using command line tools.
 
 ### Manage multiple versions of Xcode 
 
