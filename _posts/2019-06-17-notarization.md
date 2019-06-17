@@ -6,6 +6,10 @@ With the public release of macOS 10.14.5, all developers creating a Developer ID
 
 ---
 
+### Certificates
+
+Certificates are used to sign an application. Certificates can be created <i class="fa fa-external-link" aria-hidden="true"></i> [online](https://developer.apple.com/account), or from <i class="fa fa-external-link" aria-hidden="true"></i> [Xcode](https://help.apple.com/xcode/mac/current/#/dev154b28f09).
+
 ### Manage multiple versions of Xcode 
 
 Unlike ``stapler`` which is installed under ``/usr/bin/``, ``altool`` (not to be confused with ``actool``) is a command line developer tool installed inside Xcode, invoked via ``xcrun``.
