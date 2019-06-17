@@ -22,8 +22,8 @@ Apart from "iOS Development" and "iOS Distribution" which are obviously not for 
 - Developer ID Application
 - Developer ID Installer
 
-A new Apple Development certificate is available in Xcode 11.0 and later, replacing iOS Development and Mac Development. Likewise, Apple Distribution corresponds to iOS Distribution or Mac App Distribution.
-{: .notice--info}
+A new "Apple Development" certificate is available in Xcode 11.0 and later, replacing "iOS Development" and "Mac Development". Likewise, "Apple Distribution" corresponds to "iOS Distribution" and "Mac App Distribution".
+{:.info}
 
 
 
