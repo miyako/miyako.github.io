@@ -29,11 +29,11 @@ A new "Apple Development" certificate is available in Xcode 11.0 and later, repl
 
 "Mac App Distribution" is a certificate used to sign the app before distribution through the Mac App Store. Most 4D apps are not distributed through the store, so we can rule this one out.
 
-"Mac Installer Distribution" is a certificate used to sign an installer containing an app sign using a "Mac Development" certificate. The installer is either a disk image (.dmg) or a package (.pkg). A simple zip archive is not considered to be a safe form of distribution, since its content can be altered during transport. 
+"Mac Installer Distribution" is a certificate used to sign an installer package containing an app sign using a "Mac App Distribution" certificate, for distribution through the Mac App Store. Most 4D apps are not distributed through the store, so we can rule this one out too.
 
 "Developer ID Application" is a certificate used to sign the app before distribution outside the Mac App Store. A 4D app may be signed using this type of certificate for deployment.
 
-"Developer ID Installer" is a certificate used to sign an installer containing an app sign using a "Developer ID Application" certificate. A signed 4D app may be packaged and signed using this type of certificate for deployment over a network (AirDrop, HTTP, FTP, etc.). Copying an app from a connected external drive does not require an installer.
+"Developer ID Installer" is a certificate used to sign an installer containing an app sign using a "Developer ID Application" certificate. The installer is either a disk image (.dmg) or a package (.pkg). A simple zip archive is not considered to be a safe form of distribution, since its content can be altered during transport. A signed 4D app may be packaged and signed using this type of certificate for deployment over a network (AirDrop, HTTP, FTP, etc.). Copying an app from a connected external drive does not require an installer.
 
 ### Manage multiple versions of Xcode 
 
