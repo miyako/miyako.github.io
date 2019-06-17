@@ -45,7 +45,7 @@ It seems that in most parts of the world, 4D developers have a very good busines
 
 <i class="fa fa-external-link" aria-hidden="true"></i>[Notarizing Your App Before Distribution](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution?language=objc)
 
-### Grant the appropriate kind of entitlements 
+### Grant the appropriate entitlements 
 
 An app must be entitled to take advantage of certain services. Some entitlements are embedded with the signature. Other entitlements are associated with the App ID and embedded in its provisioning profile. The "Hardened Runtime" [entitlement](https://developer.apple.com/documentation/bundleresources/entitlements?language=objc) required for notarization falls into the former category.
 
@@ -70,7 +70,7 @@ There are several kinds of entitlements that control the "Hardened Runtime" capa
 You should normally grant the least number of entitlements for your 4D app to operate. Imagine, for example, a malicious user who installs an unauthorised plugin that exploits the user's trust in your app and attempts to access sensitive information. Notarization is designed to prevent such abuse.
 {:.success}
 
-### Select the appropriate type of certificate
+### Find an appropriate certificate
 
 Certificates are used to sign an application. Certificates can be created <i class="fa fa-external-link" aria-hidden="true"></i>[online](https://developer.apple.com/account), or from <i class="fa fa-external-link" aria-hidden="true"></i>[Xcode](https://help.apple.com/xcode/mac/current/#/dev154b28f09).
 
