@@ -26,7 +26,7 @@ Gatekeeper verifies the signature and identify of an app's developer to ensure t
 It seems that in most parts of the world, 4D developers have a very good business relation with their end user. Customers trust them to install and configure their unsigned app, regardless of Gatekeeper settings. Notarization, or code signature for that matter, is less important as a security measure where such level of trust already exists. That said, a 4D developer may still consider signing and notarizing their app, for several reasons:
 
 1. access to certain app services (automation, photo contacts, calendar, notes, etc.) may be restricted for unsigned apps
-1. deployment without any human interaction may be required to create more business opportunities
+1. deployment without any human interaction may be required to expand business opportunities
 1. Apple may make it mandatory to sign and notarize apps in the future
 
 ---
