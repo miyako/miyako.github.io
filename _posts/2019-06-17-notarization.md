@@ -49,7 +49,7 @@ It seems that in most parts of the world, 4D developers have a very good busines
 
 ### Grant the appropriate entitlements 
 
-An app must be entitled to take advantage of certain services. Some entitlements are embedded with the signature. Other entitlements are associated with the App ID and embedded in its provisioning profile. The "Hardened Runtime" [entitlement](https://developer.apple.com/documentation/bundleresources/entitlements?language=objc) required for notarization falls into the former category.
+An app must have the right set of entitlements in order to take advantage of certain services. Some entitlements are embedded with the signature. Other entitlements are associated with the App ID and embedded in its provisioning profile. The "Hardened Runtime" [entitlement](https://developer.apple.com/documentation/bundleresources/entitlements?language=objc) required for notarization falls into the former category.
 
 There are several kinds of entitlements that control the "Hardened Runtime" capability.
 
