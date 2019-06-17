@@ -71,13 +71,13 @@ Normally, an app built using Xcode has the ``com.apple.security.get-task-allow``
 
 There are no native 4D commands that records audio, but you may need this if you use plugins that do.
 
-[4d-plugin-sfml-audio](https://github.com/miyako/4d-plugin-sfml-audio)
+ * [4d-plugin-sfml-audio](https://github.com/miyako/4d-plugin-sfml-audio)
 
 * Camera Entitlement: ``true`` or ``false``
 
 There are no native 4D commands that records video, but you may need this if you use plugins that do.
 
-[4d-plugin-capture](https://github.com/miyako/4d-plugin-capture)
+ * [4d-plugin-capture](https://github.com/miyako/4d-plugin-capture)
 
 * Location Entitlement: ``true`` or ``false``
 
