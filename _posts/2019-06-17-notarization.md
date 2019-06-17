@@ -53,11 +53,11 @@ There are several kinds of entitlements that control the "Hardened Runtime" capa
 
 <i class="fa fa-external-link" aria-hidden="true"></i>[Hardened Runtime Entitlements](https://developer.apple.com/documentation/security/hardened_runtime_entitlements?language=objc)
 
-* Allow Execution of JIT-compiled Code Entitlement: ?
+* Allow Execution of JIT-compiled Code Entitlement: 
 
-* Allow Unsigned Executable Memory Entitlement: ?
+* Allow Unsigned Executable Memory Entitlement: 
 
-* Allow DYLD Environment Variables Entitlement: ?
+* Allow DYLD Environment Variables Entitlement: 
 
 * Disable Library Validation Entitlement: ``true``
 
@@ -70,25 +70,25 @@ Normally, an app built using Xcode has the ``com.apple.security.get-task-allow``
 
 * Audio Input Entitlement:
 
-There are no native 4D commands that records audio, but you may need this if you use plugins that do.
+There are no native 4D commands to record audio, but you may need this if you use plugins that do.
 
    * [4d-plugin-sfml-audio](https://github.com/miyako/4d-plugin-sfml-audio)
 
 * Camera Entitlement: 
 
-There are no native 4D commands that records video, but you may need this if you use plugins that do.
+There are no native 4D commands to record video, but you may need this if you use plugins that do.
 
    * [4d-plugin-capture](https://github.com/miyako/4d-plugin-capture)
 
 * Address Book Entitlement: 
 
-There are no native 4D commands that access contacts, but you may need this if you use plugins that do.
+There are no native 4D commands to access contacts, but you may need this if you use plugins that do.
 
    * [4d-plugin-address-book](https://github.com/miyako/4d-plugin-address-book)
 
 * Calendars Entitlement: 
 
-There are no native 4D commands that access calendars, but you may need this if you use plugins that do.
+There are no native 4D commands to access calendars, but you may need this if you use plugins that do.
 
    * [4d-plugin-ical](https://github.com/miyako/4d-plugin-ical)
    * [4d-plugin-event-kit](https://github.com/miyako/4d-plugin-event-kit)
