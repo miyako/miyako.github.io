@@ -57,6 +57,10 @@ graph TB;
     D--installer-->I;
 ```
 
+#### Key points
+
+The purpose of the certificate can be deducted from its name. "Distribution" implies distribution through the Mac App Store. "Developer ID" implies distribution outside the Mac App Store. A separate certificate is used for the app and its installer. A "Development" certificate is only used for testing.
+
 ### Manage multiple versions of Xcode 
 
 Unlike ``stapler`` which is installed under ``/usr/bin/``, ``altool`` (not to be confused with ``actool``) is a command line developer tool installed inside Xcode, invoked via ``xcrun``.
