@@ -8,11 +8,11 @@ With the public release of macOS 10.14.5, all developers creating a Developer ID
 
 ### Certificates
 
-Certificates are used to sign an application. Certificates can be created <i class="fa fa-external-link" aria-hidden="true"></i> [online](https://developer.apple.com/account), or from <i class="fa fa-external-link" aria-hidden="true"></i> [Xcode](https://help.apple.com/xcode/mac/current/#/dev154b28f09).
+Certificates are used to sign an application. Certificates can be created <i class="fa fa-external-link" aria-hidden="true"></i>[online](https://developer.apple.com/account), or from <i class="fa fa-external-link" aria-hidden="true"></i>[Xcode](https://help.apple.com/xcode/mac/current/#/dev154b28f09).
 
-Apple recommends <i class="fa fa-external-link" aria-hidden="true"></i> [automatic signing](https://help.apple.com/xcode/mac/current/#/dev80cc24546) by Xcode. For an app built with 4D, most of the work must be performed manually, that is, using command line tools.
+Apple recommends <i class="fa fa-external-link" aria-hidden="true"></i>[automatic signing](https://help.apple.com/xcode/mac/current/#/dev80cc24546) by Xcode. For an app built with 4D, most of the work must be performed manually, that is, using command line tools.
 
-For instance, we can use Xcode to <i class="fa fa-external-link" aria-hidden="true"></i> [create a certificate](https://help.apple.com/xcode/mac/current/#/dev154b28f09?sub=dev23755c6c6), but we need to specify the appropriate type of certificate to create.
+For instance, we can use Xcode to <i class="fa fa-external-link" aria-hidden="true"></i>[create a certificate](https://help.apple.com/xcode/mac/current/#/dev154b28f09?sub=dev23755c6c6), but we need to specify the appropriate type of certificate to create.
 
 Apart from "iOS Development" and "iOS Distribution" which are obviously not for 4D, there are 5 different certificates types to choose from:
 
