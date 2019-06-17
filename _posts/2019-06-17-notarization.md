@@ -41,20 +41,20 @@ graph TB;
     B[Mac Development]
     C[Submit to Mac App Store?]
     D[Sign what?]
-    H[Mac App Distribution]
-    I[Mac Installer Distribution]
-    E[Sign what?]
-    F[Developer ID Application]
-    G[Developer ID Installer]
+    E[Mac App Distribution]
+    F[Mac Installer Distribution]
+    G[Sign what?]
+    H[Developer ID Application]
+    I[Developer ID Installer]
 
     A--development-->B;
     A--deployment-->C;
     C--yes-->D;
-    C--no-->E;
-    E--app-->F;    
-    E--installer-->G;
-    D--app-->H;    
-    D--installer-->I;
+    C--no-->G;
+    D--app-->E;    
+    D--installer-->F;
+    G--app-->H;    
+    G--installer-->I;
 ```
 
 #### Key points
