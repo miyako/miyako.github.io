@@ -31,8 +31,8 @@ It seems that in most parts of the world, 4D developers have a very good busines
 
 ### Prerequisites for notarization
  
-- ``Xcode``: 10 or later 
-- ``macOS``: 10.13.6 or later
+- ``Xcode``: ``10`` or later (launch once, or run ``xcode-select --install`` to install command line tools)
+- ``macOS``: ``10.13.6`` or later
 - ``Entitlement``: "Hardened Runtime" capability
 - ``Certificate``: "Developer ID Application", "Developer ID Installer"
 - Code Signature: all executables must be signed *
@@ -41,7 +41,7 @@ It seems that in most parts of the world, 4D developers have a very good busines
 
 **\*** Executables include framework, plugin, PHP, JavaScript, HTML, JSON files, as well as tools invoked via ``LAUNCH EXTERNAL PROCESS``.
 
-**\*\*** This does not necessarily that the app can't run on macOS 10.8 or earlier. It just means that a newer version of ``codesign`` must be used to sign the app.
+**\*\*** This does not necessarily mean that the app can't run on macOS 10.8 or earlier. It just means that a newer version of ``codesign`` must be used to sign the app.
 
 <i class="fa fa-external-link" aria-hidden="true"></i>[Notarizing Your App Before Distribution](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution?language=objc)
 
