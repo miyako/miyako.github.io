@@ -67,7 +67,7 @@ There are several kinds of entitlements that control the "Hardened Runtime" capa
 * Calendars Entitlement: There are no native 4D commands to access calendars, but you may need this if you use plugins that do.
 * Apple Events Entitlement: If the app runs AppleScript via ``osascript``, this entitlement should not be necessary, but you may need this if [ScriptingBridge](https://developer.apple.com/documentation/scriptingbridge?language=objc) or [NSAppleScript](https://developer.apple.com/documentation/foundation/nsapplescript?language=objc) is used by a plugin.
 
-You should normally grant the least number of entitlements for your 4D app to operate. Imagine, for example, a malicious user who installs an unauthorised plugin that exploits the user's trust and attempts to access resources that are not necessary for your app. Notarization is designed to prevent such activity.
+You should normally grant the least number of entitlements for your 4D app to operate. Imagine, for example, a user who installs an unauthorised plugin that exploits the user's trust in your app and attempts to access sensitive information. Notarization is designed to prevent such malicious activity.
 {:.warning}
 
 ### Select the appropriate type of certificate
