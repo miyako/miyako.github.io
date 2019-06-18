@@ -172,7 +172,7 @@ pkgbuild --component /Applications/sample.app --sign  --sign {identity_installer
 
 ### Case study: Notarize v17.2
 
-#### 1 `fail`{:.error}
+#### 1 
 
 Let's use a clean install version of v17.2 and see what happens.
 
@@ -209,7 +209,9 @@ No entitlements, no hardened runtime, just normal ``codesign --deep --force --si
 
 * 4D.app/Contents/Resources/php/Mac/php-fcgi-4d
 
-#### 2 `fail`{:.error}
+`fail`{:.error}
+
+#### 2
 
 Let's just sign all **plugins**, all **native components**, **PHP** and the **SASL plugin** with the ``--timestamp`` option. This should al least take care of the "not signed", "does not include timestamp" and "signature algorithm is too weak" issues. 
 
@@ -223,13 +225,19 @@ Other than the "hardened runtime" exception, ``altool``now  returns the followin
 
 * 4D.dmg/4D.app/Contents/Plugins/4D InternetCommands.bundle/Contents/MacOS/4D InternetCommands (2)
 
-#### 3 `fail`{:.error}
+`fail`{:.error}
 
-We could replace **4D Internet Commands** with a newer copy (17R5, for example). Since not all application need this legacy plugin, and a plugin can always be installed at the structure level, I am just going to remove it from the app.
+#### 3 
 
-Moving on to the "hardened runtime" issue, let's sign **PHP**, **4D Helper** and the app itself with ``--entitlements`` and ``--options=runtime``.
+We could replace **4D Internet Commands** with a newer copy (17R5, for example). Since not all application need this legacy plugin, and a plugin can always be installed at the structure level, we could alternatively remove it from the app.
 
-#### 4 `fail`{:.error}
+Either way, the "invalid signature" issues are gone, but we still have the "hardened runtime" issues.
+
+`fail`{:.error}
+
+#### 4
+
+Let's sign **PHP**, **4D Helper** and the app itself with ``--entitlements`` and ``--options=runtime``.
 
 We no longer have critical validation errors, in fact, the app is accepted and notarized by Apple...but wait! **Can we actually launch it**?
 
@@ -266,6 +274,8 @@ When a notarized version of 4D is launched, we systematically get the following 
 27  libsystem_pthread.dylib       	0x00007fff5b1ec40d thread_start + 13
 ```
 
+ `fail`{:.error}
+ 
 <i class="fa fa-external-link" aria-hidden="true"></i>[Resolving Common Notarization Issues](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution/resolving_common_notarization_issues?language=objc) 
 
 ---
