@@ -207,7 +207,7 @@ No entitlements, no hardened runtime, just normal ``codesign --deep --force --si
 
 * 4D.app/Contents/Resources/php/Mac/php-fcgi-4d
 
-Let's just sign all **plugins**, all native components**, **PHP** and the **SASL plugin** with the ``--timestamp`` option. This should al least take care of the "not signed", "does not include timestamp" and "signature algorithm is too weak" issues. 
+Let's just sign all **plugins**, all **native components**, **PHP** and the **SASL plugin** with the ``--timestamp`` option. This should al least take care of the "not signed", "does not include timestamp" and "signature algorithm is too weak" issues. 
 
 <i class="fa fa-external-link" aria-hidden="true"></i>[Resolving Common Notarization Issues](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution/resolving_common_notarization_issues?language=objc) 
 
