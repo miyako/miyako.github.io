@@ -209,6 +209,20 @@ No entitlements, no hardened runtime, just normal ``codesign --deep --force --si
 
 Let's just sign all **plugins**, all **native components**, **PHP** and the **SASL plugin** with the ``--timestamp`` option. This should al least take care of the "not signed", "does not include timestamp" and "signature algorithm is too weak" issues. 
 
+Other than the "hardened runtime" exception, ``altool``now  returns the following exceptions:
+
+**The signature of the binary is invalid** (2)  
+
+* 4D.dmg/4D.app/Contents/Plugins/4D InternetCommands.bundle/Contents/MacOS/4D InternetCommands (2)
+
+**The binary uses an SDK older than the 10.9 SDK** (2)
+
+* 4D.dmg/4D.app/Contents/Plugins/4D InternetCommands.bundle/Contents/MacOS/4D InternetCommands (2)
+
+We could replace **4D Internet Commands** with a newer copy (17R5, for example). Since not all application need this legacy plugin, and a plugin can always be installed at the structure level, I am just going to remove it from the app.
+
+Moving on to the "hardened runtime" issue, let's sign **PHP**, **4D Helper** and the app itself with ``--entitlements`` and ``--options=runtime``.
+
 <i class="fa fa-external-link" aria-hidden="true"></i>[Resolving Common Notarization Issues](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution/resolving_common_notarization_issues?language=objc) 
 
 ---
