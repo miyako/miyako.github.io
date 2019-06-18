@@ -219,7 +219,7 @@ Keep in mind that notarization is an automated process. Just because an app is a
 
 Likewise, if the app is signed with the ``--deep`` ``--force`` option, all the specific signatures for native components, plugins and tools will become invalid (notarization may succeed, but 4D will crash).
 
-**4D Internet Commands** is a plugin preinstalled in with 4D. With v17.2, the SDK used to build the plugin is older than 10.9, the minimum required for notarization. To solve this, you can remove the plugin from inside the app, or replace with a newer version (17R5, for example).
+**4D Internet Commands** is a plugin preinstalled in with 4D. With v17.2, the SDK used to build the plugin is older than 10.9, the minimum required for notarization. To solve this, you can remove the plugin from inside the app, or migrate to a newer version altogether (4D 17 R5, for example).
 
 In addition to the main executable, 2 helpers, **HelperTool** and **InstallTool** are also present in the MacOS folder. These  need to be explicitly signed with hardened runtime entitlements.
 
