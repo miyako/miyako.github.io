@@ -275,6 +275,10 @@ When a notarized version of 4D is launched, we systematically get the following 
 ```
 
  `fail`{:.error}
+
+#### Step 5
+
+ Perhaps this is all because 4D has an unconventional package structure. Maybe we need to sign the 3 executables (``HelperTool``, ``InstallTool``, ``4D``) with the hardened runtime, but sign the whole package without entitlements.
  
 <i class="fa fa-external-link" aria-hidden="true"></i>[Resolving Common Notarization Issues](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution/resolving_common_notarization_issues?language=objc) 
 
