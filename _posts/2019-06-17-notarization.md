@@ -215,15 +215,15 @@ Keep in mind that notarization is an automated process. Just because an app is a
 
 ### Gotchas
 
-**4D Helper** is an app placed inside WebViewerCEF.bundle. As a framework, the bundle needs to be signed with the ``--deep`` option. If the ``--force`` option is used, the signature for 4D Helper will become invalid. On the other hand, if 4D Helper is signed after WebViewerCEF.bundle., that will invalidate the framework's signature. The solution is to avoid the ``--force`` option and sign from the inside out.
+**4D Helper** is an app placed inside WebViewerCEF.bundle. As a framework, the bundle needs to be signed with the ``--deep`` option. If the ``--force`` option is used, the signature for 4D Helper will become invalid. On the other hand, if 4D Helper is signed after WebViewerCEF.bundle, that will invalidate the framework's signature. The solution is to avoid the ``--force`` option and sign from the inside out. 4D helper must be signed with hardened runtime. If sufficient entitlements are not granted, the embedded CEF web area will not work.
 
-Likewise, if the app is signed with the ``--force`` option, all the specific signatures for native components, plugins and tools will be wiped out. 
+Likewise, if the app is signed with the ``--deep`` ``--force`` option, all the specific signatures for native components, plugins and tools will become invalid (notarization may succeed, but 4D will crash).
 
 **4D Internet Commands** is a plugin preinstalled in with 4D. With v17.2, the SDK used to build the plugin is older than 10.9, the minimum required for notarization. To solve this, you can remove the plugin from inside the app, or replace with a newer version (17R5, for example).
 
-In addition to the main executable, 2 helpers, ``HelperTool`` and ``InstallTool`` are also present in the MacOS folder. These need to be explicitly signed with entitlements.
+In addition to the main executable, 2 helpers, **HelperTool** and **InstallTool** are also present in the MacOS folder. These  need to be explicitly signed with hardened runtime entitlements.
 
-As mentioned above, the XML exported from ``DOM EXPORT TO FILE`` is not a usable property list. It must be converted with ``plutil``. You can confirm that the original property list is corrupt, by running ``codesign -d --entitlements -`` to review the embedded entitlements.
+As mentioned above, the XML exported from ``DOM EXPORT TO FILE`` is not a usable property list. It must be converted with ``plutil``. You can confirm that the original property list is corrupt, by running ``codesign -d --entitlements -`` to review the embedded entitlements. 
 
 <i class="fa fa-external-link" aria-hidden="true"></i>[Resolving Common Notarization Issues](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution/resolving_common_notarization_issues?language=objc) 
 
