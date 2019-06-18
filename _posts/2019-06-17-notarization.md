@@ -138,17 +138,48 @@ Notarization is integrated in Xcode. When an app is built with 4D, notarization 
 BUILD APPLICATION
 ```
 
-- Remove extended attributes
+- Remove extended attributes (optional)
 
 ```
 xattr -cr .
 ```
 
-- Sign the app
+Don't recursively clear extended attributes after signing objects, such action will invalidate existing signatures. 
+{:.info}
+
+- Remove old signatures (optional)
 
 ```
-codesign --verbose --deep --force --options=runtime --timestamp --entitlements entitlements.plist --sign {identity_app}
+codesign --remove-signature
 ```
+
+- Modify ``Info.plist`` as necessary
+
+```
+DOM EXPORT TO FILE
+```
+
+```
+plutil -convert xml1 
+```
+
+The XML exported from 4D is not suitable for ``Info.plist`` or ``entitlements.plist``. You must use ``plutil`` to convert the file. 
+{:.info}
+
+- Sign native components, plugins, etc. from the inside out
+
+```
+codesign --verbose --timestamp --deep --sign {identity_app}
+```
+
+- Sign apps
+
+```
+codesign --verbose --timestamp --deep --options=runtime --entitlements entitlements.plist --sign {identity_app}
+```
+
+Don't use the ``--force`` option indiscriminately. You might invalidate your signature hierarchy. Rather, you should sign objects from the inside out. Naturally, inner objects should be cleaned beforehand, since ``codesign`` will not replace old signatures by default. 
+{:.info}
 
 - Create a ZIP archive 
 
@@ -184,114 +215,9 @@ xcrun altool --notarization-info --username user --password pass
 
 ### Case study: Notarize v17.2
 
-#### Step 1 
 
-Let's use a clean install version of v17.2 and see what happens.
 
-No entitlements, no hardened runtime, just normal ``codesign --deep --force --sign``.
 
-``altool`` returns the following exceptions:
-
-**The executable does not have the hardened runtime enabled** (5)  
-
-* 4D.app/Contents/MacOS/HelperTool
-* 4D.app/Contents/MacOS/4D
-* 4D.app/Contents/MacOS/InstallTool
-* 4D.app/Contents/Resources/php/Mac/php-fcgi-4d
-* 4D.app/Contents/Native Components/WebViewerCEF.bundle/Contents/Frameworks/4D Helper.app/Contents/MacOS/4D Helper
-
-**The binary is not signed** (6)  
-
-* 4D.app/Contents/Plugins/4D InternetCommands.bundle/Contents/MacOS/4D InternetCommands (3)
-* 4D.app/Contents/Native Components/WebViewerCEF.bundle/Contents/Frameworks/4D Helper.app/Contents/MacOS/4D Helper
-* 4D.app/Contents/Native Components/WebViewerCEF.bundle/Contents/Frameworks/Chromium Embedded Framework.framework/Chromium Embedded Framework
-* 4D.app/Contents/SASL Plugins/libdigestmd5.plugin
-
-**The signature does not include a secure timestamp** (6)
-
-* 4D.app/Contents/Plugins/4D InternetCommands.bundle/Contents/MacOS/4D InternetCommands (3)
-* 4D.app/Contents/Native Components/WebViewerCEF.bundle/Contents/Frameworks/4D Helper.app/Contents/MacOS/4D Helper
-* 4D.app/Contents/Native Components/WebViewerCEF.bundle/Contents/Frameworks/Chromium Embedded Framework.framework/Chromium Embedded Framework
-* 4D.app/Contents/SASL Plugins/libdigestmd5.plugin
-
-**4D Internet Commands** has 3 architectures (i386, x84_64, x64_64h).
-{:.info}
-
-**The signature algorithm used is too weak** (1)
-
-* 4D.app/Contents/Resources/php/Mac/php-fcgi-4d
-
-`fail`{:.error}
-
-#### Step 2
-
-Let's just sign all **plugins**, all **native components**, **PHP** and the **SASL plugin** with the ``--timestamp`` option. This should al least take care of the "not signed", "does not include timestamp" and "signature algorithm is too weak" issues. 
-
-Other than the "hardened runtime" exception, ``altool``now  returns the following exceptions:
-
-**The signature of the binary is invalid** (2)  
-
-* 4D.dmg/4D.app/Contents/Plugins/4D InternetCommands.bundle/Contents/MacOS/4D InternetCommands (2)
-
-**The binary uses an SDK older than the 10.9 SDK** (2)
-
-* 4D.dmg/4D.app/Contents/Plugins/4D InternetCommands.bundle/Contents/MacOS/4D InternetCommands (2)
-
-`fail`{:.error}
-
-#### Step 3 
-
-We could replace **4D Internet Commands** with a newer copy (17R5, for example). Since not all application need this legacy plugin, and a plugin can always be installed at the structure level, we could alternatively remove it from the app.
-
-Either way, the "invalid signature" issues are gone, but we still have the "hardened runtime" issues.
-
-`fail`{:.error}
-
-#### Step 4
-
-Let's sign **PHP**, **4D Helper** and the app itself with ``--entitlements`` and ``--options=runtime``.
-
-We no longer have critical validation errors, in fact, the app is accepted and notarized by Apple...but wait! **Can we actually launch it**?
-
-When a notarized version of 4D is launched, we systematically get the following error:
-
-```
-0   ???                           	0x000000011a93e000 0 + 4740866048
-1   com.4d.4d                     	0x000000010241ff3b CallAsmPart2 + 65
-2   ???                           	0x000070000dc9b280 0 + 123145533633152
-3   com.4d.4d                     	0x00000001020490ab VDBLanguageContext_compiled::DoExecute(calcblock&, VCodeDescriptor*) + 179
-4   com.4d.4d                     	0x0000000102058d98 VDBLanguageContext::Execute(VDB4DTableProxy*, VFormContext*, short, int, int, champvar_template<256>**, VCodeDescriptor*) + 160
-5   com.4d.4d                     	0x0000000101fd25f6 V4DDatabase::ExecuteScript(VFormObject*, VScriptRef*, int, int*) + 142
-6   com.4d.4d                     	0x00000001020c989a VFormObject::ExecuteScript(int, int, int*) + 126
-7   com.4d.4d                     	0x000000010207d110 VFormContext::ExecuteCycle(int) + 324
-8   com.4d.4d                     	0x0000000101d81c77 saisierec::_Open(bool) + 1581
-9   com.4d.4d                     	0x0000000101d815d9 saisierec::Open(bool) + 69
-10  com.4d.4d                     	0x0000000101dd4927 NewDial4DStrWithTitle(xbox::VString const&, xbox::VString const&, Rect*, short, short, unsigned int, V4DWindowPlacement const*, Dial4DRec*, unsigned char, WindowLevel) + 2169
-11  com.4d.4d                     	0x0000000101dd4ce6 NewDial4Dstr(xbox::VString const&, Rect*, short, short, unsigned int, Dial4DRec*, unsigned char, V4DWindowPlacement const*, WindowLevel) + 50
-12  com.4d.4d                     	0x000000010227a5b4 V4DDialog::_Show(xbox::VWindow const&, xbox::VWindow const&, short, short, WindowLevel, unsigned int, xbox::VRect const&, V4DWindowPlacement const*) + 236
-13  com.4d.4d                     	0x000000010227a49f V4DDialog::Show(V4DDialog::WindowKind, xbox::VWindow const&, unsigned int, xbox::VRect const&, V4DWindowPlacement const*, WindowLevel) + 221
-14  com.4d.4d                     	0x000000010227a341 V4DDialog::Show(V4DDialog::WindowKind, xbox::VWindow const&, unsigned int, xbox::VRect const&) + 23
-15  com.4d.4d                     	0x00000001022854b7 V4DFloatingToolbar::CreateDialog() + 297
-16  com.4d.4d                     	0x000000010228bac2 V4DControllerTask::_RunWithoutDatabase() + 28
-17  com.4d.4d                     	0x000000010228b161 V4DControllerTask::_Run(V4DTaskConcrete*) + 183
-18  com.4d.4d                     	0x000000010228afe6 V4DControllerTask::_RunProc(V4DTaskConcrete*, xbox::IRefCountable*) + 64
-19  com.4d.4d                     	0x0000000101fe0da0 Task4DProc(V4DTaskConcrete*) + 957
-20  com.4d.4d                     	0x000000010245ebe2 V4DTaskManager::_Task4DProc(xbox::VTask*) + 158
-21  com.4d.kernel                 	0x000000010428592d xbox::VTask::_Run() + 141
-22  com.4d.kernel                 	0x000000010428b2f6 xbox::XMacTask_fiber::_ThreadProc(void*) + 70
-23  com.4d.kernel                 	0x00000001042c04cf xbox::VMacFiber_thread::_ThreadProc(void*) + 31
-24  com.apple.CoreServices.CarbonCore	0x00007fff303ffea4 CooperativeThread + 282
-25  libsystem_pthread.dylib       	0x00007fff5b1ed2eb _pthread_body + 126
-26  libsystem_pthread.dylib       	0x00007fff5b1f0249 _pthread_start + 66
-27  libsystem_pthread.dylib       	0x00007fff5b1ec40d thread_start + 13
-```
-
- `fail`{:.error}
-
-#### Step 5
-
- Perhaps this is all because 4D has an unconventional package structure. Maybe we need to sign the 3 executables (``HelperTool``, ``InstallTool``, ``4D``) with the hardened runtime, but sign the whole package without entitlements.
- 
 <i class="fa fa-external-link" aria-hidden="true"></i>[Resolving Common Notarization Issues](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution/resolving_common_notarization_issues?language=objc) 
 
 ---
