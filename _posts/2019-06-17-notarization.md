@@ -172,11 +172,11 @@ pkgbuild --component /Applications/sample.app --sign  --sign {identity_installer
 
 ### Case study: Notarize v17.2
 
+`Attempt #1`{:.error}
+
 Let's use a clean install version of v17.2 and see what happens.
 
 No entitlements, no hardened runtime, just normal ``codesign --deep --force --sign``.
-
-`Attempt #1`{:.error}
 
 ``altool`` returns the following exceptions:
 
