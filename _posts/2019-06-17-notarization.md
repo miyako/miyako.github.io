@@ -176,6 +176,8 @@ Let's use a clean install version of v17.2 and see what happens.
 
 No entitlements, no hardened runtime, just normal ``codesign --deep --force --sign``.
 
+`Attempt #1`{:.error}
+
 ``altool`` returns the following exceptions:
 
 **The executable does not have the hardened runtime enabled** (5)  
@@ -207,6 +209,8 @@ No entitlements, no hardened runtime, just normal ``codesign --deep --force --si
 
 * 4D.app/Contents/Resources/php/Mac/php-fcgi-4d
 
+`Attempt #2`{:.error}
+
 Let's just sign all **plugins**, all **native components**, **PHP** and the **SASL plugin** with the ``--timestamp`` option. This should al least take care of the "not signed", "does not include timestamp" and "signature algorithm is too weak" issues. 
 
 Other than the "hardened runtime" exception, ``altool``now  returns the following exceptions:
@@ -218,6 +222,8 @@ Other than the "hardened runtime" exception, ``altool``now  returns the followin
 **The binary uses an SDK older than the 10.9 SDK** (2)
 
 * 4D.dmg/4D.app/Contents/Plugins/4D InternetCommands.bundle/Contents/MacOS/4D InternetCommands (2)
+
+`Attempt #3`{:.error}
 
 We could replace **4D Internet Commands** with a newer copy (17R5, for example). Since not all application need this legacy plugin, and a plugin can always be installed at the structure level, I am just going to remove it from the app.
 
