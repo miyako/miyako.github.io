@@ -153,19 +153,31 @@ codesign --verbose --deep --force --options=runtime --timestamp --entitlements e
 - Create a ZIP archive 
 
 ```
-ditto -c -k --keepParent  sample.app sample.zip
+ditto -c -k --keepParent sample.app sample.zip
 ```
 
 or a disk image (UDIF format)
 
 ```
-hdiutil create -srcfolder sample.app sample.dmg
+hdiutil create -format UDBZ -srcfolder sample.app sample.dmg
 ```
 
 or a signed flat installer package
 
 ```
 pkgbuild --component /Applications/sample.app --sign  --sign {identity_installer} /Users/miyako/Desktop/sample.pkg
+```
+
+- Uploade the archice, disk image or signed flat package 
+
+```
+xcrun altool --notarize-app --file sample.dmg --primary-bundle-id {upload_id} --username user --password pass
+```
+
+- Check notarization status 
+
+```
+xcrun altool --notarization-info --username user --password pass
 ```
 
 ---
