@@ -168,6 +168,45 @@ or a signed flat installer package
 pkgbuild --component /Applications/sample.app --sign  --sign {identity_installer} /Users/miyako/Desktop/sample.pkg
 ```
 
+---
+
+### Case study: Notarize v17.2
+
+Let's use a clean install version of v17.2 and see what happens.
+
+No entitlements, no hardened runtime, just normal ``codesign --deep --force --sign``.
+
+``altool`` returns the following exceptions.
+
+**The executable does not have the hardened runtime enabled** (5)  
+
+* 4D.app/Contents/MacOS/HelperTool
+* 4D.app/Contents/MacOS/4D
+* 4D.app/Contents/MacOS/InstallTool
+* 4D.app/Contents/Resources/php/Mac/php-fcgi-4d
+* 4D.app/Contents/Native Components/WebViewerCEF.bundle/Contents/Frameworks/4D Helper.app/Contents/MacOS/4D Helper
+
+**The binary is not signed** (6)  
+
+* 4D.app/Contents/Plugins/4D InternetCommands.bundle/Contents/MacOS/4D InternetCommands (3)
+* 4D.app/Contents/Native Components/WebViewerCEF.bundle/Contents/Frameworks/4D Helper.app/Contents/MacOS/4D Helper
+* 4D.app/Contents/Native Components/WebViewerCEF.bundle/Contents/Frameworks/Chromium Embedded Framework.framework/Chromium Embedded Framework
+* 4D.app/Contents/SASL Plugins/libdigestmd5.plugin
+
+**The signature does not include a secure timestamp** (6)
+
+* 4D.app/Contents/Plugins/4D InternetCommands.bundle/Contents/MacOS/4D InternetCommands (3)
+* 4D.app/Contents/Native Components/WebViewerCEF.bundle/Contents/Frameworks/4D Helper.app/Contents/MacOS/4D Helper
+* 4D.app/Contents/Native Components/WebViewerCEF.bundle/Contents/Frameworks/Chromium Embedded Framework.framework/Chromium Embedded Framework
+* 4D.app/Contents/SASL Plugins/libdigestmd5.plugin
+
+Internet Commands contain 3 architectures (i386, x84_64, x64_64h).
+{:.info}
+
+**The signature algorithm used is too weak** (1)
+
+* 4D.app/Contents/Resources/php/Mac/php-fcgi-4d
+
 ### Managing multiple versions of Xcode 
 
 Unlike ``stapler``, ``altool`` is a command line developer tool installed inside Xcode, invoked via ``xcrun``.
