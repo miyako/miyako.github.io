@@ -176,7 +176,7 @@ Let's use a clean install version of v17.2 and see what happens.
 
 No entitlements, no hardened runtime, just normal ``codesign --deep --force --sign``.
 
-``altool`` returns the following exceptions.
+``altool`` returns the following exceptions:
 
 **The executable does not have the hardened runtime enabled** (5)  
 
@@ -200,7 +200,7 @@ No entitlements, no hardened runtime, just normal ``codesign --deep --force --si
 * 4D.app/Contents/Native Components/WebViewerCEF.bundle/Contents/Frameworks/Chromium Embedded Framework.framework/Chromium Embedded Framework
 * 4D.app/Contents/SASL Plugins/libdigestmd5.plugin
 
-Internet Commands contain 3 architectures (i386, x84_64, x64_64h).
+**4D Internet Commands** has 3 architectures (i386, x84_64, x64_64h).
 {:.info}
 
 **The signature algorithm used is too weak** (1)
