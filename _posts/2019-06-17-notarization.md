@@ -172,7 +172,7 @@ pkgbuild --component /Applications/sample.app --sign  --sign {identity_installer
 
 ### Case study: Notarize v17.2
 
-#### 1 
+#### Step 1 
 
 Let's use a clean install version of v17.2 and see what happens.
 
@@ -211,7 +211,7 @@ No entitlements, no hardened runtime, just normal ``codesign --deep --force --si
 
 `fail`{:.error}
 
-#### 2
+#### Step 2
 
 Let's just sign all **plugins**, all **native components**, **PHP** and the **SASL plugin** with the ``--timestamp`` option. This should al least take care of the "not signed", "does not include timestamp" and "signature algorithm is too weak" issues. 
 
@@ -227,7 +227,7 @@ Other than the "hardened runtime" exception, ``altool``now  returns the followin
 
 `fail`{:.error}
 
-#### 3 
+#### Step 3 
 
 We could replace **4D Internet Commands** with a newer copy (17R5, for example). Since not all application need this legacy plugin, and a plugin can always be installed at the structure level, we could alternatively remove it from the app.
 
@@ -235,7 +235,7 @@ Either way, the "invalid signature" issues are gone, but we still have the "hard
 
 `fail`{:.error}
 
-#### 4
+#### Step 4
 
 Let's sign **PHP**, **4D Helper** and the app itself with ``--entitlements`` and ``--options=runtime``.
 
