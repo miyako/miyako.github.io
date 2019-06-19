@@ -41,7 +41,7 @@ It seems that in most parts of the world, 4D developers have a very good busines
 - Internet Connection: required, to include a secure timestamp with the signature
 - SDK: 10.9 or later ** 
 
-**\*** Executables include framework, plugin, PHP, JavaScript, HTML, JSON files, as well as tools invoked via ``LAUNCH EXTERNAL PROCESS``.
+**\*** Executables include frameworks, plugins, helpers and tools invoked via ``LAUNCH EXTERNAL PROCESS``.
 
 **\*\*** This does not necessarily mean that the app can't run on macOS 10.8 or earlier. It just means that a newer version of ``codesign`` must be used to sign the app.
 
