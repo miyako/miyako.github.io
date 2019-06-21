@@ -14,3 +14,4 @@ The following plugins have been updated to 10.11 (``i386`` ``x86_64``) and 10.14
 
 - [x] 4d-plugin-common-crypto
 - [x] 4d-plugin-window-button
+- [x] 4d-plugin-gs
