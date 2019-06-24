@@ -6,9 +6,9 @@ tags: plugin graphic v17
 
 Rewrite of [Potrace](http://potrace.sourceforge.net) plugin; project based sample DB and ``PROCESS 4D TAGS`` scaffolding.
 
-[miyako/4d-plugin-potrace-v2](https://github.com/miyako/4d-plugin-potrace-v2)
-
 <!--more-->
+
+[miyako/4d-plugin-potrace-v2](https://github.com/miyako/4d-plugin-potrace-v2)
 
 ---
 
