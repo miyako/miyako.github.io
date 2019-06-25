@@ -223,9 +223,13 @@ Likewise, if the app is signed with the ``--deep`` ``--force`` option, all the s
 
 In addition to the main executable, 2 helpers, **HelperTool** and **InstallTool** are also present in the MacOS folder. These  need to be explicitly signed with hardened runtime entitlements.
 
+**Note**: As of 17R5, it seems the helpers have been replaced by a new **InstallTool** app.
+
 As mentioned above, the XML exported from ``DOM EXPORT TO FILE`` is not a usable property list. It must be converted with ``plutil``. You can confirm that the original property list is corrupt, by running ``codesign -d --entitlements -`` to review the embedded entitlements. 
 
 <i class="fa fa-external-link" aria-hidden="true"></i>[Resolving Common Notarization Issues](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution/resolving_common_notarization_issues?language=objc) 
+
+**Symbolic links** are useful to reference common resources shared across apps and libraries. According to [Gatekeeper Changes in macOS 10.11 and Later](https://developer.apple.com/library/archive/technotes/tn2206/_index.html), symbolic links that "point outside the app bundle" are rejected. If a nested app needs to link to a library or framework outside its bundle, it might be necessary to use ``install_name_tool -change`` and locate the resource, instead of using a symbolic link inside its own "Frameworks" folder.
 
 ---
 
