@@ -98,6 +98,17 @@ source:=Get input source
   <div class="syntax-td cell cell--8">Text input source</div>  
 </div>
 
+Returns an object that contains information about the currently selected keyboard text input source.
+
+#### Text input source
+
+Property|Type|Description
+------------|------|----
+source|OBJECT|
+source.id|TEXT|
+source.name|TEXT|``localizedNameForInputSource``
+source.icon|PICTURE|``kTISPropertyIconRef`` or content of ``kTISPropertyIconImageURL``
+
 ```
 source:=_o_Get input source
 ```
@@ -110,3 +121,5 @@ source:=_o_Get input source
   <div class="syntax-td cell cell--2">TEXT</div>
   <div class="syntax-td cell cell--8">Text input source identifier</div>  
 </div>
+
+Simply returns the identifier string ([``selectedKeyboardInputSource``](https://developer.apple.com/documentation/appkit/nstextinputcontext/1533970-selectedkeyboardinputsource?language=objc)) for the currently selected keyboard text input source.
