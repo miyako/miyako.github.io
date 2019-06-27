@@ -1,6 +1,6 @@
 ---
-layout: Text Input Context 
-title: Imebra
+layout: simple
+title: Text Input Context 
 tags: plugin userinterface japanese v17
 ---
 
@@ -19,6 +19,16 @@ SET INPUT SOURCE (source)
 Parameter|Type|Description
 ------------|------|----
 source|TEXT|``NSTextInputSourceIdentifier``
+
+<div class="grid">
+  <div class="cell cell--4">Parameter</div>
+  <div class="cell cell--2">Type</div>
+  <div class="cell cell--6">Description</div>
+  <div class="cell cell--4">source</div>
+  <div class="cell cell--2">TEXT</div>
+  <div class="cell cell--6">``NSTextInputSourceIdentifier``</div>  
+</div>
+
 
 ```
 GET INPUT SOURCE LOCALES (locales)
