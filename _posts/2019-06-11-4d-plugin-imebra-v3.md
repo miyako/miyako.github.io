@@ -16,11 +16,20 @@ Simple DICOM reader using [Imebra](https://imebra.com) with some [LibGD](https:/
 images:=Imebra Get images (data{;options})
 ```
 
-Parameter|Type|Description
-------------|------|----
-data|BLOB|DICOM file data
-options|OBJECT|see below
-images|OBJECT|see below
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">data</div>
+  <div class="syntax-td cell cell--2">BLOB</div>
+  <div class="syntax-td cell cell--8">DICOM file data</div>  
+  <div class="syntax-td cell cell--2">options</div>
+  <div class="syntax-td cell cell--2">OBJECT</div>
+  <div class="syntax-td cell cell--8">see below/div>  
+  <div class="syntax-td cell cell--2">images</div>
+  <div class="syntax-td cell cell--2">OBJECT</div>
+  <div class="syntax-td cell cell--8">see below/div>      
+</div>
 
 #### Options
 
@@ -52,11 +61,20 @@ images\[\].image|PICTURE|
 images:=Imebra Apply filters (data{;options})
 ```
 
-Parameter|Type|Description
-------------|------|----
-data|BLOB|image data
-options|OBJECT|see below
-images|OBJECT|see below
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">data</div>
+  <div class="syntax-td cell cell--2">BLOB</div>
+  <div class="syntax-td cell cell--8">image data</div>  
+  <div class="syntax-td cell cell--2">options</div>
+  <div class="syntax-td cell cell--2">OBJECT</div>
+  <div class="syntax-td cell cell--8">see below/div>  
+  <div class="syntax-td cell cell--2">images</div>
+  <div class="syntax-td cell cell--2">OBJECT</div>
+  <div class="syntax-td cell cell--8">see below/div>      
+</div>
 
 #### Options
 
