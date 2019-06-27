@@ -55,9 +55,9 @@ SET INPUT SOURCE LOCALES (locales)
   <div class="syntax-td cell cell--8">Text input source locales</div>  
 </div>
 
-pass ``ALL ROMAN INPUT SOURCES`` to specify ``NSAllRomanInputSourcesLocaleIdentifier``.
+Pass ``ALL ROMAN INPUT SOURCES`` to specify ``NSAllRomanInputSourcesLocaleIdentifier``.
 
-pass empty array to allow any locale.
+Pass an empty array to allow any locale.
 
 ```
 INPUT SOURCES LIST (sources)
