@@ -108,6 +108,7 @@ source|OBJECT|
 source.id|TEXT|
 source.name|TEXT|``localizedNameForInputSource``
 source.icon|PICTURE|``kTISPropertyIconRef`` or content of ``kTISPropertyIconImageURL``
+source.languages\[\]|COLLECTION|``kTISPropertyInputSourceLanguages``
 
 ```
 source:=_o_Get input source
