@@ -17,11 +17,11 @@ SET INPUT SOURCE (source)
 ```
 
 <div class="grid">
-  <div class="syntax-th cell cell--3">Parameter</div>
-  <div class="syntax-th cell cell--1">Type</div>
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
   <div class="syntax-th cell cell--8">Description</div>
-  <div class="syntax-td cell cell--3">source</div>
-  <div class="syntax-td cell cell--1">TEXT</div>
+  <div class="syntax-td cell cell--2">source</div>
+  <div class="syntax-td cell cell--2">TEXT</div>
   <div class="syntax-td cell cell--8">Text input source identifier</div>  
 </div>
 
@@ -32,11 +32,11 @@ GET INPUT SOURCE LOCALES (locales)
 ```
 
 <div class="grid">
-  <div class="syntax-th cell cell--3">Parameter</div>
-  <div class="syntax-th cell cell--1">Type</div>
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
   <div class="syntax-th cell cell--8">Description</div>
-  <div class="syntax-td cell cell--3">locales</div>
-  <div class="syntax-td cell cell--1">ARRAY TEXT</div>
+  <div class="syntax-td cell cell--2">locales</div>
+  <div class="syntax-td cell cell--2">ARRAY TEXT</div>
   <div class="syntax-td cell cell--8">Input sources locale identifier</div>  
 </div>
 
