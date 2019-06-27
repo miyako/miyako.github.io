@@ -21,12 +21,12 @@ Parameter|Type|Description
 source|TEXT|``NSTextInputSourceIdentifier``
 
 <div class="grid">
-  <div class="cell cell--4">Parameter</div>
-  <div class="cell cell--2">Type</div>
-  <div class="cell cell--6">Description</div>
-  <div class="cell cell--4">source</div>
-  <div class="cell cell--2">TEXT</div>
-  <div class="cell cell--6">``NSTextInputSourceIdentifier``</div>  
+  <div class="cell cell--3 ">Parameter</div>
+  <div class="cell cell--1">Type</div>
+  <div class="cell cell--auto">Description</div>
+  <div class="cell cell--3">source</div>
+  <div class="cell cell--1">TEXT</div>
+  <div class="cell cell--auto">NSTextInputSourceIdentifier</div>  
 </div>
 
 
