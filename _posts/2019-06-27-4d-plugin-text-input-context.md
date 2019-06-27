@@ -23,10 +23,10 @@ source|TEXT|``NSTextInputSourceIdentifier``
 <div class="grid">
   <div class="syntax-th cell cell--3">Parameter</div>
   <div class="syntax-th cell cell--1">Type</div>
-  <div class="syntax-th cell cell--auto">Description</div>
+  <div class="syntax-th cell cell--8">Description</div>
   <div class="cell cell--3">source</div>
   <div class="cell cell--1">TEXT</div>
-  <div class="cell cell--auto">NSTextInputSourceIdentifier</div>  
+  <div class="cell cell--8">NSTextInputSourceIdentifier</div>  
 </div>
 
 
