@@ -6,7 +6,7 @@ tags: plugin userinterface japanese v17
 
 Manage text input source on macOS using [NSTextInputContext](https://developer.apple.com/documentation/appkit/nstextinputcontext?language=objc).
 
-[miyako/4d-plugin-text-input-service](https://github.com/miyako/4d-plugin-text-input-service)
+[miyako/4d-plugin-text-input-context](https://github.com/miyako/4d-plugin-text-input-context)
 
 <!--more-->
 
