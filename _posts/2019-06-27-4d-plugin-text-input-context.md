@@ -25,7 +25,7 @@ SET INPUT SOURCE (source)
   <div class="syntax-td cell cell--8">Text input source identifier</div>  
 </div>
 
-Pass a ``NSTextInputSourceIdentifier`` e.g. ``com.apple.keylayout.US`` to ``source``.
+Pass an ``NSTextInputSourceIdentifier`` e.g. ``com.apple.keylayout.US`` to ``source``.
 
 ```
 GET INPUT SOURCE LOCALES (locales)
