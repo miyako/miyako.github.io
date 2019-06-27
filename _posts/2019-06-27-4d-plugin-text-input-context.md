@@ -60,7 +60,7 @@ Pass ``ALL ROMAN INPUT SOURCES`` to specify ``NSAllRomanInputSourcesLocaleIdenti
 Pass an empty array to allow any locale.
 
 ```
-INPUT SOURCES LIST (sources)
+sources:=Input sources list
 ```
 
 <div class="grid">
@@ -71,6 +71,16 @@ INPUT SOURCES LIST (sources)
   <div class="syntax-td cell cell--2">COLLECTION</div>
   <div class="syntax-td cell cell--8">Text input sources</div>  
 </div>
+
+Returns a collection of objects that contains information about keyboard text input sources.
+
+#### Text input source
+
+Property|Type|Description
+------------|------|----
+source|OBJECT|
+source.id|TEXT|
+source.name|TEXT|``localizedNameForInputSource``
 
 ```
 _o_INPUT SOURCES LIST (sources)
@@ -84,6 +94,8 @@ _o_INPUT SOURCES LIST (sources)
   <div class="syntax-td cell cell--2">ARRAY TEXT</div>
   <div class="syntax-td cell cell--8">Text input source identifiers</div>  
 </div>
+
+Simply returns an array of identifier string ([``selectedKeyboardInputSource``](https://developer.apple.com/documentation/appkit/nstextinputcontext/1533970-selectedkeyboardinputsource?language=objc)) of keyboard text input sources.
 
 ```
 source:=Get input source
