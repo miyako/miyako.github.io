@@ -22,16 +22,25 @@ SET INPUT SOURCE (source)
   <div class="syntax-th cell cell--8">Description</div>
   <div class="syntax-td cell cell--3">source</div>
   <div class="syntax-td cell cell--1">TEXT</div>
-  <div class="syntax-td cell cell--8">NSTextInputSourceIdentifier</div>  
+  <div class="syntax-td cell cell--8">Text input source identifier</div>  
 </div>
+
+Pass a ``NSTextInputSourceIdentifier`` e.g. ``com.apple.keylayout.US`` to ``source``.
 
 ```
 GET INPUT SOURCE LOCALES (locales)
 ```
 
-Parameter|Type|Description
-------------|------|----
-locales|ARRAY TEXT|``ALL ROMAN INPUT SOURCES`` for ``NSAllRomanInputSourcesLocaleIdentifier``
+<div class="grid">
+  <div class="syntax-th cell cell--3">Parameter</div>
+  <div class="syntax-th cell cell--1">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--3">locales</div>
+  <div class="syntax-td cell cell--1">ARRAY TEXT</div>
+  <div class="syntax-td cell cell--8">Input sources locale identifier</div>  
+</div>
+
+``ALL ROMAN INPUT SOURCES`` is returned for ``NSAllRomanInputSourcesLocaleIdentifier``.
 
 ```
 SET INPUT SOURCE LOCALES (locales)
