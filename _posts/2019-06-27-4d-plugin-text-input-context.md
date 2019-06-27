@@ -16,10 +16,6 @@ Manage text input source on macOS using [NSTextInputContext](https://developer.a
 SET INPUT SOURCE (source)
 ```
 
-Parameter|Type|Description
-------------|------|----
-source|TEXT|``NSTextInputSourceIdentifier``
-
 <div class="grid">
   <div class="syntax-th cell cell--3">Parameter</div>
   <div class="syntax-th cell cell--1">Type</div>
@@ -28,7 +24,6 @@ source|TEXT|``NSTextInputSourceIdentifier``
   <div class="cell cell--1">TEXT</div>
   <div class="cell cell--8">NSTextInputSourceIdentifier</div>  
 </div>
-
 
 ```
 GET INPUT SOURCE LOCALES (locales)
