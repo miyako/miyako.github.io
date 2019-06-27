@@ -221,7 +221,13 @@
 }
 .syntax-th {
   font-weight: map-get($base, font-weight-bold);
+  padding: map-get($spacers, 2);
   border: 1px solid $border-color-l;
   background-color: $text-background-color;
   text-align: center;
+}
+.syntax-td {
+  padding: map-get($spacers, 2);
+  border: 1px solid $border-color-l;
+  text-align: left;
 }
