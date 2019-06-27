@@ -28,7 +28,7 @@ images:=Imebra Get images (data{;options})
   <div class="syntax-td cell cell--8">see below/div>  
   <div class="syntax-td cell cell--2">images</div>
   <div class="syntax-td cell cell--2">OBJECT</div>
-  <div class="syntax-td cell cell--8">see below/div>      
+  <div class="syntax-td cell cell--8">see below</div>      
 </div>
 
 #### Options
@@ -73,7 +73,7 @@ images:=Imebra Apply filters (data{;options})
   <div class="syntax-td cell cell--8">see below/div>  
   <div class="syntax-td cell cell--2">images</div>
   <div class="syntax-td cell cell--2">OBJECT</div>
-  <div class="syntax-td cell cell--8">see below/div>      
+  <div class="syntax-td cell cell--8">see below</div>      
 </div>
 
 #### Options
