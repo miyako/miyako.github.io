@@ -107,6 +107,8 @@ Property|Type|Description
 source|OBJECT|
 source.id|TEXT|
 source.name|TEXT|``localizedNameForInputSource``
+source.category|TEXT|``kTISPropertyInputSourceCategory``
+source.type|TEXT|``kTISPropertyInputSourceType``
 source.icon|PICTURE|``kTISPropertyIconRef`` or content of ``kTISPropertyIconImageURL``
 source.languages\[\]|COLLECTION|``kTISPropertyInputSourceLanguages``
 
