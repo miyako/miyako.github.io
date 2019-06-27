@@ -12,7 +12,7 @@ Simple DICOM reader using [Imebra](https://imebra.com) with some [LibGD](https:/
 
 ---
 
-### Syntax
+#### Syntax
 
 ```
 images:=Imebra Get images (data{;options})
