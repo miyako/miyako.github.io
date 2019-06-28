@@ -55,8 +55,7 @@ fillcolor|TEXT|
 color|TEXT|
 width|TEXT|
 height|TEXT|
-pagesize|TEXT|
-pagesize|TEXT|
+pagesize|TEXT|``A4`` ``A3`` ``A5`` ``B5`` ``Letter`` ``Legal`` ``Tabloid`` ``Statement`` ``Executive`` ``Folio`` ``Quarto`` ``10x14``
 scale|TEXT|
 resolution|TEXT|
 bottommargin|TEXT|
