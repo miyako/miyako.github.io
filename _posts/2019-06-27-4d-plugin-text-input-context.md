@@ -37,6 +37,15 @@ SET INPUT SOURCE (source)
 
 Pass an ``NSTextInputSourceIdentifier`` e.g. ``com.apple.keylayout.US`` to ``source``.
 
+入力ソースを切り替えます。ソースの識別子は，``_o_INPUT SOURCES LIST`` ``_o_Get input source``などから返される文字列です。
+
+例：
+
+``com.apple.inputmethod.Kotoeri.Japanese``  
+``jp.co.ergo.egbridge_universal_2.component.Japanese``  
+``com.justsystems.inputmethod.atok22.Japanese``  
+``com.google.inputmethod.Japanese.base``
+
 ```
 GET INPUT SOURCE LOCALES (locales)
 ```
@@ -51,6 +60,8 @@ GET INPUT SOURCE LOCALES (locales)
 </div>
 
 ``ALL ROMAN INPUT SOURCES`` is returned for ``NSAllRomanInputSourcesLocaleIdentifier``.
+
+カレントの入力ソースが対応しているロケールのリストが返されます。デフォルトは空の配列です。
 
 ```
 SET INPUT SOURCE LOCALES (locales)
@@ -68,6 +79,8 @@ SET INPUT SOURCE LOCALES (locales)
 Pass ``ALL ROMAN INPUT SOURCES`` to specify ``NSAllRomanInputSourcesLocaleIdentifier``.
 
 Pass an empty array to allow any locale.
+
+ロケールは，一般的な言語コードで指定します。英数一般は``ALL ROMAN INPUT SOURCES``定数で指定することができます。空の配列を渡した場合，ロケールの制限はありません。英数モードから復帰する場合，他の言語が制限されたままにならないよう，日本語（``ja``）ではなく，空の配列を渡すようにしてください。
 
 ```
 sources:=Input sources list
