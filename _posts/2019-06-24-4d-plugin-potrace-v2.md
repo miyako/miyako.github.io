@@ -55,6 +55,14 @@ fillcolor|TEXT|
 color|TEXT|
 width|TEXT|
 height|TEXT|
+pagesize|TEXT|
+pagesize|TEXT|
+scale|TEXT|
+resolution|TEXT|
+bottommargin|TEXT|
+topmargin|TEXT|
+rightmargin|TEXT|
+leftmargin|TEXT|
 
 ```
 image:=Mkbitmap (data{;options})
