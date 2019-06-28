@@ -97,6 +97,8 @@ sources:=Input sources list
 
 Returns a collection of objects that contains information about keyboard text input sources.
 
+選択できる入力モードのコレクションが返されます。キーボードビューアや絵文字と記号のパレットは含まれません。``_o_``は，単純に識別子だけが配列で返されます。
+
 #### Text input source
 
 Property|Type|Description
@@ -134,6 +136,8 @@ source:=Get input source
 </div>
 
 Returns an object that contains information about the currently selected keyboard text input source.
+
+カレントの入力モードに関する情報がオブジェクト型で返されます。``_o_``は，単純に識別子だけが文字列で返されます。
 
 #### Text input source
 
