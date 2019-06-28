@@ -12,6 +12,16 @@ Manage text input source on macOS using [NSTextInputContext](https://developer.a
 
 ---
 
+* サンプルプログラムは，プロジェクトモードで開いてください。（17r5以降）
+
+* オブジェクト型やコレクション型を使用しています。（v17以降）
+
+* スレッドセーフです。
+
+* v16以前で使用する場合，Releasesから``1.0``版をダウンロードしてください。
+
+* ``-carbon``とタグ付けされているリリースは，32/64ビット対応です。
+
 ```
 SET INPUT SOURCE (source)
 ```
