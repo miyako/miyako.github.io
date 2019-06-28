@@ -51,6 +51,10 @@ stretch|REAL|
 unit|REAL|
 group|TEXT|``flat`` ``connected`` ``hierarchical``
 longcoding|BOOLEAN|
+fillcolor|TEXT|
+color|TEXT|
+width|TEXT|
+height|TEXT|
 
 ```
 image:=Mkbitmap (data{;options})
