@@ -31,6 +31,12 @@ image:=Potrace (data{;options})
   <div class="syntax-td cell cell--8"></div>    
 </div>
 
+#### Options
+
+Property|Type|Description
+------------|------|----
+format|TEXT|``.svg`` ``.pdf``
+
 ```
 image:=Mkbitmap (data{;options})
 ```
@@ -49,3 +55,5 @@ image:=Mkbitmap (data{;options})
   <div class="syntax-td cell cell--2">OBJECT</div>
   <div class="syntax-td cell cell--8"></div>    
 </div>
+
+***not implemented***
