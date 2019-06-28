@@ -36,6 +36,7 @@ image:=Potrace (data{;options})
 Property|Type|Description
 ------------|------|----
 format|TEXT|``.svg`` ``.pdf``
+policy|TEXT|``black`` ``white`` ``right`` ``left`` ``minority`` ``majority`` ``random``
 
 ```
 image:=Mkbitmap (data{;options})
