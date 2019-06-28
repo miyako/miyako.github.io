@@ -37,6 +37,20 @@ Property|Type|Description
 ------------|------|----
 format|TEXT|``.svg`` ``.pdf``
 policy|TEXT|``black`` ``white`` ``right`` ``left`` ``minority`` ``majority`` ``random``
+turdsize|LONGINT|
+alphamax|REAL|
+opticurve|BOOLEAN|
+opttolerance|REAL|
+opaque|BOOLEAN|
+invert|BOOLEAN|
+tight|BOOLEAN|
+angle|REAL|
+gamma|REAL|
+blacklevel|REAL|
+stretch|REAL|
+unit|REAL|
+group|TEXT|``flat`` ``connected`` ``hierarchical``
+longcoding|BOOLEAN|
 
 ```
 image:=Mkbitmap (data{;options})
