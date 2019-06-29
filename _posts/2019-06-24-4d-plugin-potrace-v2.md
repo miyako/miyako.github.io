@@ -18,8 +18,6 @@ Rewrite of [Potrace](http://potrace.sourceforge.net) plugin; project based sampl
 
 * スレッドセーフです。
 
-* バックエンドは，SVGとPDFだけがサポートされています。
-
 ```
 image:=Potrace (data{;options})
 ```
