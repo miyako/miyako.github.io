@@ -14,9 +14,11 @@ Rewrite of [Potrace](http://potrace.sourceforge.net) plugin; project based sampl
 
 * サンプルプログラムは，プロジェクトモードで開いてください。（17r5以降）
 
-* オブジェクト型やコレクション型を使用しています。（v17以降）
+* オブジェクト型を使用しています。（v17以降）
 
 * スレッドセーフです。
+
+* バックエンドは，SVGとPDFだけがサポートされています。
 
 ```
 image:=Potrace (data{;options})
