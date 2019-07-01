@@ -18,6 +18,8 @@ Rewrite of [Potrace](http://potrace.sourceforge.net) plugin; project based sampl
 
 * スレッドセーフです。
 
+* カラー画像をトレース用にフィルターされた白黒画像に変換するメソッドを追加しました。（``mkbitmap``）
+
 ```
 image:=Potrace (data{;options})
 ```
