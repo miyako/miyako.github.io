@@ -84,8 +84,21 @@ image:=Mkbitmap (data{;options})
   <div class="syntax-td cell cell--2">OBJECT</div>
   <div class="syntax-td cell cell--8"></div>  
   <div class="syntax-td cell cell--2">image</div>
-  <div class="syntax-td cell cell--2">OBJECT</div>
+  <div class="syntax-td cell cell--2">BLOB</div>
   <div class="syntax-td cell cell--8"></div>    
 </div>
 
-***not implemented***
+#### Options
+
+Property|Type|Description
+------------|------|----
+filter|REAL|
+blur|REAL|
+scale|REAL|
+threshold|REAL|
+grey|BOOLEAN|
+linear|BOOLEAN|
+cubic|BOOLEAN|
+nofilter|BOOLEAN|
+invert|BOOLEAN|
+nodefaults|BOOLEAN|
