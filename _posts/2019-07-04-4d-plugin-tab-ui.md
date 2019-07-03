@@ -57,7 +57,10 @@ Pass ``1`` in mode to force tabbing. Pass ``0`` to respect system preferences.
 
 Passing an empty string will disable tabbing (merged windows stay merged).
 
-**Note**: Design mode windows share the id "4D Forms and Methods".
+**Note**: You can merge your custom window with design mode windows by assigning the ID ``4D Forms and Methods``.
+
+![](https://user-images.githubusercontent.com/1725068/60555052-a961bc80-9d75-11e9-8b76-8b484a798d0e.png){:.image .image--xl .shadow}
+
 
 ```
 TOGGLE WINDOW TAB OVERVIEW (window)
