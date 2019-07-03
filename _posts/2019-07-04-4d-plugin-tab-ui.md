@@ -1,6 +1,6 @@
 ---
 layout: simple
-title: Window tabbing
+title: Window Tabbing
 tags: plugin mac v17
 ---
 
@@ -77,3 +77,59 @@ Invokes [``toggleTabOverview:``](https://developer.apple.com/documentation/appki
 `macOS 10.13+`{:.info}
 
 ![](https://user-images.githubusercontent.com/1725068/60555051-a8c92600-9d75-11e9-869e-712b3c3db19f.png){:.image .image--xl .shadow}
+
+```
+TOGGLE WINDOW TAB BAR (window)
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">window</div>
+  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--8"></div>  
+</div>
+
+**Note**: By default, a tabbable window with single member has no tab bar. If the window contains multiple members, the tab bar can not be hidden.
+
+```
+MERGE ALL WINDOWS (window)
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">window</div>
+  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--8"></div>  
+</div>
+
+Merges all other windows with the same ID to the specified window.
+
+```
+SELECT NEXT WINDOW TAB (window)
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">window</div>
+  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--8"></div>  
+</div>
+
+```
+SELECT PREVIOUS WINDOW TAB (window)
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">window</div>
+  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--8"></div>  
+</div>
