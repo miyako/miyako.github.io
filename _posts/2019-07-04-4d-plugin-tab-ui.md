@@ -1,7 +1,7 @@
 ---
 layout: simple
 title: Window Tabbing
-tags: plugin mac v17
+tags: plugin userinterface mac v17
 ---
 
 Window tabbing for macOS.
