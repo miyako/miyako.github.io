@@ -43,7 +43,6 @@ Creates a websocket server object.
 Property|Type|Description
 ------------|------|----
 method|TEXT|name of project method to invoke on event
-name|TEXT|name of process to launch on event
 window|LONGINT|value passed on as parameter to method (``$4``)
 process|LONGINT|value passed on as parameter to method (``$5``)
 port|LONGINT|used to configure the server 
@@ -78,7 +77,6 @@ Creates a websocket client object.
 Property|Type|Description
 ------------|------|----
 method|TEXT|name of project method to invoke on event
-name|TEXT|name of process to launch on event
 window|LONGINT|value passed on as parameter to method (``$4``)
 process|LONGINT|value passed on as parameter to method (``$5``)
 url|TEXT|used to configure the client 
