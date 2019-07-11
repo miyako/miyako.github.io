@@ -1,6 +1,6 @@
 ---
 layout: simple
-title: STOMP
+title: WebSocket
 tags: plugin network v17
 ---
 
