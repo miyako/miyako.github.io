@@ -128,3 +128,40 @@ The return object contains the current configuration plus a ``ref`` property.
 </div>
 
 The method is executed in a local process named ``$websocket_event_queue``. 
+
+#### Context
+
+For message, ping, pong, fragment
+
+Property|Type|Description
+------------|------|----
+wireSize|LONGINT|
+binary|BOOLEAN|
+data|TEXT|
+
+For open
+
+Property|Type|Description
+------------|------|----
+uri|TEXT|
+
+Headers are added as key value pair.
+
+For error
+
+Property|Type|Description
+------------|------|----
+decompressionError|BOOLEAN|
+reason|TEXT|
+http_status|LONGINT|
+wait_time|REAL|
+retries|LONGINT|
+
+For close
+
+Property|Type|Description
+------------|------|----
+code|LONGINT|
+reason|TEXT|
+remote|BOOLEAN|
+
