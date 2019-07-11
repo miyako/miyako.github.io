@@ -43,9 +43,9 @@ Creates a websocket server object.
 Property|Type|Description
 ------------|------|----
 method|TEXT|name of project method to invoke on event
-window|LONGINT|value passed on as parameter to method (``$4``)
 worker|TEXT|value passed on as parameter to method (``$5``)
-process|LONGINT|value passed on as parameter to method (``$6``)
+window|LONGINT|value passed on as parameter to method (``$6``)
+process|LONGINT|value passed on as parameter to method (``$7``)
 port|LONGINT|used to configure the server 
 host|TEXT|used to configure the server 
 backlog|LONGINT|used to configure the server 
@@ -78,9 +78,9 @@ Creates a websocket client object.
 Property|Type|Description
 ------------|------|----
 method|TEXT|name of project method to invoke on event
-window|LONGINT|value passed on as parameter to method (``$4``)
 worker|TEXT|value passed on as parameter to method (``$5``)
-process|LONGINT|value passed on as parameter to method (``$6``)
+window|LONGINT|value passed on as parameter to method (``$6``)
+process|LONGINT|value passed on as parameter to method (``$7``)
 url|TEXT|used to configure the client 
 pingInterval|LONGINT|used to configure the client 
 pingTimeout|LONGINT|used to configure the client 
@@ -109,17 +109,22 @@ The return object contains the current configuration plus a ``ref`` property.
 <div class="syntax-td cell cell--8">0 for client side messages</div>  
 <div class="syntax-td cell cell--2">client</div>
 <div class="syntax-td cell cell--2">LONGINT</div>
-<div class="syntax-td cell cell--8"></div>   
+<div class="syntax-td cell cell--8"></div>  
+<div class="syntax-td cell cell--2">type</div>
+<div class="syntax-td cell cell--2">TEXT</div>
+<div class="syntax-td cell cell--8">open, close, error, fragment, ping, pong, message</div>   
 <div class="syntax-td cell cell--2">context</div>
 <div class="syntax-td cell cell--2">TEXT</div>
 <div class="syntax-td cell cell--8">JSON format</div>   
-<div class="syntax-td cell cell--2">window</div>
-<div class="syntax-td cell cell--2">LONGINT</div>
-<div class="syntax-td cell cell--8"></div>   
 <div class="syntax-td cell cell--2">worker</div>
 <div class="syntax-td cell cell--2">TEXT</div>
+<div class="syntax-td cell cell--8"> </div>   
+<div class="syntax-td cell cell--2">window</div>
+<div class="syntax-td cell cell--2">LONGINT</div>
 <div class="syntax-td cell cell--8"></div>   
 <div class="syntax-td cell cell--2">process</div>
 <div class="syntax-td cell cell--2">LONGINT</div>
 <div class="syntax-td cell cell--8"></div>   
 </div>
+
+The method is executed in a local process named ``$websocket_event_queue``. 
