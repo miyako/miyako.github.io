@@ -92,7 +92,7 @@ perMessageDeflate.clientNoContextTakeover|BOOLEAN|used to configure the client
 perMessageDeflate.serverNoContextTakeover|BOOLEAN|used to configure the client 
 perMessageDeflate.serverMaxWindowBits|LONGINT|used to configure the client 
 perMessageDeflate.clientMaxWindowBits|LONGINT|used to configure the client 
-disablePerMessageDeflate|BOOLEAN|mutually excludive with ``perMessageDeflate``
+disablePerMessageDeflate|BOOLEAN|mutually exclusive with ``perMessageDeflate``
 
 The return object contains the current configuration plus a ``ref`` property.
 
