@@ -129,7 +129,7 @@ The return object contains the current configuration plus a ``ref`` property.
 
 The method is executed in a local process named ``$websocket_event_queue``. 
 
-**Note**: Try not to abort this process from the debugger (let it exit gracefully). If a debug window displayed via ``TRACE`` is aborted, the callback method is no longer executed. By contrast, a debug window displayed via a break point does not prevent subsequent calls, but closing the application which such window is open may hang the application. You might want to delegate the response to a new process or a worker. In fact, that is the intended purpose of the parameters ``process``, ``window`` and ``worker``. 
+**Note**: Try not to abort this process from the debugger (let it exit gracefully). If a debug window displayed via ``TRACE`` is aborted, the callback method is no longer executed. By contrast, a debug window displayed via a break point does not prevent subsequent calls, but closing the application while such window is running may hang the application. You might want to delegate the response to a new process or a worker. In fact, that is the intended purpose of the parameters ``process``, ``window`` and ``worker``. 
 
 #### Context
 
