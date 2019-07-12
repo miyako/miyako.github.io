@@ -136,7 +136,7 @@ For message, ping, pong, fragment
 Property|Type|Description
 ------------|------|----
 wireSize|LONGINT|
-binary|BOOLEAN|
+binary|BOOLEAN|always ``false`` if the plugin is used to ``send()``
 data|TEXT|
 
 For open
