@@ -165,3 +165,247 @@ code|LONGINT|
 reason|TEXT|
 remote|BOOLEAN|
 
+```
+status:=Websocket server start (server)
+```
+
+<div class="grid">
+<div class="syntax-th cell cell--2">Parameter</div>
+<div class="syntax-th cell cell--2">Type</div>
+<div class="syntax-th cell cell--8">Description</div>
+<div class="syntax-td cell cell--2">status</div>
+<div class="syntax-td cell cell--2">OBJECT</div>
+<div class="syntax-td cell cell--8"></div>  
+<div class="syntax-td cell cell--2">server</div>
+<div class="syntax-td cell cell--2">OBJECT</div>
+<div class="syntax-td cell cell--8">must at least contain ref</div>   
+</div>
+
+Start a websocket server.
+
+サーバーを開始します。
+
+The ``server`` object may optionally contain  ``method`` ``worker`` ``window`` ``process``  to modify current configuration. Other proprties are mutable.
+
+#### Status
+
+Property|Type|Description
+------------|------|----
+success|BOOLEAN|
+message|TEXT|
+
+```
+status:=Websocket client start (client)
+```
+
+<div class="grid">
+<div class="syntax-th cell cell--2">Parameter</div>
+<div class="syntax-th cell cell--2">Type</div>
+<div class="syntax-th cell cell--8">Description</div>
+<div class="syntax-td cell cell--2">status</div>
+<div class="syntax-td cell cell--2">OBJECT</div>
+<div class="syntax-td cell cell--8"></div>  
+<div class="syntax-td cell cell--2">client</div>
+<div class="syntax-td cell cell--2">OBJECT</div>
+<div class="syntax-td cell cell--8">must at least contain ref</div>   
+</div>
+
+Start a websocket client.
+
+クライアントを開始します。
+
+The ``client`` object may optionally contain a connection ``timeout`` property (default: ``20`` seconds).
+
+It may also contain ``method`` ``worker`` ``window`` ``process`` ``url`` ``pingInterval`` ``pingTimeout`` ``enableAutomaticReconnection`` ``enablePong`` ``perMessageDeflate`` ``disablePerMessageDeflate`` to modify current configuration.
+
+#### Status
+
+Property|Type|Description
+------------|------|----
+success|BOOLEAN|
+http_status|LONGINT|
+errorStr|TEXT|
+uri|TEXT|
+headers|OBJECT|
+
+```
+status:=Websocket server stop (server)
+```
+
+<div class="grid">
+<div class="syntax-th cell cell--2">Parameter</div>
+<div class="syntax-th cell cell--2">Type</div>
+<div class="syntax-th cell cell--8">Description</div>
+<div class="syntax-td cell cell--2">status</div>
+<div class="syntax-td cell cell--2">OBJECT</div>
+<div class="syntax-td cell cell--8"></div>  
+<div class="syntax-td cell cell--2">server</div>
+<div class="syntax-td cell cell--2">OBJECT</div>
+<div class="syntax-td cell cell--8">must at least contain ref</div>   
+</div>
+
+Stop a websocket server.
+
+サーバーを停止します。
+
+The ``server`` object may contain properties (see ``Websocket server start``) to be used the next time the server is started. The ``status`` object is a copy of the server object with updated properties.
+
+```
+status:=Websocket client stop (client)
+```
+
+<div class="grid">
+<div class="syntax-th cell cell--2">Parameter</div>
+<div class="syntax-th cell cell--2">Type</div>
+<div class="syntax-th cell cell--8">Description</div>
+<div class="syntax-td cell cell--2">status</div>
+<div class="syntax-td cell cell--2">OBJECT</div>
+<div class="syntax-td cell cell--8"></div>  
+<div class="syntax-td cell cell--2">client</div>
+<div class="syntax-td cell cell--2">OBJECT</div>
+<div class="syntax-td cell cell--8">must at least contain ref</div>   
+</div>
+
+Stop a websocket client.
+
+クライアントを停止します。
+
+The ``client`` object may contain properties (see ``Websocket client start``) to be used the next time the server is started. The ``status`` object is a copy of the client object with updated properties.
+
+```
+status:=Websocket server send (server;data)
+```
+
+<div class="grid">
+<div class="syntax-th cell cell--2">Parameter</div>
+<div class="syntax-th cell cell--2">Type</div>
+<div class="syntax-th cell cell--8">Description</div>
+<div class="syntax-td cell cell--2">statuses</div>
+<div class="syntax-td cell cell--2">COLLECTION</div>
+<div class="syntax-td cell cell--8"></div>  
+<div class="syntax-td cell cell--2">server</div>
+<div class="syntax-td cell cell--2">OBJECT</div>
+<div class="syntax-td cell cell--8">must at least contain ref</div>   
+<div class="syntax-td cell cell--2">data</div>
+<div class="syntax-td cell cell--2">BLOB</div>
+<div class="syntax-td cell cell--8"></div>   
+</div>
+
+Send data to connected clients.
+
+クライアントにデータを送信します。
+
+The ``server`` object may optionally contain a ``clients`` property, which is a collection of integer (client ``ref``) to send data to a select target. Otherwise, data is sent to all clients connected to the server. 
+
+A status object is returned for each target.
+
+#### Status
+
+Property|Type|Description
+------------|------|----
+success|BOOLEAN|
+compressionError|BOOLEAN|
+payloadSize|LONGINT|
+wireSize|LONGINT|
+client|LONGINT|
+
+```
+status:=Websocket client send (client;data)
+```
+
+<div class="grid">
+<div class="syntax-th cell cell--2">Parameter</div>
+<div class="syntax-th cell cell--2">Type</div>
+<div class="syntax-th cell cell--8">Description</div>
+<div class="syntax-td cell cell--2">status</div>
+<div class="syntax-td cell cell--2">OBJECT</div>
+<div class="syntax-td cell cell--8"></div>  
+<div class="syntax-td cell cell--2">client</div>
+<div class="syntax-td cell cell--2">OBJECT</div>
+<div class="syntax-td cell cell--8">must at least contain ref</div>   
+<div class="syntax-td cell cell--2">data</div>
+<div class="syntax-td cell cell--2">BLOB</div>
+<div class="syntax-td cell cell--8"></div>   
+</div>
+
+Send data to connected server.
+
+サーバーにデータを送信します。
+
+#### Status
+
+Property|Type|Description
+------------|------|----
+success|BOOLEAN|
+compressionError|BOOLEAN|
+payloadSize|LONGINT|
+wireSize|LONGINT|
+
+```
+status:=Websocket server clear (server)
+```
+
+<div class="grid">
+<div class="syntax-th cell cell--2">Parameter</div>
+<div class="syntax-th cell cell--2">Type</div>
+<div class="syntax-th cell cell--8">Description</div>
+<div class="syntax-td cell cell--2">status</div>
+<div class="syntax-td cell cell--2">OBJECT</div>
+<div class="syntax-td cell cell--8"></div>  
+<div class="syntax-td cell cell--2">server</div>
+<div class="syntax-td cell cell--2">OBJECT</div>
+<div class="syntax-td cell cell--8">must at least contain ref</div>    
+</div>
+
+Dispose a server.
+
+サーバーオブジェクトを破棄します。
+
+All remaining objects are automatically cleared on exit. 
+
+The returned object is empty (unused).
+
+```
+status:=Websocket client clear (server)
+```
+
+<div class="grid">
+<div class="syntax-th cell cell--2">Parameter</div>
+<div class="syntax-th cell cell--2">Type</div>
+<div class="syntax-th cell cell--8">Description</div>
+<div class="syntax-td cell cell--2">status</div>
+<div class="syntax-td cell cell--2">OBJECT</div>
+<div class="syntax-td cell cell--8"></div>  
+<div class="syntax-td cell cell--2">client</div>
+<div class="syntax-td cell cell--2">OBJECT</div>
+<div class="syntax-td cell cell--8">must at least contain ref</div>    
+</div>
+
+Dispose a client.
+
+クライアントオブジェクトを破棄します。
+
+All remaining objects are automatically cleared on exit. 
+
+The returned object is empty (unused).
+
+```
+status:=Websocket server clients (server)
+```
+
+<div class="grid">
+<div class="syntax-th cell cell--2">Parameter</div>
+<div class="syntax-th cell cell--2">Type</div>
+<div class="syntax-th cell cell--8">Description</div>
+<div class="syntax-td cell cell--2">clients</div>
+<div class="syntax-td cell cell--2">COLLECTION</div>
+<div class="syntax-td cell cell--8"></div>  
+<div class="syntax-td cell cell--2">server</div>
+<div class="syntax-td cell cell--2">OBJECT</div>
+<div class="syntax-td cell cell--8">must at least contain ref</div>    
+</div>
+
+Returns a list of connected clients (integer ``ref``).
+
+サーバーに接続しているクライアントの参照番号を返します。
+
