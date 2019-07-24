@@ -1,6 +1,6 @@
 ---
 layout: simple
-title: Tidy
+title: Input Scope
 tags: plugin text userinterface v17
 ---
 
