@@ -1,6 +1,6 @@
 ---
 layout: simple
-title: Tiny
+title: Tidy
 tags: plugin html v17
 ---
 
