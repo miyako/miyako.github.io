@@ -6,9 +6,9 @@ tags: plugin graphic v17
 
 Simple DICOM reader using [Imebra](https://imebra.com) with some [LibGD](https://libgd.github.io) filters.
 
-[miyako/4d-plugin-imebra-v3](https://github.com/miyako/4d-plugin-imebra-v3)
-
 <!--more-->
+
+[miyako/4d-plugin-imebra-v3](https://github.com/miyako/4d-plugin-imebra-v3)
 
 ---
 
