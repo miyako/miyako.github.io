@@ -1,7 +1,7 @@
 ---
 layout: simple
 title: Input Scope
-tags: plugin text userinterface v17
+tags: plugin text windows userinterface v17
 ---
 
 Simple wrapper for [SetInputScope](https://docs.microsoft.com/ja-jp/windows/win32/api/inputscope/nf-inputscope-setinputscope).
