@@ -82,6 +82,8 @@ hash:=SHA224 (value;format)
 hash:=SHA256 (value;format)
 hash:=SHA384 (value;format)
 hash:=SHA512 (value;format)
+hash:=SHA512_224 (value;format)
+hash:=SHA512_256 (value;format)
 ```
 
 <div class="grid">
