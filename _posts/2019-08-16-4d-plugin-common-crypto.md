@@ -189,3 +189,57 @@ hash:=AES256 (value;password;operation;mode;format)
   <div class="syntax-td cell cell--2">TEXT</div>
   <div class="syntax-td cell cell--8"></div>  
 </div>
+
+#### [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
+
+```
+hash:=RSASHA1 (value;key;format)
+hash:=RSASHA256 (value;key;format)
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">value</div>
+  <div class="syntax-td cell cell--2">BLOB</div>
+  <div class="syntax-td cell cell--8"></div>  
+  <div class="syntax-td cell cell--2">key</div>
+  <div class="syntax-td cell cell--2">BLOB</div>
+  <div class="syntax-td cell cell--8"></div> 
+  <div class="syntax-td cell cell--2">format</div>
+  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--8"></div>  
+  <div class="syntax-td cell cell--2">hash</div>
+  <div class="syntax-td cell cell--2">TEXT</div>
+  <div class="syntax-td cell cell--8"></div>  
+</div>
+
+```
+ok:=RSAVERIFYSHA1 (value;key;result;format)
+ok:=RSAVERIFYSHA256 (value;key;result;format)
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">value</div>
+  <div class="syntax-td cell cell--2">BLOB</div>
+  <div class="syntax-td cell cell--8"></div>  
+  <div class="syntax-td cell cell--2">key</div>
+  <div class="syntax-td cell cell--2">BLOB</div>
+  <div class="syntax-td cell cell--8"></div> 
+  <div class="syntax-td cell cell--2">result</div>
+  <div class="syntax-td cell cell--2">TEXT</div>
+  <div class="syntax-td cell cell--8"></div> 
+  <div class="syntax-td cell cell--2">format</div>
+  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--8"></div>  
+  <div class="syntax-td cell cell--2">ok</div>
+  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--8"></div>  
+</div>
+
+
+
