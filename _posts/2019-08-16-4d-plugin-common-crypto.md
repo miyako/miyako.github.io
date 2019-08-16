@@ -168,6 +168,14 @@ hash:=AES192 (value;password;operation;mode;format)
 hash:=AES256 (value;password;operation;mode;format)
 ```
 
+```
+hash:=AES128 (value;"";operation;mode;format;key;iv)
+hash:=AES192 (value;"";operation;mode;format;key;iv)
+hash:=AES256 (value;"";operation;mode;format;key;iv)
+```
+
+use either a password or key/iv pair.
+
 <div class="grid">
   <div class="syntax-th cell cell--2">Parameter</div>
   <div class="syntax-th cell cell--2">Type</div>
