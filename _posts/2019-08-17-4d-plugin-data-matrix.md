@@ -67,3 +67,57 @@ value:=DMTX Read image (barcode;values)
   <div class="syntax-td cell cell--2">TEXT</div>
   <div class="syntax-td cell cell--8"></div>    
 </div>
+
+#### DMTX Scheme
+
+Property|Type|Description
+------------|------|----
+DMTX Scheme ASCII|LONGINT|
+DMTX Scheme C40|LONGINT|
+DMTX Scheme Text|LONGINT|
+DMTX Scheme X12|LONGINT|
+DMTX Scheme Edifact|LONGINT|
+DMTX Scheme Base256|LONGINT|
+
+#### DMTX Scheme
+
+Property|Type|Description
+------------|------|----
+DMTX Format JPG|LONGINT|
+DMTX Format SVG|LONGINT|
+DMTX Format PNG|LONGINT|
+
+#### DMTX Symbol Size
+
+Property|Type|Description
+------------|------|----
+DMTX Symbol 10x10|LONGINT|
+DMTX Symbol 12x12|LONGINT|
+DMTX Symbol 14x14|LONGINT|
+DMTX Symbol 16x16|LONGINT|
+DMTX Symbol 18x18|LONGINT|
+DMTX Symbol 20x20|LONGINT|
+DMTX Symbol 22x22|LONGINT|
+DMTX Symbol 24x24|LONGINT|
+DMTX Symbol 26x26|LONGINT|
+DMTX Symbol 32x32|LONGINT|
+DMTX Symbol 36x36|LONGINT|
+DMTX Symbol 40x40|LONGINT|
+DMTX Symbol 44x44|LONGINT|
+DMTX Symbol 48x48|LONGINT|
+DMTX Symbol 52x52|LONGINT|
+DMTX Symbol 64x64|LONGINT|
+DMTX Symbol 72x72|LONGINT|
+DMTX Symbol 80x80|LONGINT|
+DMTX Symbol 88x88|LONGINT|
+DMTX Symbol 96x96|LONGINT|
+DMTX Symbol 104x104|LONGINT|
+DMTX Symbol 120x120|LONGINT|
+DMTX Symbol 132x132|LONGINT|
+DMTX Symbol 144x144|LONGINT|
+DMTX Symbol 8x18|LONGINT|
+DMTX Symbol 8x32|LONGINT|
+DMTX Symbol 12x26|LONGINT|
+DMTX Symbol 12x36|LONGINT|
+DMTX Symbol 16x36|LONGINT|
+DMTX Symbol 16x48|LONGINT|
