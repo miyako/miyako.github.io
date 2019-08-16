@@ -43,5 +43,27 @@ barcode:=DMTX (value;format;scheme;module;symbol;margin;dpi;output)
   <div class="syntax-td cell cell--8"></div>
   <div class="syntax-td cell cell--2">output</div>
   <div class="syntax-td cell cell--2">TEXT</div>
-  <div class="syntax-td cell cell--8">result text</div>  
+  <div class="syntax-td cell cell--8">result text</div> 
+  <div class="syntax-td cell cell--2">barcode</div>
+  <div class="syntax-td cell cell--2">PICTURE</div>
+  <div class="syntax-td cell cell--8"></div>  
+</div>
+
+```
+value:=DMTX Read image (barcode;values)
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">value</div>
+  <div class="syntax-td cell cell--2">PICTURE</div>
+  <div class="syntax-td cell cell--8"></div>  
+  <div class="syntax-td cell cell--2">values</div>
+  <div class="syntax-td cell cell--2">TEXT ARRAY</div>
+  <div class="syntax-td cell cell--8"></div>  
+  <div class="syntax-td cell cell--2">value</div>
+  <div class="syntax-td cell cell--2">TEXT</div>
+  <div class="syntax-td cell cell--8"></div>    
 </div>
