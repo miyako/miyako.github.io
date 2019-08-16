@@ -4,7 +4,7 @@ title: Common Crypto
 tags: plugin text v17
 ---
 
-Cryptographic hash functions based on OpenSSL.
+Cryptographic hash functions based on [OpenSSL](https://www.openssl.org/source/).
 
 <!--more-->
 
