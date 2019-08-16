@@ -127,6 +127,8 @@ hash:=SHAKE256 (value;format)
   <div class="syntax-td cell cell--8"></div>  
 </div>
 
+``SHAKE128`` and ``SHAKE256`` output length is fixed to ``256`` and ``512`` respectively.
+
 #### [HMAC](https://en.wikipedia.org/wiki/HMAC)
 
 ```
