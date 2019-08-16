@@ -142,8 +142,6 @@ hash:=HMACSHA3_224 (key;value;format)
 hash:=HMACSHA3_256 (key;value;format)
 hash:=HMACSHA3_384 (key;value;format)
 hash:=HMACSHA3_512 (key;value;format)
-hash:=HMACSHAKE128 (key;value;format)
-hash:=HMACSHAKE256 (key;value;format)
 ```
 
 <div class="grid">
