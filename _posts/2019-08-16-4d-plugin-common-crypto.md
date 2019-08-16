@@ -98,3 +98,50 @@ hash:=SHA512 (value;format)
   <div class="syntax-td cell cell--2">TEXT</div>
   <div class="syntax-td cell cell--8"></div>  
 </div>
+
+#### [SHA-3](https://en.wikipedia.org/wiki/SHA-3)
+
+```
+hash:=SHA3_224 (value;format)
+hash:=SHA3_256 (value;format)
+hash:=SHA3_384 (value;format)
+hash:=SHA3_512 (value;format)
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">value</div>
+  <div class="syntax-td cell cell--2">BLOB</div>
+  <div class="syntax-td cell cell--8"></div>  
+  <div class="syntax-td cell cell--2">format</div>
+  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--8"></div>  
+  <div class="syntax-td cell cell--2">hash</div>
+  <div class="syntax-td cell cell--2">TEXT</div>
+  <div class="syntax-td cell cell--8"></div>  
+</div>
+
+#### [HMAC](https://en.wikipedia.org/wiki/HMAC)
+
+```
+hash:=HMACMD5 (key;value;format)
+hash:=HMACSHA1 (key;value;format)
+hash:=HMACSHA224 (key;value;format)
+hash:=HMACSHA256 (key;value;format)
+hash:=HMACSHA384 (key;value;format)
+hash:=HMACSHA512 (key;value;format)
+hash:=HMACSHA3_224 (key;value;format)
+hash:=HMACSHA3_256 (key;value;format)
+hash:=HMACSHA3_384 (key;value;format)
+hash:=HMACSHA3_512 (key;value;format)
+```
+
+#### [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
+
+```
+hash:=AES128 (value;password;operation;mode;format)
+hash:=AES192 (value;password;operation;mode;format)
+hash:=AES256 (value;password;operation;mode;format)
+```
