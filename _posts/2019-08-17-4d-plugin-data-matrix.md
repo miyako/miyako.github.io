@@ -18,7 +18,7 @@ Barcode generator based on [libdmtx](https://github.com/dmtx/libdmtx).
 
 * スレッドセーフです。
 
-* ``DMTX Read image``と``DMTX Read images``はWindows 7では**スレッドアンセーフ**です。
+**Attention** ``DMTX Read image`` and ``DMTX Read images`` are **thread-unsafe** on Windows 7 due to the use of [SHCreateMemStream](https://docs.microsoft.com/en-us/windows/win32/api/shlwapi/nf-shlwapi-shcreatememstream).
 
 ```
 barcode:=DMTX (value;format;scheme;module;symbol;margin;dpi;output)
