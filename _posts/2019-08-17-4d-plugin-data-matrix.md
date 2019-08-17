@@ -12,6 +12,14 @@ Barcode generator based on [libdmtx](https://github.com/dmtx/libdmtx).
 
 ---
 
+* サンプルプログラムは，プロジェクトモードで開いてください。（17r5以降）
+
+* オブジェクト型を使用しています。（v17以降）
+
+* スレッドセーフです。
+
+* ``DMTX Read image``と``DMTX Read images``はWindows 7では**スレッドアンセーフ**です。
+
 ```
 barcode:=DMTX (value;format;scheme;module;symbol;margin;dpi;output)
 ```
@@ -50,7 +58,8 @@ barcode:=DMTX (value;format;scheme;module;symbol;margin;dpi;output)
 </div>
 
 ```
-value:=DMTX Read image (barcode;values)
+value:=DMTX Read image (barcode)
+values:=DMTX Read images (barcode)
 ```
 
 <div class="grid">
@@ -60,12 +69,12 @@ value:=DMTX Read image (barcode;values)
   <div class="syntax-td cell cell--2">value</div>
   <div class="syntax-td cell cell--2">PICTURE</div>
   <div class="syntax-td cell cell--8"></div>  
-  <div class="syntax-td cell cell--2">values</div>
-  <div class="syntax-td cell cell--2">TEXT ARRAY</div>
-  <div class="syntax-td cell cell--8"></div>  
   <div class="syntax-td cell cell--2">value</div>
   <div class="syntax-td cell cell--2">TEXT</div>
-  <div class="syntax-td cell cell--8"></div>    
+  <div class="syntax-td cell cell--8"></div>   
+  <div class="syntax-td cell cell--2">values</div>
+  <div class="syntax-td cell cell--2">COLLECTION</div>
+  <div class="syntax-td cell cell--8"></div>     
 </div>
 
 #### DMTX Scheme
