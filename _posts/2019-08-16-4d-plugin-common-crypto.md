@@ -108,8 +108,6 @@ hash:=SHA3_224 (value;format)
 hash:=SHA3_256 (value;format)
 hash:=SHA3_384 (value;format)
 hash:=SHA3_512 (value;format)
-hash:=SHAKE128 (value;format)
-hash:=SHAKE256 (value;format)
 ```
 
 <div class="grid">
@@ -127,7 +125,28 @@ hash:=SHAKE256 (value;format)
   <div class="syntax-td cell cell--8"></div>  
 </div>
 
-``SHAKE128`` and ``SHAKE256`` output length is fixed to ``256`` and ``512`` respectively.
+```
+hash:=SHAKE128 (value;format)
+hash:=SHAKE256 (value;format)
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">value</div>
+  <div class="syntax-td cell cell--2">BLOB</div>
+  <div class="syntax-td cell cell--8"></div>  
+  <div class="syntax-td cell cell--2">length</div>
+  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--8"></div>  
+  <div class="syntax-td cell cell--2">format</div>
+  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--8"></div>  
+  <div class="syntax-td cell cell--2">hash</div>
+  <div class="syntax-td cell cell--2">TEXT</div>
+  <div class="syntax-td cell cell--8"></div>  
+</div>
 
 #### [HMAC](https://en.wikipedia.org/wiki/HMAC)
 
