@@ -10,6 +10,12 @@ Simple archiver based on [libminizip](https://github.com/nmoinvaz/minizip).
 
 [miyako/4d-plugin-zip](https://github.com/miyako/4d-plugin-zip)
 
+---
+
+* Updated to minizip ``2.8.9``
+
+The previous version had a bug in detecting a directory path. As a result, the zip file had incorrect meta data; a folder was ``defN`` instead of ``stor``, which could be confirmed by ``zipinfo``. Mojave would unzip such files, but the unarchiver on Catalina would report the file as corrupt.
+
 ```
 success:=Zip (src;dst;pass;level;options;callback;codepage)
 ```
