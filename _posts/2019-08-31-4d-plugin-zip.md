@@ -50,6 +50,40 @@ success:=Zip (src;dst;pass;level;options;callback;codepage)
   <div class="syntax-td cell cell--8"></div>  
 </div>
 
+#### Zip options
+
+Property|Type|Description
+------------|------|----
+ZIP_Ignore_hidden|LONGINT|
+ZIP_With_attributes|LONGINT|
+ZIP_Without_enclosing_folder|LONGINT|
+ZIP_With_encryption|LONGINT|
+ZIP_BZ2|LONGINT|
+ZIP_7Z|LONGINT|
+
+#### Zip Compression Level
+
+Property|Type|Description
+------------|------|----
+ZIP_Compression_level_default|LONGINT|
+ZIP_Compression_level_0|LONGINT|
+ZIP_Compression_level_1|LONGINT|
+ZIP_Compression_level_2|LONGINT|
+ZIP_Compression_level_3|LONGINT|
+ZIP_Compression_level_4|LONGINT|
+ZIP_Compression_level_5|LONGINT|
+ZIP_Compression_level_6|LONGINT|
+ZIP_Compression_level_7|LONGINT|
+ZIP_Compression_level_8|LONGINT|
+ZIP_Compression_level_9|LONGINT|
+
+#### Zip Charset
+
+Property|Type|Description
+------------|------|----
+Zip_Charset_automatic|LONGINT|
+{any}|LONGINT|windows code page
+
 ```
 result:=Unzip (src;dst;pass;options;callback;codepage)
 ```
