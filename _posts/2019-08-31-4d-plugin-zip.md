@@ -122,7 +122,9 @@ In order to keep integrity we want the following features:
 
 Unfortunately, neither the ``madler`` or ``nmoinvaz`` seems to tick all boxes.
 
-The plugin is based on the ``nmoinvaz`` ``minizip`` with some modifications to ignore invisible files and store symbolic links with their paths.
+The plugin is based on the ``nmoinvaz`` ``minizip`` code with some modifications to ignore invisible files and store symbolic links with their paths. **This is critical to create a zip that can be unarchived on macOS 10.15 Catalina**.  
+
+**Note**: If you transfer a zipped app over a network (AirDrop, email, FTP:,  HTTP:, etc.) the file will be marked with some Finder attributes that will signal GateKeeper to block its execution. You can remove such attributes with ``xattr -r -c`` or `xattr -r -d com.apple.quarantine``. 
 
 ---
 
