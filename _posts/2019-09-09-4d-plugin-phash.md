@@ -12,6 +12,21 @@ Image hash based on [pHash](http://www.phash.org/).
 
 **Attention** If you create the PNG on Mac OS, make sure the "simple file" option is NOT used. Otherwise the hash value will be zero.
 
+``1.0.0`` (cmake) version of pHash returns different (incorrect?) results on Mac. Reverted to ``0.9.6``.
+
+Examples:
+
+/RESOURCES/2004Cogs.jpg
+/RESOURCES/2004Cogs.bmp
+/RESOURCES/2004Cogs.png
+
+```
+$status:=PH Compute DCT ($file;$hash)  
+```
+
+1.0.0: ``3695991198010760088`` (mac), ``3726390674172847513`` (windows)
+0.9.6: ``3726390674172847513``
+
 ---
 
 ```
