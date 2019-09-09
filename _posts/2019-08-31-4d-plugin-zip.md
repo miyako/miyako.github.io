@@ -67,7 +67,7 @@ We can see that the program is quite limited.
 1. Invisble files are NOT stored
 1. Symbolic links are NOT stored
 1. UNIX file attributes are NOT stored
-1. Dates are not stored
+1. Dates are NOT stored
 1. Platform is ``fat``
 
 * Zip
@@ -89,7 +89,6 @@ lrwxr-xr-x  3.0 unx       33 bx stor 19-Sep-09 14:18 test/a
 1. Invisble files are stored
 1. Symbolic links are stored
 1. UNIX file attributes are stored
-1. Dates are stored
 1. Platform is ``unx``
 
 * Minizip (nmoinvaz version)
@@ -100,9 +99,30 @@ lrwxr-xr-x  3.0 unx       33 bx stor 19-Sep-09 14:18 test/a
 minizip -y test.zip test
 ```
 `
+```
+Zip file size: 764 bytes, number of entries: 3
+-rw-r--r--  6.3 osx     6148 bX defN 19-Sep-09 14:27 .DS_Store
+drwxr-xr-x  6.3 osx        0 b- stor 19-Sep-09 14:16 folder/
+lrwxr-xr-x  6.3 osx        0 bX defN 19-Sep-09 14:16 a
+```
 
+1. Invisble files are stored
+1. Symbolic links are stored but the content (path) is missing
+1. UNIX file attributes are stored
+1. Platform is ``osx``
 
+In order to keep integrity we want the following features:
 
+1. Ignore invisble files 
+1. Ignore Resource forks and HFS meta-data
+1. Store symbolic links with their paths
+1. Store UNIX file attributes 
+1. Store dates 
+1. Store platform as ``osx`` (optional)
+
+Unfortunately, neither the ``madler`` or ``nmoinvaz`` seems to tick all boxes.
+
+The plugin is based on the ``nmoinvaz`` ``minizip`` with some modifications to ignore invisible files and store symbolic links with their paths.
 
 ---
 
