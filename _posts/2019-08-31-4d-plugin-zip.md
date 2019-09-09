@@ -78,13 +78,13 @@ We can see that the program is quite limited.
 zip -r -y test.zip test
 ```
 
-``sh
+```sh
 Zip file size: 893 bytes, number of entries: 4
 drwxr-xr-x  3.0 unx        0 bx stor 19-Sep-09 14:18 test/
 -rw-r--r--  3.0 unx     6148 bx defN 19-Sep-09 14:27 test/.DS_Store
 drwxr-xr-x  3.0 unx        0 bx stor 19-Sep-09 14:16 test/folder/
 lrwxr-xr-x  3.0 unx       33 bx stor 19-Sep-09 14:18 test/a
-``
+```
 
 1. Invisble files are stored
 1. Symbolic links are stored
@@ -97,7 +97,7 @@ lrwxr-xr-x  3.0 unx       33 bx stor 19-Sep-09 14:18 test/a
 [nmoinvaz/minizip/](https://github.com/nmoinvaz/minizip)
 
 ```sh
-minizip test.zip test
+minizip -y test.zip test
 ```
 `
 
