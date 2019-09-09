@@ -14,7 +14,97 @@ Simple archiver based on [libminizip](https://github.com/nmoinvaz/minizip).
 
 * Updated to minizip ``2.8.9``
 
-The previous version had a bug in detecting a directory path. As a result, the zip file had incorrect meta data; a folder was ``defN`` instead of ``stor``, which could be confirmed by ``zipinfo``. Mojave would unzip such files, but the unarchiver on Catalina would report the file as corrupt.
+#### Compatibility note
+
+There are several ways to create a zip file from an app on macOS. Not all of them are valid.
+
+* Archive Utility
+
+``/System/Library/CoreServices/Applications``
+
+When a zip file is created via the Finder, the result is essentailly the same as using ``ditto`` with the option ``--sequesterRsrc``.
+
+```sh
+ditto -c -k --sequesterRsrc --keepParent test test.zip 
+```
+
+**Note**: The source and destination paths are passed in the reverse order for ``ditto`` compared to ``zip`` or ``minizip``.
+
+```
+drwxr-xr-x  2.1 unx        0 bx stor 19-Sep-09 14:18 test/
+-rw-r--r--  2.1 unx     6148 bX defN 19-Sep-09 14:17 test/.DS_Store
+drwxrwxr-x  2.1 unx        0 bx stor 19-Sep-09 14:18 __MACOSX/
+drwxrwxr-x  2.1 unx        0 bx stor 19-Sep-09 14:18 __MACOSX/test/
+-rw-r--r--  2.1 unx      120 bX defN 19-Sep-09 14:17 __MACOSX/test/._.DS_Store
+drwxr-xr-x  2.1 unx        0 bx stor 19-Sep-09 14:16 test/folder/
+lrwxr-xr-x  2.1 unx       33 b- stor 19-Sep-09 14:18 test/a
+7 files, 6301 bytes uncompressed, 338 bytes compressed:  94.6%
+```
+
+We can assertain a few things:
+
+1. Invisble files are stored
+1. Symbolic links are stored
+1. Resource forks and HFS meta-data are stored in a directory named ``__MACOSX``
+1. UNIX file attributes are stored
+1. Platform is ``unx``
+
+* Minizip (zlib version)
+
+[madler/zlib/contrib/minizip](https://github.com/madler/zlib/tree/master/contrib/minizip)
+
+```sh
+minizip test.zip test
+```
+
+```
+-rw----     0.0 fat        0 b- defN 80-Jan-00 00:00 test
+1 file, 0 bytes uncompressed, 2 bytes compressed:  0.0%
+```
+
+We can see that the program is quite limited.
+
+1. Invisble files are NOT stored
+1. Symbolic links are NOT stored
+1. UNIX file attributes are NOT stored
+1. Dates are not stored
+1. Platform is ``fat``
+
+* Zip
+
+``/usr/bin/zip``
+
+```sh
+zip -r -y test.zip test
+```
+
+``sh
+Zip file size: 893 bytes, number of entries: 4
+drwxr-xr-x  3.0 unx        0 bx stor 19-Sep-09 14:18 test/
+-rw-r--r--  3.0 unx     6148 bx defN 19-Sep-09 14:27 test/.DS_Store
+drwxr-xr-x  3.0 unx        0 bx stor 19-Sep-09 14:16 test/folder/
+lrwxr-xr-x  3.0 unx       33 bx stor 19-Sep-09 14:18 test/a
+``
+
+1. Invisble files are stored
+1. Symbolic links are stored
+1. UNIX file attributes are stored
+1. Dates are stored
+1. Platform is ``unx``
+
+* Minizip (nmoinvaz version)
+
+[nmoinvaz/minizip/](https://github.com/nmoinvaz/minizip)
+
+```sh
+minizip test.zip test
+```
+`
+
+
+
+
+---
 
 ```
 success:=Zip (src;dst;pass;level;options;callback;codepage)
