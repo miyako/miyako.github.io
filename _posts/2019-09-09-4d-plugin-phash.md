@@ -12,11 +12,32 @@ Image hash based on [pHash](http://www.phash.org/).
 
 **Attention** If you create the PNG on Mac OS, make sure the "simple file" option is NOT used. Otherwise the hash value will be zero.
 
-#### Library version
+#### Compatibility note
 
-Mac: pHash ``1.0.0`` gives slightly different results compared to the original pHash ``0.9.6``.
+Due to library update (``0.9.6`` to ``1.0.0``), function results are not the same as the old plugin. 
 
-Windows: pHash for Windows `0.9.0` (distributed with ``1.0.0``) gives similar results as the original pHash ``0.9.6`` (MinGW DLL), except for ``PH Compare MH``.
+Previous version was using the original ``0.9.6`` code for UNIX/MinGW.
+
+Current version uses ``1.0.0`` for Mac and a pseudo ``1.0.0`` for Windows (based on ``0.9.0`` distributed with ``1.0.0``).
+
+Windows 64-bit uses [``__popcnt64``](https://docs.microsoft.com/en-us/cpp/intrinsics/popcnt16-popcnt-popcnt64). ``__cpuid`` is **not checked**, since 64-bit version of 4D requires SSE4 anyway. 32-bit version uses classic emulation code.
+
+```
+ulong64 x = hash1^hash2;
+#ifdef _WIN64
+    return __popcnt64(x);
+#else
+  const ulong64 m1 = 0x5555555555555555ULL;
+  const ulong64 m2 = 0x3333333333333333ULL;
+  const ulong64 h01 = 0x0101010101010101ULL;
+  const ulong64 m4 = 0x0f0f0f0f0f0f0f0fULL;
+  x -= (x >> 1) & m1;
+  x = (x & m2) + ((x >> 2) & m2);
+  x = (x + (x >> 4)) & m4;
+ 
+  return int((x * h01) >> 56);
+#endif
+```
 
 ---
 
