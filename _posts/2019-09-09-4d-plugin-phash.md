@@ -12,41 +12,11 @@ Image hash based on [pHash](http://www.phash.org/).
 
 **Attention** If you create the PNG on Mac OS, make sure the "simple file" option is NOT used. Otherwise the hash value will be zero.
 
-``1.0.0`` (cmake) version of pHash returns different (incorrect?) results on Mac. Reverted to ``0.9.6``.
+#### Library version
 
-Windows version is using pHash for Windows ``0.9.0``.
+Mac: pHash ``1.0.0`` gives slightly different results compared to the original pHash ``0.9.6``.
 
-Examples:
-
-* /RESOURCES/2004Cogs.jpg
-* /RESOURCES/2004Cogs.bmp
-* /RESOURCES/2004Cogs.png
-
-```
-$status:=PH Compute DCT ($file;$hash)  
-```
-
-* ``1.0.0``: ``3695991198010760088`` (mac)
-* ``0.9.0``: ``3726390674172847513`` (windows)
-* ``0.9.6``: ``3726390674172847513`` (mac)
-
-* /RESOURCES/4D-main.jpg
-* /RESOURCES/4D-main.png
-
-* ``1.0.0``: ``10888135207193571144`` (mac)
-* ``0.9.0``: ``2732728107267830226`` (windows)
-* ``0.9.6``: ``2732728107267830226`` (mac)
-
-There is a difference in real precision on v17 compared to previous versions
-
-```
-$pcc:=PH Compare RADISH ($file1;$file2;$sigma;$gamma;$N)
-```
-
-* v14: ``0.9999931960446829526``
-* ``1.0.0``: ``0.9999931960447`` (mac)
-* ``0.9.6``: ``0.9999932088701`` (mac)
-* ``0.9.0``: ``0.9999931960447`` (windows)
+Windows: pHash for Windows `0.9.0` (distributed with ``1.0.0``) gives similar results as the original pHash ``0.9.6`` (MinGW DLL), except for ``PH Compare MH``.
 
 ---
 
