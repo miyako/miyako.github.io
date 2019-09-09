@@ -22,7 +22,7 @@ Current version uses ``1.0.0`` for Mac and a pseudo ``1.0.0`` for Windows (based
 
 Windows 64-bit uses [``__popcnt64``](https://docs.microsoft.com/en-us/cpp/intrinsics/popcnt16-popcnt-popcnt64). ``__cpuid`` is **not checked**, since 64-bit version of 4D requires SSE4 anyway. 32-bit version uses classic emulation code.
 
-```
+```c
 ulong64 x = hash1^hash2;
 #ifdef _WIN64
     return __popcnt64(x);
