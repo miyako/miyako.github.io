@@ -16,16 +16,16 @@ Image hash based on [pHash](http://www.phash.org/).
 
 Examples:
 
-/RESOURCES/2004Cogs.jpg
-/RESOURCES/2004Cogs.bmp
-/RESOURCES/2004Cogs.png
+* /RESOURCES/2004Cogs.jpg
+* /RESOURCES/2004Cogs.bmp
+* /RESOURCES/2004Cogs.png
 
 ```
 $status:=PH Compute DCT ($file;$hash)  
 ```
 
-1.0.0: ``3695991198010760088`` (mac), ``3726390674172847513`` (windows)
-0.9.6: ``3726390674172847513``
+* ``1.0.0``: ``3695991198010760088`` (mac), ``3726390674172847513`` (windows)
+* ``0.9.6``: ``3726390674172847513``
 
 ---
 
