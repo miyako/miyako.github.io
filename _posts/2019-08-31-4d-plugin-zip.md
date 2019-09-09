@@ -49,7 +49,7 @@ We can assertain a few things:
 1. UNIX file attributes are stored
 1. Platform is ``unx``
 
-[ditto](https://www.unix.com/man-page/osx/1/ditto/)
+<i class="fa fa-external-link" aria-hidden="true"></i> [ditto](https://www.unix.com/man-page/osx/1/ditto/)
 
 * Minizip (zlib version)
 
@@ -93,7 +93,7 @@ lrwxr-xr-x  3.0 unx       33 bx stor 19-Sep-09 14:18 test/a
 1. UNIX file attributes are stored
 1. Platform is ``unx``
 
-[zip](https://www.unix.com/man-page/osx/1/zip/)
+<i class="fa fa-external-link" aria-hidden="true"></i> [zip](https://www.unix.com/man-page/osx/1/zip/)
 
 * Minizip (nmoinvaz version)
 
@@ -130,7 +130,7 @@ The plugin is based on the ``nmoinvaz`` ``minizip`` code with some modifications
 
 **Note**: If you transfer a zipped app over a network (AirDrop, email, FTP:,  HTTP:, etc.) the file will be marked with some Finder attributes that will signal GateKeeper to block its execution. You can remove such attributes with ``xattr -r -c`` or ``xattr -r -d com.apple.quarantine``. 
 
-[xattr](https://www.unix.com/man-page/osx/1/xattr/)
+<i class="fa fa-external-link" aria-hidden="true"></i> [xattr](https://www.unix.com/man-page/osx/1/xattr/)
 
 ---
 
