@@ -33,6 +33,8 @@ status:=PH Compute DCT(file;hash)
   <div class="syntax-td cell cell--8"></div> 
 </div>  
 
+wrapper of ``ph_dct_imagehash``. contrary to specification, status is always ``0`` (supposed to be ``-1`` for failure, ``1`` for success.
+
 ```
 pcc:=PH Compare MH(file1;file2;alpha;lvl)
 pcc:=PH Compare RADISH(file1;file2;sigma;gamma;n)
