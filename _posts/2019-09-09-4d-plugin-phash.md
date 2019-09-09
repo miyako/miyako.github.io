@@ -33,7 +33,9 @@ status:=PH Compute DCT(file;hash)
   <div class="syntax-td cell cell--8"></div> 
 </div>  
 
-wrapper of ``ph_dct_imagehash``. contrary to specification, status is always ``0`` (supposed to be ``-1`` for failure, ``1`` for success.
+wrapper of ``ph_dct_imagehash``. 
+
+**Attention** contrary to header file description, status is ``0`` (not ``1``) for success and ``-1`` for failure.
 
 ```
 pcc:=PH Compare MH(file1;file2;alpha;lvl)
