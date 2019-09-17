@@ -26,3 +26,22 @@ For simplicity, the command signature has been changed.
 ``xmlInitParser()`` is used in the "main" thread
 
 [http://xmlsoft.org/threads.html](http://xmlsoft.org/threads.html)
+
+```
+result:=XSLT Apply stylesheet(xml;xsl;options)
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">xml</div>
+  <div class="syntax-td cell cell--2">BLOB</div>
+  <div class="syntax-td cell cell--8"></div>
+  <div class="syntax-td cell cell--2">xsl</div>
+  <div class="syntax-td cell cell--2">BLOB</div>
+  <div class="syntax-td cell cell--8"></div>  
+  <div class="syntax-td cell cell--2">options</div>
+  <div class="syntax-td cell cell--2">OBJECT</div>
+  <div class="syntax-td cell cell--8"></div> 
+</div>  
