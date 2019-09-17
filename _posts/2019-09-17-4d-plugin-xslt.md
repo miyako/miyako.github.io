@@ -45,3 +45,7 @@ result:=XSLT Apply stylesheet(xml;xsl;options)
   <div class="syntax-td cell cell--2">OBJECT</div>
   <div class="syntax-td cell cell--8"></div> 
 </div>  
+
+Pass key/value pair in ``options`` to set XSLT parameters. Keep in mind that XSLT parameters are always string. The numeric value ``123`` should be passed as ``"123"`` and string value ``abc`` should be passed as ``'abc'``. 
+
+Reserved key names ``xmlParserOption`` and ``xslParserOption`` can be used to specify [xmlParserOption](http://xmlsoft.org/html/libxml-parser.html#xmlParserOption).
