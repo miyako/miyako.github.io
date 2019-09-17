@@ -8,7 +8,7 @@ XSLT based on [libxml](http://xmlsoft.org/index.html).
 
 <!--more-->
 
-[miyako/4d-plugin-xslt](https://github.com/miyako/4d-plugin-xslt)
+[miyako/4d-plugin-xslt-v2](https://github.com/miyako/4d-plugin-xslt-v2)
 
 #### Compatibility note
 
