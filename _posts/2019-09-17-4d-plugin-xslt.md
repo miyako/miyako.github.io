@@ -54,3 +54,5 @@ Pass key/value pair in ``options`` to set XSLT parameters. Keep in mind that XSL
 Reserved key names ``xmlParserOption`` and ``xslParserOption`` can be used to specify [xmlParserOption](http://xmlsoft.org/html/libxml-parser.html#xmlParserOption).
 
 ``xml`` and ``xsl`` can be a path or BLOB data. On Mac, the path should be HFS system path in UTF-8. On Windows, it is unclear whether the library expects ANSI or UTF-8. IF unsure, consider the BLOB option. 
+
+For simlpicity, the plugin does not yield to 4D runtime during XSLT. If processing takes time, consider using a preemptive worker process.
