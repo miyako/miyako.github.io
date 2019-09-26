@@ -42,7 +42,7 @@ option:=TWAIN Get default option(device.productName)
 </div>
 
 ```
-TWAIN SCAN(device.productName;option;imageType;images)
+images:=TWAIN Scan(device.productName;option;imageType)
 ```
 
 <div class="grid">
@@ -59,7 +59,7 @@ TWAIN SCAN(device.productName;option;imageType;images)
   <div class="syntax-td cell cell--2">LONGINT</div>
   <div class="syntax-td cell cell--8"></div>   
   <div class="syntax-td cell cell--2">images</div>
-  <div class="syntax-td cell cell--2">ARRAY PICTURE</div>
+  <div class="syntax-td cell cell--2">COLLECTION</div>
   <div class="syntax-td cell cell--8"></div>  
 </div>
 
