@@ -20,6 +20,10 @@ Not many scanners have a 64-bit TWAIN driver.
 
 [32-bit](https://www.fujitsu.com/global/support/products/computing/peripheral/scanners/fi/software/fi6x30-fi6x40-ps-ip-twain32.html)
 
+* hp
+
+[64-bit]() N/A
+
 ---
 
 ```
