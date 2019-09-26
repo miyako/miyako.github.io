@@ -22,6 +22,8 @@ Not many scanners have a 64-bit TWAIN driver.
 
 [Panasonic](https://panasonic.net/cns/pcc/support/scanner/download.html)
 
+[Ricoh](https://www.ricoh.co.jp/support/os/edition/twain.html) N/A
+
 ---
 
 ```
