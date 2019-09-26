@@ -10,6 +10,16 @@ Image scanner based on [twain-dsm](https://github.com/twain/twain-dsm).
 
 [miyako/4d-plugin-twain-v2](https://github.com/miyako/4d-plugin-twain-v2)
 
+#### Discussion
+
+Not many scanners have a 64-bit TWAIN driver.
+
+Fujitsu
+
+[64-bit](https://www.fujitsu.com/global/support/products/computing/peripheral/scanners/fi/software/fi6x30-fi6x40-ps-ip-twain64.html)
+
+[32-bit](https://www.fujitsu.com/global/support/products/computing/peripheral/scanners/fi/software/fi6x30-fi6x40-ps-ip-twain32.html)
+
 ---
 
 ```
