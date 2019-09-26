@@ -14,7 +14,7 @@ Image scanner based on [twain-dsm](https://github.com/twain/twain-dsm).
 
 Not many scanners have a 64-bit TWAIN driver.
 
-Fujitsu
+* Fujitsu
 
 [64-bit](https://www.fujitsu.com/global/support/products/computing/peripheral/scanners/fi/software/fi6x30-fi6x40-ps-ip-twain64.html)
 
