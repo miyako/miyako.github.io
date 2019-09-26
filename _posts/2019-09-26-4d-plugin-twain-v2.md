@@ -18,6 +18,8 @@ Not many scanners have a 64-bit TWAIN driver.
 
 [hp](#) N/A
 
+[Canon](https://cweb.canon.jp/drv-upd/sfs/sc68-win-lide220-103-ea333.html)
+
 [Panasonic](https://panasonic.net/cns/pcc/support/scanner/download.html)
 
 ---
