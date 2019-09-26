@@ -22,7 +22,7 @@ Not many scanners have a 64-bit TWAIN driver.
 
 * hp
 
-[64-bit] N/A
+[64-bit](#) N/A
 
 ---
 
