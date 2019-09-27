@@ -12,7 +12,9 @@ Image scanner based on [twain-dsm](https://github.com/twain/twain-dsm).
 
 #### Discussion
 
-TWAIN is a dying technology. [Not many scanners have a native 64-bit TWAIN driver](https://answers.microsoft.com/en-us/windows/forum/windows_8-hardware/twain-and-64-bit-os/e9910f04-09c3-4f09-a721-2ddd9bd2c257).
+TWAIN is a dying technology. 
+
+[Not many scanners have a native 64-bit TWAIN driver](https://answers.microsoft.com/en-us/windows/forum/windows_8-hardware/twain-and-64-bit-os/e9910f04-09c3-4f09-a721-2ddd9bd2c257).
 
 But for 32-bit, probably OK.
 
