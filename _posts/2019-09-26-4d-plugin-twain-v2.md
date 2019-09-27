@@ -39,6 +39,22 @@ devices:=TWAIN Get devices
   <div class="syntax-td cell cell--8"></div>   
 </div>
 
+#### Device
+
+Property|Type|Description
+------------|------|----
+manufacturer|TEXT|
+productFamily|TEXT|
+productName|TEXT|
+protocolMajor|LONGINT|
+protocolMinor|LONGINT|
+supportedGroups|LONGINT|
+version.info|TEXT|
+version.majorNum|LONGINT|
+version.minorNum|LONGINT|
+version.language|LONGINT|
+version.country|LONGINT|
+
 ```
 option:=TWAIN Get default option(device.productName)
 ```
@@ -54,6 +70,8 @@ option:=TWAIN Get default option(device.productName)
   <div class="syntax-td cell cell--2">OBJECT</div>
   <div class="syntax-td cell cell--8"></div>   
 </div>
+
+Non-standard capabilities are returned by thier number.
 
 ```
 images:=TWAIN Scan(device.productName;option;imageType)
