@@ -12,17 +12,17 @@ Image scanner based on [twain-dsm](https://github.com/twain/twain-dsm).
 
 #### Discussion
 
-[Not many scanners have a 64-bit TWAIN driver](https://answers.microsoft.com/en-us/windows/forum/windows_8-hardware/twain-and-64-bit-os/e9910f04-09c3-4f09-a721-2ddd9bd2c257).
+TWAIN is a dying technology. [Not many scanners have a 64-bit TWAIN driver](https://answers.microsoft.com/en-us/windows/forum/windows_8-hardware/twain-and-64-bit-os/e9910f04-09c3-4f09-a721-2ddd9bd2c257).
 
 [Fujitsu](https://www.fujitsu.com/global/support/products/computing/peripheral/scanners/fi/software/fi6x30-fi6x40-ps-ip-twain64.html)
 
-[Canon](https://cweb.canon.jp/drv-upd/sfs/sc68-win-lide220-103-ea333.html) plug-and-play
+* [Canon](https://cweb.canon.jp/drv-upd/sfs/sc68-win-lide220-103-ea333.html) plug-and-play
 
-[Panasonic](https://panasonic.net/cns/pcc/support/scanner/download.html)
+* [Panasonic](https://panasonic.net/cns/pcc/support/scanner/download.html)
 
-[Ricoh](https://www.ricoh.co.jp/support/os/edition/twain.html) N/A
+* [Ricoh](https://www.ricoh.co.jp/support/os/edition/twain.html) N/A
 
-[hp](https://support.hp.com/ie-en/document/c04635830) N/A
+* [hp](https://support.hp.com/ie-en/document/c04635830) N/A
 
 ---
 
@@ -99,7 +99,5 @@ images:=TWAIN Scan(device.productName;option;imageType)
 
 Property|Type|Description
 ------------|------|----
-Scanner image type JPEG|LONGINT|
+Scanner image type JPEG|LONGINT|default
 Scanner image type PNG|LONGINT|
-
-
