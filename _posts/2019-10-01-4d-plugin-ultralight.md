@@ -8,7 +8,7 @@ Headless web browser base on [Ultralight](https://github.com/ultralight-ux/Ultra
 
 <!--more-->
 
-[miyako/4d-plugin-ultralight)](https://github.com/miyako/4d-plugin-ultralight)
+[miyako/4d-plugin-ultralight](https://github.com/miyako/4d-plugin-ultralight)
 
 #### Discussion
 
