@@ -10,6 +10,10 @@ Headless web browser base on [Ultralight](https://github.com/ultralight-ux/Ultra
 
 [miyako/4d-plugin-ultralight)](https://github.com/miyako/4d-plugin-ultralight)
 
+#### Discussion
+
+Vertical writing mode is **NOT** supported. 
+
 ---
 
 ```
