@@ -51,6 +51,22 @@ Ultralight Load path(view;path)
 </div>
 
 ```
+Ultralight Load html(view;html) 
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">view</div>
+  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--8"></div>  
+  <div class="syntax-td cell cell--2">html</div>
+  <div class="syntax-td cell cell--2">TEXT</div>
+  <div class="syntax-td cell cell--8"></div>    
+</div>
+
+```
 result:=Ultralight Evaluate script(view;code) 
 ```
 
