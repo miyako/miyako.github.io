@@ -14,6 +14,8 @@ Headless web browser base on [Ultralight](https://github.com/ultralight-ux/Ultra
 
 Vertical writing mode is **NOT** supported. 
 
+Currently the plugin crashes on shutdown due to excess autorelease (possibly in singleton ``Platform``, GPU driver). 
+
 ---
 
 ```
