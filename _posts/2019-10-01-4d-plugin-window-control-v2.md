@@ -53,3 +53,12 @@ icon:=WINDOW Get enabled(window)
 </div>
 
 The ``representedURL`` is set to ``file://`` which corresponds to the system volume path.
+
+#### Window Button Types
+
+Property|Type|Description
+------------|------|----
+Window close button|LONGINT|
+Window minimize button|LONGINT|
+Window zoom button|LONGINT|
+Window document modified|LONGINT|
