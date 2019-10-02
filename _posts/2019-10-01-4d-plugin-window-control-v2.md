@@ -4,51 +4,61 @@ title: Window Control
 tags: plugin mac userinterface v17
 ---
 
-Volume mount notification for Mac.
+Control window icon and button on Mac.
 
 <!--more-->
 
-[miyako/4d-plugin-mount](https://github.com/miyako/4d-plugin-mount)
+[miyako/4d-plugin-window-control-v2](https://github.com/miyako/4d-plugin-window-control-v2)
 
 ---
 
 ```
-name:=Unmount(path) 
-Mount(name) 
+WINDOW SET ENABLED(window;button;enabled) 
+enabled:=WINDOW Get enabled(window;button)
 ```
 
 <div class="grid">
   <div class="syntax-th cell cell--2">Parameter</div>
   <div class="syntax-th cell cell--2">Type</div>
   <div class="syntax-th cell cell--8">Description</div>
-  <div class="syntax-td cell cell--2">path</div>
-  <div class="syntax-td cell cell--2">TEXT</div>
-  <div class="syntax-td cell cell--8">system path</div>  
-  <div class="syntax-td cell cell--2">name</div>
-  <div class="syntax-td cell cell--2">TEXT</div>
-  <div class="syntax-td cell cell--8">BSD name</div>  
+  <div class="syntax-td cell cell--2">window</div>
+  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--8"></div>  
+  <div class="syntax-td cell cell--2">button</div>
+  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--8"></div> 
+  <div class="syntax-td cell cell--2">enabled</div>
+  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--8"></div> 
 </div>
 
 ```
-Mount WATCH(method) 
+WINDOW SET ICON(window;icon) 
+icon:=WINDOW Get enabled(window)
 ```
 
 <div class="grid">
   <div class="syntax-th cell cell--2">Parameter</div>
   <div class="syntax-th cell cell--2">Type</div>
   <div class="syntax-th cell cell--8">Description</div>
-  <div class="syntax-td cell cell--2">method</div>
-  <div class="syntax-td cell cell--2">TEXT</div>
+  <div class="syntax-td cell cell--2">window</div>
+  <div class="syntax-td cell cell--2">LONGINT</div>
   <div class="syntax-td cell cell--8"></div>  
+  <div class="syntax-td cell cell--2">button</div>
+  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--8"></div> 
+  <div class="syntax-td cell cell--2">icon</div>
+  <div class="syntax-td cell cell--2">PICTURE</div>
+  <div class="syntax-td cell cell--8"></div> 
 </div>
 
 The ``representedURL`` is set to ``file://`` which corresponds to the system volume path.
 
-#### Mount Event Types
+#### Window Button Types
 
 Property|Type|Description
 ------------|------|----
-Volume did mount event|LONGINT|
-Volume will unmount event|LONGINT|
-Volume did unmount event|LONGINT|
-Volume did rename event|LONGINT|
+Window close button|LONGINT|
+Window minimize button|LONGINT|
+Window zoom button|LONGINT|
+Window document modified|LONGINT|
