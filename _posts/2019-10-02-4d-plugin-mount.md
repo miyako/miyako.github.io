@@ -42,8 +42,6 @@ Mount WATCH(method)
   <div class="syntax-td cell cell--8"></div>  
 </div>
 
-The ``representedURL`` is set to ``file://`` which corresponds to the system volume path.
-
 #### Mount Event Types
 
 Property|Type|Description
