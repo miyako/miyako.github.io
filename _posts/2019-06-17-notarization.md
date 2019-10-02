@@ -201,6 +201,8 @@ pkgbuild --component /Applications/sample.app --sign  --sign {identity_installer
 
 - Uploade the archice, disk image or signed flat package 
 
+c.f. [Customizing the Notarization Workflow](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow?language=objc)
+
 ```
 xcrun altool --notarize-app --file sample.dmg --primary-bundle-id {upload_id} --username user --password pass
 ```
