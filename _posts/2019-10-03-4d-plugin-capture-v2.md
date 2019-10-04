@@ -32,7 +32,7 @@ Starting February 27, 2019, you must also verify your Apple Developer ID with [T
 
 #### App-specific Password
 
-Login to [https://appleid.apple.com/account/manage](https://appleid.apple.com/account/manage), move to **Security** and click **Generate Password…**. This is not neccessary for signing your app, but you will need it for **notarisation**.
+Login to [appleid.apple.com](https://appleid.apple.com/account/manage), move to **Security** and click **Generate Password…**. This is not neccessary for signing your app, but you will need it for **notarisation**.
 
 
 
