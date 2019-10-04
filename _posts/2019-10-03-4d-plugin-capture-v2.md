@@ -16,7 +16,7 @@ Due to enhanced security requirements from Apple, the app (not the plugin) must 
 
 **Note**: 4D.app itself is signed, but without the above property list entitlements. In order to use the plugin with 4D (interpreted or compiled) you must sign 4D.app with your own Apple Developer certificate.
 
-macOS 10.14以降，プライバシー保護のため，カメラを使用するようなアプリは``Hardened Runtime``および``Camera``の``entitlement``が追加にされた**コード署名**，さらに``NSCameraUsageDescription``という**プロパティリストキー**がなければなりません。これらの条件は，プラグインではなく，アプリ本体に対するものです。4D.appは署名されていますが，必要な``entitlement``がないため，そのままではカメラを使用することができません。自分のデベロッパー証明書を使用し，署名を上書きする必要があります。
+macOS 10.14以降，プライバシー保護のため，カメラを使用するようなアプリは``Hardened Runtime``および``Camera``の``entitlement``が追加にされた**コード署名**，さらに``NSCameraUsageDescription``という**プロパティリストキー**がなければなりません。これらの条件は，プラグインではなく，アプリ本体に対するものです。4D.appは署名されていますが，必要な``entitlement``が署名に追加されていないため，そのままではカメラを使用することができません。自分のデベロッパー証明書を使用し，署名を上書きする必要があります。
 
 #### Apple Developer ID
 
@@ -27,6 +27,8 @@ In order to sign an app, you need an Apple Developer ID.
 **Option 2**: You may choose to join Apple Developer Program (you must be over the age of 18). You can create a **Developer ID Application** certificate and sign your app for distribution.
 
 <i class="fa fa-external-link" aria-hidden="true"></i> [developer.apple.com](https://developer.apple.com)
+
+コードに署名するためには，**Apple Developer ID**が必要です。通常のApple IDを無料のApple Developer IDに転用した場合，個人のMacで使用できる**Mac Developer**証明書が発行できるようになります。年会費を支払って**Apple Developer Program**に加入すれば，配付用の**Developer ID Application**証明書が発行できるようになります。
 
 #### Two-factor Authentication
 
