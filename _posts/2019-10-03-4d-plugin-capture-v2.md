@@ -16,6 +16,8 @@ Due to enhanced security requirements from Apple, the app (not the plugin) must 
 
 **Note**: 4D.app itself is signed, but without the above property list entitlements. In order to use the plugin with 4D (interpreted or compiled) you must sign 4D.app with your own Apple Developer certificate.
 
+macOS 10.14以降，プライバシー保護のため，カメラを使用するようなアプリは``Hardened Runtime``および``Camera``の``entitlement``が追加にされた**コード署名**，さらに``NSCameraUsageDescription``という**プロパティリストキー**がなければなりません。これらの条件は，プラグインではなく，アプリ本体に対するものです。4D.appは署名されていますが，必要な``entitlement``がないため，そのままではカメラを使用することができません。自分のデベロッパー証明書を使用し，署名を上書きする必要があります。
+
 #### Apple Developer ID
 
 In order to sign an app, you need an Apple Developer ID.
