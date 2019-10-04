@@ -10,11 +10,15 @@ Simple video capture based on [AVFoundation](https://developer.apple.com/av-foun
 
 [miyako/4d-plugin-capture-v2](https://github.com/miyako/4d-plugin-capture-v2)
 
-#### Prerequisites
+### Prerequisites
 
 Due to enhanced security requirements from Apple, the app (not the plugin) must be signed with [Camera](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_device_camera?language=objc) and [Hardened Runtime](https://developer.apple.com/documentation/bundleresources/entitlements?language=objc) entitlements. The [NSCameraUsageDescription](https://developer.apple.com/documentation/bundleresources/information_property_list/nscamerausagedescription?language=objc) property list key must also be present.
 
 **Note**: 4D.app itself is signed, but without the above property list entitlements. In order to use the plugin with 4D (interpreted or compiled) you must sign 4D.app with your own Apple Developer certificate.
+
+#### 1. Create Apple Developer account
+
+
 
 ---
 
