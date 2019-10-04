@@ -50,6 +50,8 @@ $entitlements["com.apple.security.device.camera"]:=True
 
 **Note**: ``NSCameraUsageDescription`` is automatically added by the utility. 
 
+コード署名（および公証）を簡単にするための[サンプルコード](https://github.com/miyako/4d-utility-build-application)を公開しています。必要な``entitlement``を追加し，例題に従ってアプリに署名してください。公証が必要ないのであれば，ディスクイメージ作成の手前で中断しても構いません。
+
 ### How the plugin requests access
 
 Following Apple guidelines, the plugin calls 
