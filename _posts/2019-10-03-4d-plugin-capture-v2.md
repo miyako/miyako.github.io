@@ -26,7 +26,14 @@ In order to sign an app, you need an Apple Developer ID.
 
 <i class="fa fa-external-link" aria-hidden="true"></i> [developer.apple.com](https://developer.apple.com)
 
-Starting February 27, 2019, you must also verify your Apple Developer ID with [Two-factor Authentication](https://developer.apple.com/support/authentication/)
+#### Two-factor Authentication
+
+Starting February 27, 2019, you must also verify your Apple Developer ID with [Two-factor Authentication](https://developer.apple.com/support/authentication/).
+
+#### App-specific Password
+
+Login to [https://appleid.apple.com/account/manage](https://appleid.apple.com/account/manage), move to **Security** and click **Generate Password…**. This is not neccessary for signing your app, but you will need it for **notarisation**.
+
 
 
 
