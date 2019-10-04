@@ -16,7 +16,13 @@ Due to enhanced security requirements from Apple, the app (not the plugin) must 
 
 **Note**: 4D.app itself is signed, but without the above property list entitlements. In order to use the plugin with 4D (interpreted or compiled) you must sign 4D.app with your own Apple Developer certificate.
 
-#### 1. Create Apple Developer account
+#### 1. Create Apple Developer ID
+
+In order to sign an app, you need an Apple Developer ID.
+
+**Option 1**: You can convert your regular Apple ID to a **free** Apple Developer ID (you must be over the age of 13). With a free account, you can create a **Mac Developer** certificate and sign your app for testing on your own computer.
+
+See how: <i class="fa fa-external-link" aria-hidden="true"></i> [external link](https://9to5mac.com/2016/03/27/how-to-create-free-apple-developer-account-sideload-apps/)
 
 
 
