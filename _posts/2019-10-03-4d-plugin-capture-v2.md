@@ -1,3 +1,30 @@
+---
+layout: simple
+title: Capture
+tags: plugin mac userinterface v17
+---
+
+Simple video capture based on [AVFoundation](https://developer.apple.com/av-foundation/).
+
+<!--more-->
+
+[miyako/4d-plugin-capture-v2](https://github.com/miyako/4d-plugin-capture-v2)
+
+#### Prerequisites
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
 If access to Camera has been disabled by the user, the system will not ask again for the same app.
 
 For testing, you can ``reset`` the entry for ``Camera`` (case sensitive) with ``tccutil``:
