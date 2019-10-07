@@ -209,7 +209,9 @@ If ``device`` is ommitted, the default camera device will be used.
 
 Only ``x`` ``y`` ``width`` ``height`` ``hidden`` ``flipV`` ``flipH`` can be changed with ``capture Update``.
 
-There can only be one capture session for the application, so passing a different ``window`` will remove the preview layer from the original window.
+There can only be one capture session for the application, so passing a different ``window`` will remove the preview layer from the original window and add it to the new window. Likewise, passing a different device ID will force the capture session to be destroyed and recreated.
+
+The preview layer is added to the content view of the window. You should create a session after regular form objects are added to the window, i.e. the first (``-1``) ``On Timer`` event after ``On Load``.
 
 ``capture Start`` will force the preview layer to be visible.
 
