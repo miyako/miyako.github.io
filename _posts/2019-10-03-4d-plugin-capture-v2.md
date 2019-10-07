@@ -124,3 +124,102 @@ tccutil reset Camera
 ```
 
 <img width="334" alt="スクリーンショット 2019-10-03 12 00 03" src="https://user-images.githubusercontent.com/1725068/66096245-58ac6a80-e5d5-11e9-9557-b6c2d3c0b328.png">
+
+---
+
+```
+devices:=capture Devices
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">devices</div>
+  <div class="syntax-td cell cell--2">COLLECTION</div>
+  <div class="syntax-td cell cell--8"></div>   
+</div>
+
+properties of ``device``
+
+Property|Type|Description
+------------|------|----
+uniqueID|TEXT|
+modelID|TEXT|
+manufacturer|TEXT|
+localizedName|TEXT|
+connected|BOOLEAN|
+
+```
+capture Stop recording
+capture Pause recording
+capture Resume recording
+capture Start recording(option)
+```
+
+A capture session must be started beforehand in order to begin recording.
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">option</div>
+  <div class="syntax-td cell cell--2">OBJECT</div>
+  <div class="syntax-td cell cell--8"></div>   
+</div>
+
+Property|Type|Description
+------------|------|----
+file|TEXT|system file path to create QuickTime video
+
+```
+capture Start(option)
+capture Update(option)
+capture Stop
+image:=capture Image
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">option</div>
+  <div class="syntax-td cell cell--2">OBJECT</div>
+  <div class="syntax-td cell cell--8"></div>   
+  <div class="syntax-td cell cell--2">image</div>
+  <div class="syntax-td cell cell--2">PICTURE</div>
+  <div class="syntax-td cell cell--8"></div>   
+</div>
+
+A camera access must be requested per application session, in order to begin video capture.
+
+Property|Type|Description
+------------|------|----
+window|LONGINT|
+x|LONGINT|
+y|LONGINT|
+width|LONGINT|
+height|LONGINT|
+flipV|BOOLEAN|
+flipH|BOOLEAN|
+hidden|BOOLEAN|
+device|TEXT|unique ID (optional)
+
+If ``device`` is ommitted, the default camera device will be used.
+
+Only ``x`` ``y`` ``width`` ``height`` ``hidden`` ``flipV`` ``flipH`` can be changed with ``capture Update``.
+
+There can only be one capture session for the application, so passing a different ``window`` will remove the preview layer from the original window.
+
+``capture Start`` will force the preview layer to be visible.
+
+``image`` is in JPEG format.
+
+```
+status:=capture Request permisson
+```
+
+Property|Type|Description
+------------|------|----
+success|BOOLEAN|
+errorMessage|TEXT|
