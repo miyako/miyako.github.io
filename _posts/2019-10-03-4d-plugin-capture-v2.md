@@ -42,15 +42,7 @@ Login to [appleid.apple.com](https://appleid.apple.com/account/manage), move to 
 
 You can use the procedure outlined in [4d-utility-build-application](https://github.com/miyako/4d-utility-build-application). The same code is included in the sample structure, method ``TEST``.
 
-To request camera entitlement, add the following line (``22`` in sample code):
-
-```
-$entitlements["com.apple.security.device.camera"]:=True
-```
-
-**Note**: ``NSCameraUsageDescription`` is already added in the method ``codesign``. 
-
-コード署名（および公証）を簡単にするための[サンプルコード](https://github.com/miyako/4d-utility-build-application)を公開しています。必要な``entitlement``を追加し，例題に従ってアプリに署名してください。公証が必要ないのであれば，ディスクイメージ作成の手前で中断しても構いません。
+コード署名（および公証）を簡単にするための[サンプルコード](https://github.com/miyako/4d-utility-build-application)を公開しています。また，同じコードがサンプルストラクチャにも収録されています。例題に従って必要な``entitlement``でアプリに署名してください。公証が必要ないのであれば，ディスクイメージ作成の手前で中断しても構いません。
 
 ### How the plugin requests access
 
