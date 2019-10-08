@@ -196,7 +196,6 @@ file|TEXT|system file path to create QuickTime video (``.mov``)
 capture Start(option)
 capture Update(option)
 capture Stop
-image:=capture Image
 ```
 
 A camera access must be requested per application session, in order to begin video capture.
@@ -241,6 +240,13 @@ The preview layer is added to the content view of the window. You should create 
 
 Use the ``file`` option on Windows to record video.
 
+```
+image:=capture Image
+```
+Return a frame picture from an ongoing capture session.
+
+進行中のプレビューセッションからフレームをキャプチャします。
+
 ``image`` is a JPEG image on Mac, BMP on Windows.
 
 ```
@@ -253,3 +259,5 @@ success|BOOLEAN|
 errorMessage|TEXT|
 
 Request camera access on Mac. The app must be signed with sufficient entitlements and plist keys.
+
+アプリケーションにカメラへのアクセス許可を求めます（macOS 10.14以降）。アプリは，必要な``entitlement``で署名されている必要があります（上述）。
