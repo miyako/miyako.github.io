@@ -44,7 +44,7 @@ You can use the procedure outlined in [4d-utility-build-application](https://git
 
 コード署名（および公証）を簡単にするための[サンプルコード](https://github.com/miyako/4d-utility-build-application)を公開しています。また，同じコードがサンプルストラクチャにも収録されています。例題に従って必要な``entitlement``でアプリに署名してください。公証が必要ないのであれば，ディスクイメージ作成の手前で中断しても構いません。
 
-After a system update, ``xcrun`` tasks (``codesign``, ``altool``) might fail with error 
+**Attention**: After a system update, ``xcrun`` tasks (``codesign``, ``altool``) might fail with error 
 
 ```
 xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools)
@@ -144,15 +144,27 @@ devices:=capture Devices
   <div class="syntax-td cell cell--8"></div>   
 </div>
 
-properties of ``device``
+Returns a collection of video camera devices.
+
+カメラデバイスのリストをコレクション型で返します。
+
+properties of ``device`` object (mac)
 
 Property|Type|Description
 ------------|------|----
-uniqueID|TEXT|
+uniqueID|TEXT|pass this to ``capture Start recording`` to specify device other than the default
 modelID|TEXT|
 manufacturer|TEXT|
 localizedName|TEXT|
 connected|BOOLEAN|
+
+properties of ``device`` object (windows)
+
+Property|Type|Description
+------------|------|----
+devicePath|TEXT|pass this to ``capture Start recording`` to specify device other than the default
+friendlyName|TEXT|
+description|TEXT|
 
 ```
 capture Stop recording
@@ -162,6 +174,10 @@ capture Start recording(option)
 ```
 
 A capture session must be started beforehand in order to begin recording.
+
+録画は，すでにキャプチャ（プレビュー）セッションが開始している状態で実行する必要があります。
+
+**Platform remarks**: these 4 recording commands are not available on Windows.
 
 <div class="grid">
   <div class="syntax-th cell cell--2">Parameter</div>
@@ -174,7 +190,7 @@ A capture session must be started beforehand in order to begin recording.
 
 Property|Type|Description
 ------------|------|----
-file|TEXT|system file path to create QuickTime video
+file|TEXT|system file path to create QuickTime video (``.mov``)
 
 ```
 capture Start(option)
@@ -182,6 +198,8 @@ capture Update(option)
 capture Stop
 image:=capture Image
 ```
+
+A camera access must be requested per application session, in order to begin video capture.
 
 <div class="grid">
   <div class="syntax-th cell cell--2">Parameter</div>
@@ -195,7 +213,7 @@ image:=capture Image
   <div class="syntax-td cell cell--8"></div>   
 </div>
 
-A camera access must be requested per application session, in order to begin video capture.
+properties of ``option`` object (windows)
 
 Property|Type|Description
 ------------|------|----
@@ -204,22 +222,26 @@ x|LONGINT|
 y|LONGINT|
 width|LONGINT|
 height|LONGINT|
-flipV|BOOLEAN|
-flipH|BOOLEAN|
-hidden|BOOLEAN|
+flipV|BOOLEAN| (optional)
+flipH|BOOLEAN| (optional)
+hidden|BOOLEAN| (optional)
 device|TEXT|unique ID (optional)
+force|BOOLEAN|destroy current session instance and create a new one (optional)
+file|TEXT|system file path to record video on Windows (``.avi``)  (optional)
 
-If ``device`` is ommitted, the default camera device will be used.
+If ``device`` is ommitted, the default camera device is assumed.
+
+**Platform remarks**: ``flipV`` ``flipH`` are not available on Windows.
 
 Only ``x`` ``y`` ``width`` ``height`` ``hidden`` ``flipV`` ``flipH`` can be changed with ``capture Update``.
 
-There can only be one capture session for the application, so passing a different ``window`` will remove the preview layer from the original window and add it to the new window. Likewise, passing a different device ID will force the capture session to be destroyed and recreated.
+There can only be one capture session for the application, so passing a different ``window`` will remove the preview layer from the original window and add it to the new window. Likewise, passing a different device ID will force the capture session to be destroyed and recreated. You can also force a new session explicitly.
 
 The preview layer is added to the content view of the window. You should create a session after regular form objects are added to the window, i.e. the first (``-1``) ``On Timer`` event after ``On Load``.
 
-``capture Start`` will force the preview layer to be visible.
+Use the ``file`` option on Windows to record video.
 
-``image`` is in JPEG format.
+``image`` is a JPEG image on Mac, BMP on Windows.
 
 ```
 status:=capture Request permisson
@@ -229,3 +251,5 @@ Property|Type|Description
 ------------|------|----
 success|BOOLEAN|
 errorMessage|TEXT|
+
+Request camera access on Mac. The app must be signed with sufficient entitlements and plist keys.
