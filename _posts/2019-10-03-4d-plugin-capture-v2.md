@@ -260,4 +260,8 @@ errorMessage|TEXT|
 
 Request camera access on Mac. The app must be signed with sufficient entitlements and plist keys.
 
+The dialog will not be presented every time. However the app must call this per session in order to access the camera.
+
 アプリケーションにカメラへのアクセス許可を求めます（macOS 10.14以降）。アプリは，必要な``entitlement``で署名されている必要があります（上述）。
+
+アクセスが許可（または拒否）されていれば，ダイアログは表示されませんが，他のコマンドを使用するためにはこのコマンドを実行しなければなりません。
