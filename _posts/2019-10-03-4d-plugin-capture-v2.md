@@ -44,6 +44,18 @@ You can use the procedure outlined in [4d-utility-build-application](https://git
 
 コード署名（および公証）を簡単にするための[サンプルコード](https://github.com/miyako/4d-utility-build-application)を公開しています。また，同じコードがサンプルストラクチャにも収録されています。例題に従って必要な``entitlement``でアプリに署名してください。公証が必要ないのであれば，ディスクイメージ作成の手前で中断しても構いません。
 
+After a system update, ``xcrun`` tasks (``codesign``, ``altool``) might fail with error 
+
+```
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools)
+```
+
+You may need to update command line tools to fix it.
+
+```
+xcode-select --install
+```
+
 ### How the plugin requests access
 
 Following Apple guidelines, the plugin calls 
