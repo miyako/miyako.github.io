@@ -50,7 +50,7 @@ tags: svg japanese
 
 [https://github.com/miyako/4d-tips-svg-writing-mode](https://github.com/miyako/4d-tips-svg-writing-mode)
 
-#### Convert to PDF
+#### Convert to PDF (fail)
 
 SVGをPDFに変換する[``rsvg-convert``](https://github.com/GNOME/librsvg)というプログラムがあります。
 
@@ -67,6 +67,8 @@ Pango-ERROR **: Could not load fallback font, bailing out.
 ```
 
 日本語の``writing-mode:tb-rl``でエラーになるようです。英語の縦書きでは問題ありませんでした。いずれにしても``textArea``は出力されません。
+
+#### Convert to PDF (success)
 
 4Dの印刷コマンドでPDFを作成することができます。
 
