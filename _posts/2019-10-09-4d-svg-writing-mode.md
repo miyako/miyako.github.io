@@ -70,3 +70,123 @@ Pango-ERROR **: Could not load fallback font, bailing out.
 
 4Dの印刷コマンドでPDFを作成することができます。
 
+まず，印刷は同時に複数のプロセスで実行できないので，``Storage``でコードブロックを保護します。従来のように``Semaphore``を使用しても構いません。
+
+```
+If (Storage.mutex=Null)
+	Use (Storage)
+		Storage.mutex:=New shared object
+	End use 
+End if 
+
+If (Storage.mutex.printing=Null)
+	Use (Storage.mutex)
+		Storage.mutex.printing:=New shared object
+	End use 
+End if 
+
+Use (Storage.mutex.printing)
+
+//...
+
+End use 
+```
+
+カレントの印刷設定をオブジェクト型に保存します。
+
+```
+	C_OBJECT($currentPrintSettings)
+	
+	C_REAL($left;$top;$right;$bottom)
+	GET PRINTABLE MARGIN($left;$top;$right;$bottom)
+	
+	C_LONGINT($destination)
+	GET PRINT OPTION(Destination option;$destination)
+	
+	$currentPrintSettings:=New object(\
+	"name";Get current printer;\
+	"destination";$destination;\
+	"margin";New object(\
+	"left";$left;\
+	"top";$top;\
+	"right";$right;\
+	"bottom";$bottom)\
+	)
+```
+
+PDFファイルの保存パスを設定します。Macでは``Destination option``が``2``，Windowsでは``3``となる点に注意してください。
+
+```
+	If (Is Windows)
+		SET CURRENT PRINTER(Generic PDF driver)
+		SET PRINT OPTION(Destination option;2;$pdfPath)
+	Else 
+		
+		SET PRINT OPTION(Destination option;3;$pdfPath)
+	End if 
+```
+
+印刷コマンド終了後，印刷設定を復元します。
+
+```
+	SET CURRENT PRINTER($currentPrintSettings.name)
+	SET PRINT OPTION(Destination option;$currentPrintSettings.destination)
+	SET PRINTABLE MARGIN(\
+	$currentPrintSettings.margin.left;\
+	$currentPrintSettings.margin.top;\
+	$currentPrintSettings.margin.right;\
+	$currentPrintSettings.margin.bottom)
+```
+
+SVGは，用紙サイズぴったりのピクチャオブジェクトに転写して印刷します。フォームエディターで個別に用意することもできますが，JSONフォームであれば，オンザフライでフォームが作成できるので便利です。
+
+```
+C_OBJECT($form)
+
+$form:=New object(\
+"destination";"detailScreen";\
+"rightMargin";0;\
+"bottomMargin";0;\
+"markerHeader";0;\
+"markerBody";0;\
+"markerBreak";0;\
+"markerFooter";0;"events";New collection("onLoad";"onUnload");\
+"pages";New collection(Null;New object("objects";New object)))
+
+$form.pages[1].objects.img:=New object(\
+"type";"input";\
+"top";0;\
+"left";0;\
+"width";$width;\
+"height";$height;\
+"dataSourceTypeHint";"picture";\
+"focusable";False;\
+"enterable";False;\
+"contextMenu";"none";\
+"dragging";"none")
+```
+
+フォームの代わりにオブジェクト型をメモリにロードし，印刷ジョブを開始します。
+
+```
+OPEN PRINTING JOB
+
+FORM LOAD($form)
+
+$img:=OBJECT Get pointer(Object named;"img")
+```
+
+ピクチャをメモリ上の仮想フォームオブジェクトに代入します。
+
+```
+$img->:=$svg
+$printed:=Print object(*;"img")
+```
+
+仮想フォームをアンロードし，印刷ジョブを終了します。
+
+```
+FORM UNLOAD
+
+CLOSE PRINTING JOB
+```
