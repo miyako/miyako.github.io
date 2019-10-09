@@ -65,3 +65,5 @@ Pango-WARNING **: couldn't load font "Times New Roman, Rotated-Left 12", modifie
 ```
 Pango-ERROR **: Could not load fallback font, bailing out.
 ```
+
+日本語の``writing-mode=: tb-rl``でエラーになるようです。英語の縦書きでは問題ありませんでした。いずれにしても``textArea``は無視されます。
