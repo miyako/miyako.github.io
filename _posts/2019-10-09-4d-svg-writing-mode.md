@@ -49,3 +49,19 @@ tags: svg japanese
 #### Download
 
 [https://github.com/miyako/4d-tips-svg-writing-mode](https://github.com/miyako/4d-tips-svg-writing-mode)
+
+#### Convert to PDF
+
+SVGをPDFに変換する``rsvg-convert``[https://github.com/GNOME/librsvg]というプログラムがあります。
+
+**カスタマイズ版**: [miyako/console-rsvg-convert](https://github.com/miyako/console-rsvg-convert)
+
+上記の方法で作成したSVGを処理させたところ，下記のようなエラーが返されました。
+
+```
+Pango-WARNING **: couldn't load font "Times New Roman, Rotated-Left 12", modified variant/weight/stretch as fallback, expect ugly output.
+```
+
+```
+Pango-ERROR **: Could not load fallback font, bailing out.
+```
