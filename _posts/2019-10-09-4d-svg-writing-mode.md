@@ -38,5 +38,8 @@ tags: svg japanese
 
 <img width="275" alt="スクリーンショット 2019-10-09 16 39 32" src="https://user-images.githubusercontent.com/1725068/66461160-63726e00-eab3-11e9-87d9-7a8650c647d6.png">
 
+``text``は，どのユーザーエージェントでもサポートされている基本の要素です。テキストが複数行にわたる場合，``textArea``のように[``tbreak``](https://www.w3.org/TR/SVGTiny12/text.html#tbreakElement)要素で改行したり，レンダリングエンジンに折り返しの処理を任せたりするようなことはせず，行毎に``text``を使用します。手間はかかりますが，行間を自由に制御することができるというメリットがあります。
+
 <img width="197" alt="スクリーンショット 2019-10-09 16 39 19" src="https://user-images.githubusercontent.com/1725068/66461150-5d7c8d00-eab3-11e9-83fc-0108b559945c.png">
 
+この例では，本文に``text``，ルビに``textArea``を使用しています。座標とフォントサイズの単位に``pc``（パイカ）および``in``（インチ）を使用しているため，比較的シンプルにレイアウトを決めることができます。
