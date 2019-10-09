@@ -52,7 +52,7 @@ tags: svg japanese
 
 #### Convert to PDF
 
-SVGをPDFに変換する``rsvg-convert``[https://github.com/GNOME/librsvg]というプログラムがあります。
+SVGをPDFに変換する[``rsvg-convert``](https://github.com/GNOME/librsvg)というプログラムがあります。
 
 **カスタマイズ版**: [miyako/console-rsvg-convert](https://github.com/miyako/console-rsvg-convert)
 
