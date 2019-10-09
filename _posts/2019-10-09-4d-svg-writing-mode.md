@@ -24,15 +24,17 @@ tags: svg japanese
 * [display-align](https://www.w3.org/TR/SVGTiny12/text.html#DisplayAlignProperty) ブロック進行方向の揃え [auto, before, after, center]
 * [letter-spacing](https://www.w3.org/TR/SVG11/text.html#LetterSpacingProperty)
 
-縦書きスクリプトがサポートされているので，水平揃え・垂直揃えという表現はしません。
+縦書きスクリプトがサポートされているので，水平揃え・垂直揃えという表現はしない点に留意してください。
 
 下記のCSSスタイル属性はサポートされていません。
 
 * line-increment
 * word-spacing
-* font-stretch
-* font-variant
-* font-size-adjust
+* glyph-orientation-horizontal
+* glyph-orientation-vertical
+* dominant-baseline
+
+``textArea``は，指定した領域に収まるよう，テキストを描画するのに適しています。ただし，**行間をコントロールすることができない**ので，レイアウトのデザインに限界があります。
 
 <img width="275" alt="スクリーンショット 2019-10-09 16 39 32" src="https://user-images.githubusercontent.com/1725068/66461160-63726e00-eab3-11e9-87d9-7a8650c647d6.png">
 
