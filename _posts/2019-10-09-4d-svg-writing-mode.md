@@ -45,3 +45,7 @@ tags: svg japanese
 この例では，本文に``text``，ルビに``textArea``を使用しています。座標とフォントサイズの単位に``pc``（パイカ）および``in``（インチ）を使用しているため，比較的シンプルにレイアウトを決めることができました。
 
 ``text``または``textArea``を縦書きにする場合，要素の``writing-mode``属性を指定します。CSSスタイルで指定することはできないので，注意してください。
+
+#### Download
+
+[https://github.com/miyako/4d-tips-svg-writing-mode](https://github.com/miyako/4d-tips-svg-writing-mode)
