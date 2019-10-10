@@ -21,18 +21,18 @@ tags: svg japanese
 レイアウト関連では，下記のCSSスタイル属性がサポートされています。
 
 * [``text-align``](https://www.w3.org/TR/SVGTiny12/text.html#TextAlignProperty) テキスト進行方向の揃え [start, end. center, justify]
-* [display-align](https://www.w3.org/TR/SVGTiny12/text.html#DisplayAlignProperty) ブロック進行方向の揃え [auto, before, after, center]
-* [letter-spacing](https://www.w3.org/TR/SVG11/text.html#LetterSpacingProperty)
+* [``display-align``](https://www.w3.org/TR/SVGTiny12/text.html#DisplayAlignProperty) ブロック進行方向の揃え [auto, before, after, center]
+* [``letter-spacing``](https://www.w3.org/TR/SVG11/text.html#LetterSpacingProperty)
 
 縦書きスクリプトがサポートされているので，水平揃え・垂直揃えという表現はしない点に留意してください。
 
 下記のCSSスタイル属性はサポートされていません。
 
-* line-increment
-* word-spacing
-* glyph-orientation-horizontal
-* glyph-orientation-vertical
-* dominant-baseline
+* ``line-increment``
+* ``word-spacing``
+* ``glyph-orientation-horizontal``
+* ``glyph-orientation-vertical``
+* ``dominant-baseline``
 
 ``textArea``は，指定した領域に収まるよう，テキストを描画するのに適しています。ただし，**行間をコントロールすることができない**ので，レイアウトのデザインに限界があります。
 
