@@ -156,7 +156,7 @@ $form.pages[1].objects.img:=New object(\
 "dragging";"none")
 ```
 
-フォームの代わりにオブジェクト型をメモリにロードし，印刷ジョブを開始します。
+印刷ジョブを開始し，フォームの代わりにオブジェクト型をメモリにロードします。
 
 ```
 OPEN PRINTING JOB
