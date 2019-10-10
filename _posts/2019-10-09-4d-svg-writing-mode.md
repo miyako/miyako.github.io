@@ -116,7 +116,7 @@ End use
 	)
 ```
 
-PDFファイルの保存パスを設定します。Macでは``Destination option``が``2``，Windowsでは``3``となる点に注意してください。
+PDFファイルの保存パスを設定します。Windowsでは``Destination option``が``2``，Macでは``3``となる点に注意してください。
 
 ```
 	If (Is Windows)
