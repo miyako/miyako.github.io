@@ -128,18 +128,6 @@ PDFファイルの保存パスを設定します。Windowsでは``Destination op
 	End if 
 ```
 
-印刷コマンド終了後，印刷設定を復元します。
-
-```
-	SET CURRENT PRINTER($currentPrintSettings.name)
-	SET PRINT OPTION(Destination option;$currentPrintSettings.destination)
-	SET PRINTABLE MARGIN(\
-	$currentPrintSettings.margin.left;\
-	$currentPrintSettings.margin.top;\
-	$currentPrintSettings.margin.right;\
-	$currentPrintSettings.margin.bottom)
-```
-
 SVGは，用紙サイズぴったりのピクチャオブジェクトに転写して印刷します。フォームエディターで個別に用意することもできますが，JSONフォームであれば，オンザフライでフォームが作成できるので便利です。
 
 ```
@@ -191,4 +179,16 @@ $printed:=Print object(*;"img")
 FORM UNLOAD
 
 CLOSE PRINTING JOB
+```
+
+印刷コマンド終了後，印刷設定を復元します。
+
+```
+	SET CURRENT PRINTER($currentPrintSettings.name)
+	SET PRINT OPTION(Destination option;$currentPrintSettings.destination)
+	SET PRINTABLE MARGIN(\
+	$currentPrintSettings.margin.left;\
+	$currentPrintSettings.margin.top;\
+	$currentPrintSettings.margin.right;\
+	$currentPrintSettings.margin.bottom)
 ```
