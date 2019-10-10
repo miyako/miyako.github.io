@@ -22,7 +22,7 @@ tags: svg japanese
 
 * [``text-align``](https://www.w3.org/TR/SVGTiny12/text.html#TextAlignProperty) テキスト進行方向の揃え [start, end. center, justify]
 * [``display-align``](https://www.w3.org/TR/SVGTiny12/text.html#DisplayAlignProperty) ブロック進行方向の揃え [auto, before, after, center]
-* [``letter-spacing``](https://www.w3.org/TR/SVG11/text.html#LetterSpacingProperty)
+* [``letter-spacing``](https://www.w3.org/TR/SVG11/text.html#LetterSpacingProperty) テキスト進行方向の文字間隔
 
 縦書きスクリプトがサポートされているので，水平揃え・垂直揃えという表現はしない点に留意してください。
 
