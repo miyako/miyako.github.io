@@ -8,10 +8,10 @@ QR code generator based on [libqrencode 4.0.0](https://fukuchi.org/works/qrencod
 
 <!--more-->
 
-[miyako/4d-plugin-qrencode](https://github.com/miyako/4d-plugin-qrencode)
+[miyako/4d-plugin-qrencode-v2](https://github.com/miyako/4d-plugin-qrencode-v2/)
 
 ```
-barcode:=QRCODE (inData;inOutputFormat;inMode;inLevel;inVersion;inSize;inMargin;inDPI;outData)
+barcode:=qrcode (inData;inParams)
 ```
 
 <div class="grid">
@@ -21,37 +21,16 @@ barcode:=QRCODE (inData;inOutputFormat;inMode;inLevel;inVersion;inSize;inMargin;
   <div class="syntax-td cell cell--2">inData</div>
   <div class="syntax-td cell cell--2">TEXT</div>
   <div class="syntax-td cell cell--8"></div>
-  <div class="syntax-td cell cell--2">inOutputFormat</div>
-  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--2">inParams</div>
+  <div class="syntax-td cell cell--2">OBJECT</div>
   <div class="syntax-td cell cell--8"></div>   
-  <div class="syntax-td cell cell--2">inMode</div>
-  <div class="syntax-td cell cell--2">LONGINT</div>
-  <div class="syntax-td cell cell--8"></div>  
-  <div class="syntax-td cell cell--2">inLevel</div>
-  <div class="syntax-td cell cell--2">LONGINT</div>
-  <div class="syntax-td cell cell--8"></div> 
-  <div class="syntax-td cell cell--2">inVersion</div>
-  <div class="syntax-td cell cell--2">LONGINT</div>
-  <div class="syntax-td cell cell--8"></div> 
-  <div class="syntax-td cell cell--2">inSize</div>
-  <div class="syntax-td cell cell--2">LONGINT</div>
-  <div class="syntax-td cell cell--8"></div>   
-  <div class="syntax-td cell cell--2">inMargin</div>
-  <div class="syntax-td cell cell--2">LONGINT</div>
-  <div class="syntax-td cell cell--8"></div> 
-  <div class="syntax-td cell cell--2">inDPI</div>
-  <div class="syntax-td cell cell--2">LONGINT</div>
-  <div class="syntax-td cell cell--8"></div>  
-  <div class="syntax-td cell cell--2">outData</div>
-  <div class="syntax-td cell cell--2">TEXT</div>
-  <div class="syntax-td cell cell--8"></div>  
   <div class="syntax-td cell cell--2">barcode</div>
-  <div class="syntax-td cell cell--2">PICTURE</div>
+  <div class="syntax-td cell cell--2">OBJECT</div>
   <div class="syntax-td cell cell--8"></div>    
 </div> 
 
 ```
-QRCODE ARRAY (inData;inOutputFormat;inMode;inLevel;inVersion;inSize;inMargin;inDPI;outData)
+barcodes:=qrcode array (inData;inParams)
 ```
 
 <div class="grid">
@@ -61,29 +40,11 @@ QRCODE ARRAY (inData;inOutputFormat;inMode;inLevel;inVersion;inSize;inMargin;inD
   <div class="syntax-td cell cell--2">inData</div>
   <div class="syntax-td cell cell--2">TEXT</div>
   <div class="syntax-td cell cell--8"></div>
-  <div class="syntax-td cell cell--2">inOutputFormat</div>
-  <div class="syntax-td cell cell--2">LONGINT</div>
+  <div class="syntax-td cell cell--2">inParams</div>
+  <div class="syntax-td cell cell--2">OBJECT</div>
   <div class="syntax-td cell cell--8"></div>   
-  <div class="syntax-td cell cell--2">inMode</div>
-  <div class="syntax-td cell cell--2">LONGINT</div>
-  <div class="syntax-td cell cell--8"></div>  
-  <div class="syntax-td cell cell--2">inLevel</div>
-  <div class="syntax-td cell cell--2">LONGINT</div>
-  <div class="syntax-td cell cell--8"></div> 
-  <div class="syntax-td cell cell--2">inVersion</div>
-  <div class="syntax-td cell cell--2">LONGINT</div>
-  <div class="syntax-td cell cell--8"></div> 
-  <div class="syntax-td cell cell--2">inSize</div>
-  <div class="syntax-td cell cell--2">LONGINT</div>
-  <div class="syntax-td cell cell--8"></div>   
-  <div class="syntax-td cell cell--2">inMargin</div>
-  <div class="syntax-td cell cell--2">LONGINT</div>
-  <div class="syntax-td cell cell--8"></div> 
-  <div class="syntax-td cell cell--2">inDPI</div>
-  <div class="syntax-td cell cell--2">LONGINT</div>
-  <div class="syntax-td cell cell--8"></div>  
-  <div class="syntax-td cell cell--2">outData</div>
-  <div class="syntax-td cell cell--2">ARRAY PICTURE</div>
+  <div class="syntax-td cell cell--2">barcodes</div>
+  <div class="syntax-td cell cell--2">COLLECTION</div>
   <div class="syntax-td cell cell--8"></div>   
 </div> 
 
