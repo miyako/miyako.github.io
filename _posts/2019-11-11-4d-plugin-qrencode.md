@@ -87,3 +87,27 @@ QRCODE ARRAY (inData;inOutputFormat;inMode;inErrorCorrectionLevel;inVersion;inSi
   <div class="syntax-td cell cell--8"></div>   
 </div> 
 
+#### QR Encode Mode
+
+Property|Type|Description
+------------|------|----
+QR Mode Unicode|LONGINT|
+QR Mode Kanji|LONGINT|
+QR Mode Micro|LONGINT|
+QR Mode Latin|LONGINT|
+
+#### QR Error Correction Level
+
+Property|Type|Description
+------------|------|----
+QR Correction Level L|LONGINT|
+QR Correction Level M|LONGINT|
+QR Correction Level Q|LONGINT|
+QR Correction Level H|LONGINT|
+
+#### QR Export Type
+
+Property|Type|Description
+------------|------|----
+QR Format SVG|LONGINT|
+QR Format PNG|LONGINT|
