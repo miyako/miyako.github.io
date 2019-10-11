@@ -11,7 +11,7 @@ QR code generator based on [libqrencode 4.0.0](https://fukuchi.org/works/qrencod
 [miyako/4d-plugin-qrencode](https://github.com/miyako/4d-plugin-qrencode)
 
 ```
-barcode:=QRCODE (inData;inOutputFormat;inMode;inErrorCorrectionLevel;inVersion;inSize;inMargin;inDPI;outData)
+barcode:=QRCODE (inData;inOutputFormat;inMode;inLevel;inVersion;inSize;inMargin;inDPI;outData)
 ```
 
 <div class="grid">
@@ -27,7 +27,7 @@ barcode:=QRCODE (inData;inOutputFormat;inMode;inErrorCorrectionLevel;inVersion;i
   <div class="syntax-td cell cell--2">inMode</div>
   <div class="syntax-td cell cell--2">LONGINT</div>
   <div class="syntax-td cell cell--8"></div>  
-  <div class="syntax-td cell cell--2">inErrorCorrectionLevel</div>
+  <div class="syntax-td cell cell--2">inLevel</div>
   <div class="syntax-td cell cell--2">LONGINT</div>
   <div class="syntax-td cell cell--8"></div> 
   <div class="syntax-td cell cell--2">inVersion</div>
@@ -51,7 +51,7 @@ barcode:=QRCODE (inData;inOutputFormat;inMode;inErrorCorrectionLevel;inVersion;i
 </div> 
 
 ```
-QRCODE ARRAY (inData;inOutputFormat;inMode;inErrorCorrectionLevel;inVersion;inSize;inMargin;inDPI;outData)
+QRCODE ARRAY (inData;inOutputFormat;inMode;inLevel;inVersion;inSize;inMargin;inDPI;outData)
 ```
 
 <div class="grid">
@@ -67,7 +67,7 @@ QRCODE ARRAY (inData;inOutputFormat;inMode;inErrorCorrectionLevel;inVersion;inSi
   <div class="syntax-td cell cell--2">inMode</div>
   <div class="syntax-td cell cell--2">LONGINT</div>
   <div class="syntax-td cell cell--8"></div>  
-  <div class="syntax-td cell cell--2">inErrorCorrectionLevel</div>
+  <div class="syntax-td cell cell--2">inLevel</div>
   <div class="syntax-td cell cell--2">LONGINT</div>
   <div class="syntax-td cell cell--8"></div> 
   <div class="syntax-td cell cell--2">inVersion</div>
