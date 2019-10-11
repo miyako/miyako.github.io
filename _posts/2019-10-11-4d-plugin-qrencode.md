@@ -4,7 +4,7 @@ title: qrencode
 tags: plugin graphic v17
 ---
 
-QR code generator based on [libqrencode 4.0.0](https://fukuchi.org/works/qrencode/).
+QR code generator based on [libqrencode](https://fukuchi.org/works/qrencode/).
 
 <!--more-->
 
