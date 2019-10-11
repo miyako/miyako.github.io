@@ -1,6 +1,6 @@
 ---
 layout: simple
-title: qrencode.md
+title: qrencode
 tags: plugin graphic v17
 ---
 
