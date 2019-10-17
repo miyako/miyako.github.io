@@ -14,13 +14,3 @@ Mac版アプリケーションの仕上げと配付に関する情報をまと�
 
 | 開発 | 配付 | ビルド | ライセンス |
 |:-------------:|:-------------:|:-----:|
-| Developer Standard | Interpreted Desktop | 不可 | プリインストール |
-| Developer Standard | SQL Desktop | 不可 | 別途インストール |
-| Developer Standard | Server | 不可 | 別途インストール |
-| Developer Professional | Interpreted Desktop | 不可 | プリインストール |
-| Developer Professional | SQL Desktop | 不可 | 別途インストール |
-| Developer Professional | Server | 可 | 別途インストール |
-| Developer Professional | Volume Desktop | 必須 | プリインストール |
-| Developer Professional | OEM Desktop | 必須 | プリインストール |
-| Developer Professional | OEM Server | 必須 | プリインストール |
-
