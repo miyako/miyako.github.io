@@ -128,5 +128,5 @@ xcode-select --switch {path}
 
 Xcodeを起動し，アプリケーションメニューの「Preferences」から「Accounts」のページを開きます。Developer IDを入力し，ログインします。
 
-<img width="800" alt="スクリーンショット 2019-10-17 17 00 06" src="https://user-images.githubusercontent.com/1725068/66989622-abbb0d00-f0ff-11e9-88df-0fa4d2669863.png">
+<img width="400" alt="スクリーンショット 2019-10-17 17 00 06" src="https://user-images.githubusercontent.com/1725068/66989622-abbb0d00-f0ff-11e9-88df-0fa4d2669863.png">
 
