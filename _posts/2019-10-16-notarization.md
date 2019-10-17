@@ -85,11 +85,11 @@ Apple Developer Programには，[無料のプログラム](https://developer.app
 
 Apple IDは，Mac，iOSデバイス，アプリ，オンラインいずれかの方法で作成することができます。Macユーザーであれば，すでに保有しているのではないでしょうか。
 
-* デバイス設定時に
-* App Storeで
-* iTunesで
-* Webで
+* [デバイスの設定時に](https://support.apple.com/ja-jp/HT204316#setup)
+* [App Storeで](https://support.apple.com/ja-jp/HT204316#appstore)
+* [iTunesで](https://support.apple.com/ja-jp/HT204316#itunes)
+* [Webで](https://support.apple.com/ja-jp/HT204316#web)
 
-アプリ開発用に新しいアカウントを作成することもできますが，２ファクタ認証を有効にする必要があるので，少なくとも２台のApple機器で同じApple IDを使用しなければならない点に留意してください。また，Apple Developer Enterprise Programの場合，iCloudなどの無料メールアカウントは使用できません。
+アプリ開発用に新しいアカウントを作成することもできますが，**２ファクタ認証**を有効にする必要があるので，少なくとも２台のApple機器で同じApple IDを使用しなければならない点に留意してください。また，Apple Developer Enterprise Programの場合，iCloudなどの無料メールアカウントは使用できません。
 
 まず，既存のApple IDでログインして，Apple Developer Programに加入の手続きを開始します。２ファクタ認証が有効にされていなければ，このとき設定を済ませるよう案内されます。支払いが完了すると，数時間後に手続き完了の通知メールが送られるはずです。
