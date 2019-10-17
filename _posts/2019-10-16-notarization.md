@@ -102,4 +102,4 @@ Apple IDでログインして，Apple Developer Programに加入の手続きを�
 
 最新版のmacOSおよびXcodeは，App Storeから入手することができます。古いバージョンのXcodeがアプリケーションフォルダーにインストールされている場合，アプリケーションは上書きされます。以前のXcodeを残しておきたいのであれば，サブフォルダーなど，あらかじめ別の場所に退避してください。
 
-**注記**: [Apple Developer](https://developer.apple.com/download/)にログインすると，開発中のベータ版ソフトウェアや，古いバージョンのソフトウェアがダウンロードできます。
+**注記**: [Apple Developer](https://developer.apple.com/download/)にログインすると，開発中（ベータ版）および旧バージョンのソフトウェアがダウンロードできます。
