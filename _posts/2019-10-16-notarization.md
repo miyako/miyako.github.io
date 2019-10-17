@@ -130,3 +130,8 @@ Xcodeを起動し，アプリケーションメニューの「Preferences」か�
 
 <img width="400" alt="スクリーンショット 2019-10-17 17 00 06" src="https://user-images.githubusercontent.com/1725068/66989622-abbb0d00-f0ff-11e9-88df-0fa4d2669863.png">
 
+「Manage Certificates」をクリックし，画面の左下にある「＋」アイコンをクリックして，「Developer ID Application」および「Developer ID Installer」証明書を作成します。
+
+**注記**: 無料のApple Developer IDでログインしている場合，証明書は作成できません。
+
+<img width="400" alt="スクリーンショット 2019-10-17 17 06 07" src="https://user-images.githubusercontent.com/1725068/66990143-9d212580-f100-11e9-8ecf-df83a1fb2a7a.png">
