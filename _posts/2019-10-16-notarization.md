@@ -35,7 +35,7 @@ Developer Professional | OEM Server | 必須 | 組込
 
 10.8 Mountain Lion以降，デフォルトの設定は「App Storeと確認済みの開発元からのアプリケーションを許可」でした。これは，[Apple Developer Program](https://developer.apple.com) に登録された開発元の有効な**コード署名**が確認できないアプリは，起動を許可しない，という設定です。
 
-10.15 Catalina以降，**コード署名**に加え，**公証**（[notarization](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution?language=objc)）が確認できないアプリは，デフォルトで起動を許可しない設定になりました。公証とは，プログラムがマルウェアのように自己を改竄したりしないことを保証するために，Appleが運営している申告・判定・登録システムのことです。GateKeeperは，初回の起動でアプリが公証にパスしたことを証明する電子的なチケット（ステープル）の存在をチェックします。チケットが確認できない場合，Appleのサーバーにアクセスし，そのアプリが公証にパスしているかどうかをチェックします。
+10.15 Catalina以降，**コード署名**に加え，**公証**（[notarization](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution?language=objc)）が確認できないアプリは，デフォルトで起動を許可しない設定になりました。公証とは，プログラムがマルウェアのように自己を改竄したりしないことを保証するために，Appleが運営している申告・判定・登録システムのことです。GateKeeperは，初回の起動でアプリが公証にパスしたことを証明する電子的なチケット（ステープル）の存在をチェックします。チケットが確認できない場合，Appleのサーバーにアクセスし，そのアプリが公証にパスしたものかどうか，チェックします。
 
 署名や公証が確認できない場合，下記のような警告メッセージが表示されます。
 
