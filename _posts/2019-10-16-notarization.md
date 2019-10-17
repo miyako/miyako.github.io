@@ -90,7 +90,9 @@ Apple IDは，Mac，iOSデバイス，アプリ，オンラインいずれかの
 * [iTunesで](https://support.apple.com/ja-jp/HT204316#itunes)
 * [Webで](https://support.apple.com/ja-jp/HT204316#web)
 
-アプリ開発用に新しいアカウントを作成することもできますが，**２ファクタ認証**を有効にする必要があるので，少なくとも２台のApple機器で同じApple IDを使用しなければならない点に留意してください。また，Apple Developer Enterprise Programの場合，iCloudなどの無料メールアカウントは使用できません。
+アプリ開発用に新しいアカウントを作成することもできますが，**２ファクタ認証**を有効にする必要があり，原則的に２台以上のApple機器で同じApple IDを使用していることが想定されているので，個人のApple IDをそのままApple Developer IDにしたほうが簡単かもしれません。また，Apple Developer Enterprise Programの場合，iCloudなどの無料メールアカウントは使用できない点に注意してください。
+
+**注記**: Apple機器が１台だけの場合，電話で２ファクタ認証を完了することができます。
 
 まず，既存のApple IDでログインして，Apple Developer Programに加入の手続きを開始します。２ファクタ認証が有効にされていなければ，このとき設定を済ませるよう案内されます。支払いが完了すると，数時間後に手続き完了の通知メールが送られるはずです。
 
