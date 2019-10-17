@@ -132,6 +132,6 @@ Xcodeを起動し，アプリケーションメニューの「Preferences」か�
 
 「Manage Certificates」をクリックし，画面の左下にある「＋」アイコンをクリックして，「Developer ID Application」および「Developer ID Installer」証明書を作成します。
 
-**注記**: 無料のApple Developer IDでログインしている場合，証明書は作成できません。
+**注記**: 無料のApple Developer IDでログインしている場合，Developer ID系の証明書は作成できません。「Mac Developer」証明書は作成できますが，これは個人のデバイスでアプリをテストするための証明書であり，アプリを配付する目的では使用できないものです。
 
 <img width="400" alt="スクリーンショット 2019-10-17 17 06 07" src="https://user-images.githubusercontent.com/1725068/66990143-9d212580-f100-11e9-8ecf-df83a1fb2a7a.png">
