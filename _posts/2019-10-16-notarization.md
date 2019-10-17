@@ -151,3 +151,9 @@ xcrun altool --store-password-in-keychain-item "AC_PASSWORD" -u "AC_USERNAME" -p
 ```
 xcrun altool --notarize-app -u "AC_USERNAME" -p "@keychain:AC_PASSWORD"
 ```
+
+これでアプリの署名と公証に必要な準備が整いました！
+
+---
+
+TBD
