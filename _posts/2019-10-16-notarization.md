@@ -83,6 +83,8 @@ Developer Professional | OEM Server | 必須 | 組込
 
 Apple Developer Programには，[無料のプログラム](https://developer.apple.com/jp/support/compare-memberships/)も用意されていますが，「App StoreでのApp配信」および「Mac App Store以外でのソフトウェア配信」が特典に含まれていません。無料のメンバーシップでは，Developer ID 証明書の発行ができないためです。署名と公証には，Developer ID 証明書が必要です。
 
+#### Apple ID
+
 Apple IDは，Mac，iOSデバイス，アプリ，オンラインいずれかの方法で作成することができます。Macユーザーであれば，すでに保有しているのではないでしょうか。
 
 * [デバイスの設定時に](https://support.apple.com/ja-jp/HT204316#setup)
@@ -90,11 +92,13 @@ Apple IDは，Mac，iOSデバイス，アプリ，オンラインいずれかの
 * [iTunesで](https://support.apple.com/ja-jp/HT204316#itunes)
 * [Webで](https://support.apple.com/ja-jp/HT204316#web)
 
-アプリ開発用に新しいアカウントを作成することもできますが，**２ファクタ認証**を有効にする必要があり，原則的に２台以上のApple機器で同じApple IDを使用していることが想定されているので，個人のApple IDをそのままApple Developer IDにしたほうが簡単かもしれません。
+アプリ開発用に新しいアカウントを作成することもできますが，**２ファクタ認証**を有効にする必要があり，原則的に２台以上のApple機器で同じApple IDを使用していることが想定されているので，個人のApple IDをそのまま使用したほうが簡単かもしれません。
 
 **注記**: Apple機器が１台だけの場合，電話で２ファクタ認証を完了することができます。
 
-まず，既存のApple IDでログインして，Apple Developer Programに加入の手続きを開始します。２ファクタ認証が有効にされていなければ，このとき設定を済ませるよう案内されます。支払いが完了すると，数時間後に手続き完了の通知メールが送られるはずです。
+#### Apple Developer Program
+
+Apple IDでログインして，Apple Developer Programに加入の手続きを開始します。２ファクタ認証が有効にされていなければ，このとき設定を済ませるよう案内されます。支払いが完了すると，数時間後に手続き完了の通知メールが送られるはずです。
 
 最新版のmacOSおよびXcodeは，App Storeから入手することができます。古いバージョンのXcodeがアプリケーションフォルダーにインストールされている場合，アプリケーションは上書きされます。以前のXcodeを残しておきたいのであれば，サブフォルダーなど，あらかじめ別の場所に退避してください。
 
