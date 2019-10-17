@@ -77,8 +77,8 @@ Developer Professional | OEM Server | 必須 | 組込
 * [macOS 10.14.5以降](https://developer.apple.com/jp/news/?id=04102019a)がインストールされたMac
 * [Apple ID の２ファクタ認証](https://support.apple.com/ja-jp/HT204915)
 * [App用パスワード](https://support.apple.com/ja-jp/HT204397)
-* Apple Developer Programの有効なメンバーシップ（無料メンバーはNG）
-* Xcode 10以降
+* [Apple Developer Program](https://developer.apple.com/jp/programs/)の有効なメンバーシップ（無料メンバーはNG）
+* [Xcode 10以降](https://developer.apple.com/jp/xcode/)
 * Developer ID 証明書
 
 Apple Developer Programには，[無料のプログラム](https://developer.apple.com/jp/support/compare-memberships/)も用意されていますが，「App StoreでのApp配信」および「Mac App Store以外でのソフトウェア配信」が特典に含まれていません。無料のメンバーシップでは，Developer ID 証明書の発行ができないためです。署名と公証には，Developer ID 証明書が必要です。
