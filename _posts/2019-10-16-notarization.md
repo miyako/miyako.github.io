@@ -135,3 +135,19 @@ Xcodeを起動し，アプリケーションメニューの「Preferences」か�
 **注記**: 無料のApple Developer IDでログインしている場合，Developer ID系の証明書は作成できません。「Mac Developer」証明書は作成できますが，これは個人のデバイスでアプリをテストするための証明書であり，アプリを配付する目的では使用できないものです。
 
 <img width="400" alt="スクリーンショット 2019-10-17 17 06 07" src="https://user-images.githubusercontent.com/1725068/66990143-9d212580-f100-11e9-8ecf-df83a1fb2a7a.png">
+
+#### App Specific Password
+
+配付用アプリの公証は，ビルド毎に実行する必要があるので，自動化しておくと便利です。その場合，パスワードの入力を自動化するために，**App用パスワード**を作成しておきます。パスワードは，Apple IDのアカウントページにログインし，「セキュリティ」セクションの「App 用パスワード」の下の「パスワードを生成」をクリックすれば自動的に作成されます。「このパスワードのラベルを入力」には，後で参照できる簡単な文字列（例：``AC_PASSWORD``）を入力します。
+
+生成されたパスワードをコピーし，Macのターミナルを起動して，下記のようなコマンドラインを実行します。``AC_USERNAME``は，Apple Developer IDです。
+
+```
+xcrun altool --store-password-in-keychain-item "AC_PASSWORD" -u "AC_USERNAME" -p <secret_password>
+```
+
+これにより，**キーチェーン**にアプリ用のパスワードが保存され，下記のようなコマンドラインでパスワードが参照できるようになります。
+
+```
+xcrun altool --notarize-app -u "AC_USERNAME" -p "@keychain:AC_PASSWORD"
+```
