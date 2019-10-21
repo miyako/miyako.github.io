@@ -156,6 +156,14 @@ xcrun altool --notarize-app -u "AC_USERNAME" -p "@keychain:AC_PASSWORD"
 
 ---
 
+#### Bundle Identifier
+
+**注記**: 4Dのアプリケーションビルダーは，アプリ名から自動的にバンドル識別子を生成します。バンドル識別子に無効な文字列が含まれている場合，アプリはビルドできても，公証に失敗します。心配な場合，ビルドしたアプリのプロパティリストをエディターで開き，標準的なバンドル識別子に変更すると良いでしょう。
+
+#### Application Name
+
+アプリケーション名には，原則的に英数字だけを使用するべきです。前述したように，アプリケーション名はバンドル識別子に組み込まれるので，これは重要です。日本語や記号など，英数字ではない文字をアプリ名に使用したい場合，プロパティリストのBundle name (``CFBundleName``) は英数字で設定し，Bundle display name (``CFBundleDisplayName``) のほうに表示用の名称を設定するようにしてください。
+
 #### xattr
 
 デザインメニューの「アプリケーションビルド」，または``BUILD APPLICATION``コマンドを実行し，カスタムアプリをビルドします。「アプリケーションに署名」のチェックボックスは外しておきます。コマンドでビルドする場合，``SignApplication/MacSignature``を``False``に設定します。
@@ -286,7 +294,7 @@ codesign --deep
 security find-identity -p basic -v
 ```
 
-#### Notarization
+#### Archive
 
 公証の条件を満たすような署名を実施した後，Appleの公証サーバーにアプリを送信します。申請するためには，まず，アプリを``.pkg`` ``.dmg`` ``.zip``いずれかの形式で圧縮する必要があります。
 
@@ -345,4 +353,20 @@ pkgbuild --sign <identity>  --root payload --install-location <payload_path> --c
 インストーラーなので，署名のアイデンティーは``Developer ID Installer:…``証明書となります。
 
 **注記**: 後述するように，アプリが公証にパスした後，改めて配付用のディスクイメージまたはインストーラーを作成することになります。したがって，この段階で圧縮ファイルに署名する必要はありません。
+
+#### Notarization
+
+公証サーバーにアプリを送信するには，下記のコマンドラインを実行します。
+
+```
+xcrun altool --notarize-app --file <src> --username <username> --password @keychain:altool --primary-bundle-id <product_bundle_id>
+```
+
+``username``には，Apple Developer ID（メールアドレス）を指定します。``password``には，アプリ用パスワードを指定しますが，プレーンテキストで渡すのではなく，キーチェーンから参照することが勧められています。パスワードは，Apple IDのアカウントページで作成し，``xcrun altool --store-password-in-keychain-item``でキーチェーンに追加しておきます。
+
+``@keychain:altool``のように記述するのは，キーチェーンが下記のように設定されているためです。
+
+<img width="534" alt="スクリーンショット 2019-10-21 11 43 50" src="https://user-images.githubusercontent.com/1725068/67173100-98a68680-f3f8-11e9-93e7-e0caa57739ae.png">
+
+``primary-bundle-id``は，公証レコードを参照するために設定する任意の識別子です。アプリ自体の識別子と一致している必要はありません。申請のたびに新しい識別子が必要になるので，アプリの識別子に一意の接尾辞を連結したものを発行すると便利です。
 
