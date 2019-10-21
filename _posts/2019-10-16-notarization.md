@@ -276,3 +276,68 @@ codesign --deep
 
 4Dプラグインには，歴史的な経緯により，``4DCB``というバンドル識別子（``CFBundlePackageType``）が設定されていました。Appleの公証は，``BNDL`` ``APPL`` ``FMWK``のような標準バンドル識別子でなければ，包括的なチェックを実施しないようです。プラグインのバンドル識別子は，``BNDL``に設定する必要があります。
 
+#### Identity
+
+コード署名に使用する証明書が署名のアイデンティーとなります。アプリに署名するのであれば，``Developer ID Application:.``証明書，インストーラーに署名するのであれば，``Developer ID Installer:.``証明書をアイデンティーとして使用します。
+
+キーチェーンに登録されている証明書は，下記のコマンドラインでリストアップすることができます。
+
+```
+security find-identity -p basic -v
+```
+
+#### Notarization
+
+公証の条件を満たすような署名を実施した後，Appleの公証サーバーにアプリを送信します。申請するためには，まず，アプリを``.pkg`` ``.dmg`` ``.zip``いずれかの形式で圧縮する必要があります。
+
+* zip
+
+最上位のフォルダー（拡張子``.app``）を残しておく必要があるので，``zip``ではなく，``ditto``を使用します。
+
+```
+ditto -c -k --keepParent <src> <dst>
+```
+
+* dmg
+
+``hdiutil``でディスクイメージを作成することができます。
+
+```
+hdiutil create -format UDBZ -plist -srcfolder <src> <dst>
+```
+
+* pkg
+
+インストーラーを作成する場合，まず，インストールの対象（ペイロード）を入れるための専用フォルダーを用意します。
+
+```
+mkdir payload
+```
+
+フォルダーを作成したら，ここにアプリを入れます。
+
+```
+cp -R <src> <dst>
+```
+
+フォルダーにアプリを入れたら，``pkgbuild``でフォルダーの内容を解析し，コンポーネントリストファイル（``component.plist``）を作成します。
+
+```
+pkgbuild --analyze --root <payload_path> <component_plist_path>
+```
+
+``component.plist``ファイルは，デフォルトで``BundleIsRelocatable``キーが``YES``となっています。これは，すでにアプリがインストールされていれば，インストールを省略するという設定ですが，``YES``に設定されている場合，インストール先を指定することができません。下記のコマンドラインで``NO``に変更します。
+
+```
+plutil -replace BundleIsRelocatable -bool NO <component_plist_path>
+```
+
+最後に下記の要領で署名付きのインストーラーを作成することができます。
+
+```
+pkgbuild --sign <identity>  --root payload --install-location <payload_path> --component-plist <component_plist_path>
+```
+
+インストーラーなので，署名のアイデンティーは``Developer ID Installer:.``証明書となります。
+
+
