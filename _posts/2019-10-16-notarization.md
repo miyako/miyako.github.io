@@ -180,4 +180,64 @@ sips -z <pixelsH> <pixelsW> <path>
 
 #### Entitlements
 
+アプリのコード署名には，アプリの実行に必要な``エンタイトルメント``のリストが組み込まれることになっています。エンタイトルメントには，下記のようなものが含まれます。
+
+* 音声入力信号
+* カメラ
+* ユーザーの写真ライブラリ
+* ユーザーの位置情報
+* ユーザーの連絡先情報
+* ユーザーのカレンダー情報
+
+詳細は，Apple Developerの[ドキュメント](https://developer.apple.com/documentation/bundleresources/entitlements?language=objc)を参照してください。
+
+**注記**: エンタイトルメントは，自動的にアクセスを付与するものではありません。セアクセスを許可するかどうかは，最終的にユーザーが決定します。また，アプリ毎の許可・不許可の設定は，システム環境設定「セキュリティとプライバシー」で変更することができます。
+
+エンタイトルメントは，XML形式のプロパティリスト（``.plist``）で編集します。すべてのエンタイトルメントを請求する場合，下記のようなファイルになります。
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.security.automation.apple-events</key>
+	<true/>
+	<key>com.apple.security.cs.allow-dyld-environment-variables</key>
+	<true/>
+	<key>com.apple.security.cs.allow-jit</key>
+	<true/>
+	<key>com.apple.security.cs.allow-unsigned-executable-memory</key>
+	<true/>
+	<key>com.apple.security.cs.debugger</key>
+	<true/>
+	<key>com.apple.security.cs.disable-executable-page-protection</key>
+	<true/>
+	<key>com.apple.security.cs.disable-library-validation</key>
+	<true/>
+	<key>com.apple.security.device.audio-input</key>
+	<true/>
+	<key>com.apple.security.device.camera</key>
+	<true/>
+	<key>com.apple.security.get-task-allow</key>
+	<true/>
+	<key>com.apple.security.personal-information.addressbook</key>
+	<true/>
+	<key>com.apple.security.personal-information.calendars</key>
+	<true/>
+	<key>com.apple.security.personal-information.location</key>
+	<true/>
+	<key>com.apple.security.personal-information.photos-library</key>
+	<true/>
+</dict>
+</plist>
+```
+
+XML形式の``.plist``をそのままコード署名に使用することはできません。バイナリ形式の``.plist``に変換する必要があります。下記のようなコマンドラインを実行します。
+
+```
+plutil -convert xml1 <path>
+```
+
+#### Hardened Runtime
+
 
