@@ -119,7 +119,7 @@ xcode-select -p
 複数のXcodeがインストールされている場合，あるいは標準的ではない場所にXcodeがインストールされている場合，
 
 ```
-xcode-select --switch {path}
+xcode-select --switch <path>
 ```
 
 ただし，他の開発ツールに影響を与える恐れがあるので，環境変数の``DEVELOPER_DIR``で一時的にパスを変更したほうが無難かもしれません。
@@ -156,4 +156,26 @@ xcrun altool --notarize-app -u "AC_USERNAME" -p "@keychain:AC_PASSWORD"
 
 ---
 
-TBD
+#### xattr
+
+デザインメニューの「アプリケーションビルド」，または``BUILD APPLICATION``コマンドを実行し，カスタムアプリをビルドします。「アプリケーションに署名」のチェックボックスは外しておきます。コマンドでビルドする場合，``SignApplication/MacSignature``を``False``に設定します。
+
+インターネットからダウンロードしたファイルには，URLや日時などの**拡張ファイル属性**が追加されています。また，Finderの「情報を見る」ダイアログでカスタマイズしたアイコン・コメント・タグなども同様です。ファイルやフォルダーに署名を実施するためには，Macの拡張ファイル属性をすべて消去する必要があるので，ビルドしたアプリケーションのパスに対し，下記のコマンドラインを実行します。
+
+```
+xattr -cr <path>
+```
+
+**注記**: アプリのアイコンをカスタマイズするには，Finderの「情報を見る」ダイアログではなく，ビルドプロジェクトの``ServerIconMacPath`` ``RuntimeVLIconMacPath`` ``ClientMacIconForMacPath``を使用し，``icns``ファイルのパスを指定します。``icns``ファイルを作成するには，必要なサイズの``.png``画像を``.iconset``という拡張子のフォルダーに入れ，下記のコマンドラインを実行します。
+
+```
+iconutil -c <path>
+```
+
+単一フレームの``icns``画像では，カスタムアイコンが表示されません。``.png``画像は，``sips``でリサイズすることができます。
+
+```
+sips -z <pixelsH> <pixelsW> <path>
+```
+
+### Inside Out
