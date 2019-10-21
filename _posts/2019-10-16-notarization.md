@@ -278,7 +278,7 @@ codesign --deep
 
 #### Identity
 
-コード署名に使用する証明書が署名のアイデンティーとなります。アプリに署名するのであれば，``Developer ID Application:.``証明書，インストーラーに署名するのであれば，``Developer ID Installer:.``証明書をアイデンティーとして使用します。
+コード署名に使用する証明書が署名のアイデンティーとなります。アプリに署名するのであれば，``Developer ID Application:…``証明書，インストーラーに署名するのであれば，``Developer ID Installer:…``証明書をアイデンティーとして使用します。
 
 キーチェーンに登録されている証明書は，下記のコマンドラインでリストアップすることができます。
 
@@ -338,6 +338,6 @@ plutil -replace BundleIsRelocatable -bool NO <component_plist_path>
 pkgbuild --sign <identity>  --root payload --install-location <payload_path> --component-plist <component_plist_path>
 ```
 
-インストーラーなので，署名のアイデンティーは``Developer ID Installer:.``証明書となります。
+インストーラーなので，署名のアイデンティーは``Developer ID Installer:…``証明書となります。
 
 
