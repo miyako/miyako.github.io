@@ -298,6 +298,8 @@ security find-identity -p basic -v
 ditto -c -k --keepParent <src> <dst>
 ```
 
+``.zip``ファイルにコード署名を実施することはできません。
+
 * dmg
 
 ``hdiutil``でディスクイメージを作成することができます。
@@ -305,6 +307,8 @@ ditto -c -k --keepParent <src> <dst>
 ```
 hdiutil create -format UDBZ -plist -srcfolder <src> <dst>
 ```
+
+``.dmg``ファイルに署名する場合のアイデンティーは``Developer ID Application:…``証明書です。
 
 * pkg
 
@@ -340,4 +344,5 @@ pkgbuild --sign <identity>  --root payload --install-location <payload_path> --c
 
 インストーラーなので，署名のアイデンティーは``Developer ID Installer:…``証明書となります。
 
+**注記**: 後述するように，アプリが公証にパスした後，改めて配付用のディスクイメージまたはインストーラーを作成することになります。したがって，この段階で圧縮ファイルに署名する必要はありません。
 
