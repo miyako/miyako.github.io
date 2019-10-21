@@ -392,4 +392,6 @@ xcrun altool --notarization-info <uuid> --username <username> --password @keycha
 xcrun stapler staple <path>
 ```
 
-アプリに公証チケットをステープルした後，改めて``ditto``や``pkgbuild``で配付用のファイルを作成します。これですべての作業が完了です。
+アプリに公証チケットをステープルした後，改めて``ditto``や``pkgbuild``で配付用のファイルを作成します。
+
+これですべての作業が完了です。
