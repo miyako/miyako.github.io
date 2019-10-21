@@ -178,4 +178,6 @@ iconutil -c <path>
 sips -z <pixelsH> <pixelsW> <path>
 ```
 
-### Inside Out
+#### Entitlements
+
+
