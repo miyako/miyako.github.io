@@ -284,6 +284,14 @@ codesign --deep
 
 4Dプラグインには，歴史的な経緯により，``4DCB``というバンドル識別子（``CFBundlePackageType``）が設定されていました。Appleの公証は，``BNDL`` ``APPL`` ``FMWK``のような標準バンドル識別子でなければ，包括的なチェックを実施しないようです。プラグインのバンドル識別子は，``BNDL``に設定する必要があります。
 
+#### Bundle Name
+
+アプリ・プラグイン・フレームワークなどの「バンドル」の内部には，``Info.plist``という名称のカタログファイルが存在します。このファイルには，バンドルの基本的な情報が辞書形式（キー/値ペア）で書き込まれていますが，``CFBundleName`` ``CFBundleExecutable`` 等のキー値が実際のファイル名と完全に一致しない場合，たとえば小文字の代わりに大文字が使用されている場合，コード署名エラーになります。
+
+```
+invalid Info.plist (plist or signature have been modified)
+```
+
 #### Identity
 
 コード署名に使用する証明書が署名のアイデンティーとなります。アプリに署名するのであれば，``Developer ID Application:…``証明書，インストーラーに署名するのであれば，``Developer ID Installer:…``証明書をアイデンティーとして使用します。
