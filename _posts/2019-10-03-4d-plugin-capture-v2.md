@@ -240,6 +240,21 @@ The preview layer is added to the content view of the window. You should create 
 
 Use the ``file`` option on Windows to record video.
 
+The following options are available on Mac only.
+
+Property|Type|Description
+------------|------|----
+videoCodec|TEXT| ``JPEG`` ``H264`` ``HEVC`` ``AppleProRes422`` ``AppleProRes4444`` (optional)
+preset|TEXT| ``low`` ``medium`` ``high`` ``960x540`` ``1280x720`` ``i960x540`` ``i1280x720`` ``320x240`` ``640x480`` ``352x288`` (optional)
+quality|REAL| (optional, JPEG and HEIC only)
+averageBitRate|LONGINT| (optional, H.264 only)
+maxKeyFrameInterval|LONGINT| (optional, H.264 only)
+maxKeyFrameIntervalDuration|REAL| (optional, H.264 only)
+videoWidth|LONGINT| (optional)
+videoHeight|LONGINT| (optional)
+maxRecordedDuration|LONGINT| (optional)
+maxRecordedFileSize|LONGINT| (optional)
+
 ```
 image:=capture Image
 ```
