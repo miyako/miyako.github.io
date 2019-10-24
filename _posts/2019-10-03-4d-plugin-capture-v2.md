@@ -10,6 +10,66 @@ Simple video capture based on [AVFoundation](https://developer.apple.com/av-foun
 
 [miyako/4d-plugin-capture-v2](https://github.com/miyako/4d-plugin-capture-v2)
 
+**注記**: プラグインはv17.xでも使用することができますが，サンプルデータベースは**プロジェクトモード**で作成されているため，Ｒバージョンで実行する必要があります。
+
+プレビューエリアを表示したい位置にフォームオブジェクトを配置します。たとえば，透明な四角形オブジェクトを使用することができます。
+
+フォームイベントの``On Load`` ``On Unload`` ``On Timer``を有効にします。必要であれば，``On Resize``も有効にすることができますが，後述する理由により，キャプチャ中のリサイズ処理は非推奨です。
+
+* On Load
+
+カメラデバイスに対するアクセスをリクエストします。
+
+```
+Form.status:=capture Request permission 
+```
+
+**注記**: 必要なエンタイトルメントとプロパティリストのキーを追加した上でアプリに署名と公証がされていなければ，リクエストはできません。また，ユーザーが同意しなければ，カメラを使用することはできません。カメラが使用できない場合，``status``オブジェクトに理由が返されます。
+
+プレビューエリアを表示したい位置に配置したオブジェクトの座標を取得します。キャプチャはMacの``AVFoundation``テクノロジーを使用しており，プレビューは``CoreAnimation``レイヤーに描画されます。``CoreAnimation``の座標系は，左上ではなく，左下が``0.0``です。そのため，4Dの座標系を反転して計算する必要があります。
+
+```
+GET WINDOW RECT($l;$t;$r;$b;Current form window)
+			
+Form.x:=$left
+Form.y:=($b-$t)-($bottom)
+Form.width:=$right-$left
+Form.height:=$bottom-$top
+```
+
+``On Load``では，まだフォームオブジェクトが描画されていません。フォームオブジェクトは，ウィンドウ上のカスタムビューエリアにそれぞれ追加されてゆきます。キャプチャ動画のプレビューレイヤーは，その上に重ねる必要があるので，すべてのフォームオブジェクトが描画された後に追加しなければなりません。ここでは，プロパティだけを設定しておき，タイマーイベントを予約します。
+
+```
+Form.flipH:=True
+Form.flipV:=False
+Form.window:=Current form window
+SET TIMER(-1)
+```
+
+* On Timer
+
+プレビューエリアをフォームに追加します。指定することができるプロパティは，コマンドの説明を参照してください。
+
+```
+SET TIMER(0)
+capture Start (Form)
+```
+
+Mac版の4Dは，フォームのレンダリングに``CoreAnimation``を使用しており，チェックボックス・ラジオボタン・テキスト入力等のオブジェクトにフォーカスが移動すると，滑らかなアニメーションで表示が更新されるようになっています。プラグインは，外部から新しい``CoreAnimation``レイヤーを追加しているので，すぐには表示が更新されません。強制的にウィンドウを再描画する必要があります。
+
+```
+REDRAW WINDOW(Current form window)
+```
+
+* On Unload
+
+プラグインは一度に１個のプレビューセッションを１枚のウィンドウにだけ表示するように設計されています。ウィンドウを閉じるときには，セッションを終了するようにしてください。
+
+```
+SET TIMER(0)
+capture Stop 
+```
+
 ### Prerequisites
 
 Due to enhanced security requirements from Apple, the app (not the plugin) must be signed with [Camera](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_device_camera?language=objc) and [Hardened Runtime](https://developer.apple.com/documentation/bundleresources/entitlements?language=objc) entitlements. The [NSCameraUsageDescription](https://developer.apple.com/documentation/bundleresources/information_property_list/nscamerausagedescription?language=objc) property list key must also be present.
