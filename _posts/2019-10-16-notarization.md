@@ -438,5 +438,20 @@ App用パスワードは``25``まで作成することができます。
 
 App用パスワードは，そのまま``altool``に渡すことができますが，できれば，キーチェーン追加することが勧められています。
 
+Xcode 11であれば，``xcrun altool``でApp用パスワードをキーチェーンに追加することができます。
+
+```
+xcrun altool --store-password-in-keychain-item "abcde" --username "keisuke.miyako@4d.com" --password "xxxx-xxxx-xxxx-xxxx"
+```
+
+**注記**: 旧バージョンの``altool``は，``--store-password-in-keychain-item``オプションをサポートしていません。Xcode 11の場合，**キーチェーンアクセス**でパスワードを追加してください。
+
 [Mac でパスワードをキーチェーンに追加する](https://support.apple.com/ja-jp/guide/keychain-access/kyca1120/mac)
+
+**名前**には，任意の文字列を入力します。App用パスワードのラベルと一致している必要はありません。**場所**には，このパスワードを指定するための文字列を入力します。
+
+例え
+**名前**には，任意の文字列を入力します。App用パスワードのラベルと一致している必要はありません。**場所**には，このパスワードを指定するための文字列を入力します。場所が``altool``だった場合，コマンドラインにパスワードをそのまま渡す代わりに``"@keychain:altool"``という指定ができるようになります。
+
+
 
