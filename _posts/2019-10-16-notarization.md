@@ -448,9 +448,6 @@ xcrun altool --store-password-in-keychain-item "abcde" --username "keisuke.miyak
 
 [Mac でパスワードをキーチェーンに追加する](https://support.apple.com/ja-jp/guide/keychain-access/kyca1120/mac)
 
-**名前**には，任意の文字列を入力します。App用パスワードのラベルと一致している必要はありません。**場所**には，このパスワードを指定するための文字列を入力します。
-
-例え
 **名前**には，任意の文字列を入力します。App用パスワードのラベルと一致している必要はありません。**場所**には，このパスワードを指定するための文字列を入力します。場所が``altool``だった場合，コマンドラインにパスワードをそのまま渡す代わりに``"@keychain:altool"``という指定ができるようになります。
 
 
