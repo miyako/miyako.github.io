@@ -406,7 +406,7 @@ xcrun stapler staple <path>
 
 #### 補足情報
 
-* App用パスワード
+* [App用パスワード](https://support.apple.com/ja-jp/HT204397)
 
 [appleid.apple.com](https://appleid.apple.com/#!&page=signin)にログインします。
 
@@ -420,7 +420,12 @@ xcrun stapler staple <path>
 
 <img width="515" alt="スクリーンショット 2019-11-07 16 53 32" src="https://user-images.githubusercontent.com/1725068/68370173-36cb7800-017f-11ea-9d4f-6da0a61722dc.png">
 
+**セキュリティ**に移動します。
 
+<img width="515" alt="スクリーンショット 2019-11-07 16 57 07" src="https://user-images.githubusercontent.com/1725068/68370363-a9d4ee80-017f-11ea-815c-3ea98bdaf336.png">
 
+**パスワードを生成…**をクリックします。
 
+**パスワードのラベル**には任意の英数字（空白はOK，記号はNG）を入力します。ラベルはパスワードの「ソルト」になるようです。つまり，同じアカウント・同じラベルであれば，同じパスワードが発行されます。
 
+<img width="515" alt="スクリーンショット 2019-11-07 17 07 12" src="https://user-images.githubusercontent.com/1725068/68371009-113f6e00-0181-11ea-86b4-058e3e5858f3.png">
