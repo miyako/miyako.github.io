@@ -199,7 +199,7 @@ or a signed flat installer package
 pkgbuild --component /Applications/sample.app --sign  --sign {identity_installer} /Users/miyako/Desktop/sample.pkg
 ```
 
-- Uploade the archice, disk image or signed flat package 
+- Uploade the archive, disk image or signed flat package 
 
 c.f. [Customizing the Notarization Workflow](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow?language=objc)
 
