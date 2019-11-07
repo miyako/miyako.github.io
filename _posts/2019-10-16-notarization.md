@@ -403,3 +403,24 @@ xcrun stapler staple <path>
 アプリに公証チケットをステープルした後，改めて``ditto``や``pkgbuild``で配付用のファイルを作成します。
 
 これですべての作業が完了です。
+
+#### 補足情報
+
+* App用パスワード
+
+[appleid.apple.com](https://appleid.apple.com/#!&page=signin)にログインします。
+
+<img width="515" alt="スクリーンショット 2019-11-07 16 50 34" src="https://user-images.githubusercontent.com/1725068/68369989-d9cfc200-017e-11ea-8e2c-22e4c0339ab0.png">
+
+２ファクタ認証のサインインを許可します。
+
+<img width="480" alt="スクリーンショット 2019-11-07 16 52 07" src="https://user-images.githubusercontent.com/1725068/68370104-0daae780-017f-11ea-8655-5f7529fb7c10.png">
+
+<img width="490" alt="スクリーンショット 2019-11-07 16 53 00" src="https://user-images.githubusercontent.com/1725068/68370127-1ac7d680-017f-11ea-947c-5d116a06c14c.png">
+
+<img width="515" alt="スクリーンショット 2019-11-07 16 53 32" src="https://user-images.githubusercontent.com/1725068/68370173-36cb7800-017f-11ea-9d4f-6da0a61722dc.png">
+
+
+
+
+
