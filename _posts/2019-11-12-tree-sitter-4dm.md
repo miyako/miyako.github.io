@@ -8,6 +8,11 @@ A [``tree-sitter``](http://tree-sitter.github.io/tree-sitter/) parser to support
 
 <!--more-->
 
+To add syntax highlighting, add the following packages:
+
+* [language-4dm](https://atom.io/packages/language-4dm)
+* [tree-sitter-4dm](https://atom.io/packages/tree-sitter-4dm)
+
 ---
 
 #### Getting started with Tree-sitter
@@ -46,11 +51,6 @@ commit git repository
 apm publish patch
 npm publish
 ```
-
-To add syntax highlighting, add the following packages:
-
-[language-4dm](https://atom.io/packages/language-4dm)
-[tree-sitter-4dm](https://atom.io/packages/tree-sitter-4dm)
 
 To update, run the CLI:
 
