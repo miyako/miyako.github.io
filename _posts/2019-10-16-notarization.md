@@ -465,3 +465,13 @@ sudo xcode-select --switch /Applications/Xcode.app
 キーチェーンアクセスで該当パスワードを開きます。**名前**には，コマンドラインに渡した文字列（例：``altool``）が入力されています。この文字列は，App用パスワードのラベルと無関係です。**場所**は，空でも構いません。
 
 名前が``altool``だった場合，コマンドラインにパスワードをそのまま渡す代わりに``"@keychain:altool"``という指定ができるようになります。
+
+```
+xcrun altool --notarize-app 
+	--file <dmg_path> 
+	--username "keisuke.miyako@4d.com"
+	--password "@keychain:altool" 
+	--primary-bundle-id <primary_bundle_id> 
+```
+
+``primary_bundle_id``は，過去にアップロードしたことがない，一意の文字列（リバールDNS）でなければなりません。アプリやプラグインのバンドルIDを接頭辞にすることもできますし，まったく違う文字列を使用することもできます。
