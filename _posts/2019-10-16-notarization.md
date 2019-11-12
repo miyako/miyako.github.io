@@ -432,7 +432,7 @@ xcrun stapler staple <path>
 
 **パスワードのラベル**には任意の英数字（空白はOK，記号はNG）を入力します。
 
-<img width="515" alt="スクリーンショット 2019-11-07 17 07 12" src="https://user-images.githubusercontent.com/1725068/68371009-113f6e00-0181-11ea-86b4-058e3e5858f3.png">
+<img width="646" alt="スクリーンショット 2019-11-12 23 57 55" src="https://user-images.githubusercontent.com/1725068/68682309-48aa8200-05a8-11ea-9ff7-accc4de93bc3.png">
 
 App用パスワードは``25``まで作成することができます。
 
@@ -445,7 +445,7 @@ App用パスワードは，そのまま``altool``に渡すことができます�
 Xcode 11であれば，``xcrun altool``でApp用パスワードをキーチェーンに追加することができます。
 
 ```
-xcrun altool --store-password-in-keychain-item "AC_PASSWORD" --username "keisuke.miyako@4d.com" --password "xxxx-xxxx-xxxx-xxxx"
+xcrun altool --store-password-in-keychain-item "altool" --username "keisuke.miyako@4d.com" --password "xxxx-xxxx-xxxx-xxxx"
 ```
 
 **注記**: 旧バージョンの``altool``は，``--store-password-in-keychain-item``オプションをサポートしていません。
@@ -462,4 +462,4 @@ xcode-select -p
 sudo xcode-select --switch /Applications/Xcode.app
 ```
 
-キーチェーンアクセスで該当パスワードを開きます。**名前**には，コマンドラインに渡した文字列（例：``AC_PASSWORD``）が入力されています。この文字列は，App用パスワードのラベルと無関係です。**場所**には，このパスワードを指定するための文字列を入力します。場所が``altool``だった場合，コマンドラインにパスワードをそのまま渡す代わりに``"@keychain:altool"``という指定ができるようになります。
+キーチェーンアクセスで該当パスワードを開きます。**名前**には，コマンドラインに渡した文字列（例：``altoo``）が入力されています。この文字列は，App用パスワードのラベルと無関係です。**場所**は，空でも構いません。名前が``altool``だった場合，コマンドラインにパスワードをそのまま渡す代わりに``"@keychain:altool"``という指定ができるようになります。
