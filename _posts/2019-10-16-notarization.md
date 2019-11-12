@@ -441,7 +441,7 @@ App用パスワードは，そのまま``altool``に渡すことができます�
 Xcode 11であれば，``xcrun altool``でApp用パスワードをキーチェーンに追加することができます。
 
 ```
-xcrun altool --store-password-in-keychain-item "abcde" --username "keisuke.miyako@4d.com" --password "xxxx-xxxx-xxxx-xxxx"
+xcrun altool --store-password-in-keychain-item "AC_PASSWORD" --username "keisuke.miyako@4d.com" --password "xxxx-xxxx-xxxx-xxxx"
 ```
 
 **注記**: 旧バージョンの``altool``は，``--store-password-in-keychain-item``オプションをサポートしていません。
@@ -458,7 +458,4 @@ xcode-select -p
 sudo xcode-select --switch /Applications/Xcode.app
 ```
 
-**名前**には，任意の文字列を入力します。App用パスワードのラベルと一致している必要はありません。**場所**には，このパスワードを指定するための文字列を入力します。場所が``altool``だった場合，コマンドラインにパスワードをそのまま渡す代わりに``"@keychain:altool"``という指定ができるようになります。
-
-
-
+キーチェーンアクセスで該当パスワードを開きます。**名前**には，コマンドラインに渡した文字列（例：``AC_PASSWORD``）が入力されています。この文字列は，App用パスワードのラベルと無関係です。**場所**には，このパスワードを指定するための文字列を入力します。場所が``altool``だった場合，コマンドラインにパスワードをそのまま渡す代わりに``"@keychain:altool"``という指定ができるようになります。
