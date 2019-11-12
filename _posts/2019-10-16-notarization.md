@@ -444,9 +444,19 @@ Xcode 11であれば，``xcrun altool``でApp用パスワードをキーチェ�
 xcrun altool --store-password-in-keychain-item "abcde" --username "keisuke.miyako@4d.com" --password "xxxx-xxxx-xxxx-xxxx"
 ```
 
-**注記**: 旧バージョンの``altool``は，``--store-password-in-keychain-item``オプションをサポートしていません。Xcode 11の場合，**キーチェーンアクセス**でパスワードを追加してください。
+**注記**: 旧バージョンの``altool``は，``--store-password-in-keychain-item``オプションをサポートしていません。
 
-[Mac でパスワードをキーチェーンに追加する](https://support.apple.com/ja-jp/guide/keychain-access/kyca1120/mac)
+``xcrun``から``invalid active developer path``エラーが返される場合，コマンドラインツールのパスが正しく設定されていない可能性があります。
+
+```
+xcode-select -p
+```
+
+上記を実行して``/Library/Developer/CommandLineTools/usr/bin/xcrun``のようなパスが返される場合，``xcrun``のパスをXcode内部のフォルダーに変更してください。
+
+```
+sudo xcode-select --switch /Applications/Xcode.app
+```
 
 **名前**には，任意の文字列を入力します。App用パスワードのラベルと一致している必要はありません。**場所**には，このパスワードを指定するための文字列を入力します。場所が``altool``だった場合，コマンドラインにパスワードをそのまま渡す代わりに``"@keychain:altool"``という指定ができるようになります。
 
