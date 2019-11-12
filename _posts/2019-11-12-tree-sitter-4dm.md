@@ -40,12 +40,16 @@ node-gyp build
 
 * Things to do each time there is an update:
 
+1. commit git repository
+
+2. run the CLI:
+
 ```
 tree-sitter generate
 tree-sitter test
 ```
 
-commit git repository
+3. run the CLI:
 
 ```
 apm publish patch
