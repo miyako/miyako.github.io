@@ -13,6 +13,11 @@ To add syntax highlighting, add the following packages:
 * [language-4dm](https://atom.io/packages/language-4dm)
 * [tree-sitter-4dm](https://atom.io/packages/tree-sitter-4dm)
 
+npm:
+
+* [tree-sitter-4dm](https://www.npmjs.com/package/tree-sitter-4dm)
+* [language-4dm](https://www.npmjs.com/package/language-4dm)
+
 ---
 
 #### Getting started with Tree-sitter
