@@ -10,6 +10,8 @@ A [``tree-sitter``](http://tree-sitter.github.io/tree-sitter/) parser to support
 
 To add syntax highlighting, add the following packages:
 
+atom.io:
+
 * [language-4dm](https://atom.io/packages/language-4dm)
 * [tree-sitter-4dm](https://atom.io/packages/tree-sitter-4dm)
 
