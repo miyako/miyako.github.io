@@ -49,8 +49,8 @@ npm publish
 
 To add syntax highlighting, add the following packages:
 
-[](https://atom.io/packages/language-4dm)
-[](https://atom.io/packages/tree-sitter-4dm)
+[language-4dm](https://atom.io/packages/language-4dm)
+[tree-sitter-4dm](https://atom.io/packages/tree-sitter-4dm)
 
 To update, run the CLI:
 
