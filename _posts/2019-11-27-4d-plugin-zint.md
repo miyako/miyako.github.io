@@ -4,7 +4,7 @@ title: zint
 tags: plugin graphic v17
 ---
 
-Barcode generator based on [zint].(https://zint.github.io/).
+Barcode generator based on [zint](https://zint.github.io/).
 
 <!--more-->
 
