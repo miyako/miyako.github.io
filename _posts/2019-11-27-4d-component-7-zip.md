@@ -19,5 +19,5 @@ Compression based on [7-zip](https://www.7-zip.org)
 ```
 
 ```
-\n7-Zip (a) [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov
+7-Zip (a) [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov
 ```
