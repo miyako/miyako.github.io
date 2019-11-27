@@ -6,6 +6,8 @@ tags: component v17
 
 Compression based on [7-zip](https://www.7-zip.org)
 
+[miyako/4d-component-7-zip](https://github.com/miyako/4d-component-7-zip)
+
 <!--more-->
 
 * Compiled, signed and notarised [``p7zip``](https://sourceforge.net/projects/p7zip/) ``16.02`` for Mac.
