@@ -4,7 +4,7 @@ title: 7-zip
 tags: component v17
 ---
 
-Compression based on [7-zip](https://www.7-zip.org)
+Compression based on [7-zip](https://www.7-zip.org).
 
 [miyako/4d-component-7-zip](https://github.com/miyako/4d-component-7-zip)
 
@@ -12,7 +12,7 @@ Compression based on [7-zip](https://www.7-zip.org)
 
 * Compiled, signed and notarised [``p7zip``](https://sourceforge.net/projects/p7zip/) ``16.02`` for Mac.
 
-* updated executable to ``19.00`` for Windows.
+* Updated executable to ``19.00`` for Windows.
 
 **Note**: A colon (``:``) has been added in the version string. Updated regex to take this into account.
 
