@@ -20,42 +20,52 @@ For example, on Mac:
 brew install ejabberd
 ```
 
----
-
-**Note**: Tested 28 Nov. 2019. 
-
-There seems to be an issue with ejabberd ``19.09.1`` (tried installer, [brew](https://homebrew.bintray.com/bottles/ejabberd-19.05_1.catalina.bottle.tar.gz), building from source) and libstrophe ``0.9.3`` on Catalina. 
+[Setup TLS](https://blog.process-one.net/securing-ejabberd-with-tls-encryption/)
 
 ```
-Couldn't start TLS! error -3 tls_error 5
+openssl dhparam -out dh2048.pem 2048
 ```
 
-Note on building:
-
-- Dependencies
-
 ```
-brew install erlang elixir openssl expat libyaml libiconv libgd sqlite rebar rebar3 automake autoconf 
+openssl genrsa -out localhost-ejabberd.key 2048
 ```
 
-- Setup
-
 ```
-./autogen.sh
-export LDFLAGS="-L/usr/local/opt/openssl/lib -L/usr/local/lib -L/usr/local/opt/expat/lib"
-export CFLAGS="-I/usr/local/opt/openssl/include/ -I/usr/local/include -I/usr/local/opt/expat/include"
-export CPPFLAGS="-I/usr/local/opt/openssl/include/ -I/usr/local/include -I/usr/local/opt/expat/include"
+openssl req -out localhost-ejabberd.csr -key localhost-ejabberd.key -new -sha256
 ```
 
-- Build
-
 ```
-./configure
-make 
-make install
+openssl x509 -req -days 365 -in localhost-ejabberd.csr -signkey localhost-ejabberd.key -out localhost-ejabberd.crt
 ```
 
-``--enable-sqlite``, ``--enable-user=`` resulted in error.
+```
+cat localhost-ejabberd.crt >  localhost-ejabberd.pem
+cat localhost-ejabberd.key >> localhost-ejabberd.pem
+```
+
+Edit ``/usr/local/etc/ejabberd/ejabberd.yml``
+
+```yml
+listen:
+  -
+    port: 5222
+    ip: "::"
+    module: ejabberd_c2s
+    max_stanza_size: 262144
+    shaper: c2s_shaper
+    access: c2s
+    certfile: "/usr/local/etc/ejabberd/localhost-ejabberd.pem"
+    starttls: true
+    starttls_required: true
+    tls_compression: false
+    dhfile: "/usr/local/etc/ejabberd/dh2048.pem"
+```
+
+
+
+
+
+
 
 ---
 
