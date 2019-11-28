@@ -38,4 +38,18 @@ Create another user
 /usr/local/sbin/ejabberdctl register jimmy.fallon localhost nbc
 ```
 
-Login to web admin at [http://localhost:5280/admin/](http://localhost:5280/admin/)
+Create another user for admin
+
+```
+/usr/local/sbin/ejabberdctl register admin localhost cbs
+```
+
+Login ad admin at [http://localhost:5280/admin/](http://localhost:5280/admin/)
+
+Restart server
+
+```
+/usr/local/sbin/ejabberdctl restart
+```
+
+Refresh browser
