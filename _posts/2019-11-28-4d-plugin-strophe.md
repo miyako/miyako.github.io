@@ -60,25 +60,25 @@ make install
 Start it
 
 ```
-/usr/local/sbin/ejabberdctl start
+ejabberdctl start
 ```
 
 Create a user 
 
 ```
-/usr/local/sbin/ejabberdctl register jimmy.kimmel localhost abc
+ejabberdctl register jimmy.kimmel localhost abc
 ```
 
 Create another user 
 
 ```
-/usr/local/sbin/ejabberdctl register jimmy.fallon localhost nbc
+ejabberdctl register jimmy.fallon localhost nbc
 ```
 
 Create another user for admin
 
 ```
-/usr/local/sbin/ejabberdctl register admin localhost cbs
+ejabberdctl register admin localhost cbs
 ```
 
 Login ad admin at [http://localhost:5280/admin/](http://localhost:5280/admin/)
@@ -86,7 +86,7 @@ Login ad admin at [http://localhost:5280/admin/](http://localhost:5280/admin/)
 Restart server
 
 ```
-/usr/local/sbin/ejabberdctl restart
+ejabberdctl restart
 ```
 
 Refresh browser
