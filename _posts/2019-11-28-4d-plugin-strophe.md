@@ -25,3 +25,16 @@ Start it
 ```
 /usr/local/sbin/ejabberdctl start
 ```
+
+Create a user 
+
+```
+/usr/local/sbin/ejabberdctl register jimmy.kimmel localhost abc
+```
+
+Create another user 
+
+```
+/usr/local/sbin/ejabberdctl register jimmy.fallon localhost nbc
+```
+
