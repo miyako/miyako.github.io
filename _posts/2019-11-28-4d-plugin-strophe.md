@@ -14,3 +14,4 @@ XMPP support based on [libstrophe](http://strophe.im/libstrophe/).
 
 Download and install an XMPP server, e.g. [ejabberd Community Server](https://www.ejabberd.im).
 
+[Notarised copy for macOS Catalina](https://github.com/miyako/4d-plugin-strophe/releases/tag/19.09.1)
