@@ -22,7 +22,15 @@ brew install ejabberd
 
 ---
 
-**Note**: Tested 28 Nov. 2019. The installer (``19.09.1``) or ``brew`` seems to have compatibility issues on Catalina. Constantly getting TLS error from libstrophe. [Building from source](https://docs.ejabberd.im/developer/install-osx/) seems to be OK. My need to skip database option (``sqlite3`` in particular). Install dependency via ``brew``: 
+**Note**: Tested 28 Nov. 2019. The installer (``19.09.1``) or ``brew`` seems to have compatibility issues on Catalina. Constantly getting TLS error from libstrophe. [https://homebrew.bintray.com/bottles/ejabberd-19.05_1.catalina.bottle.tar.gz](https://homebrew.bintray.com/bottles/ejabberd-19.05_1.catalina.bottle.tar.gz)
+
+ERROR
+
+```
+Couldn't start TLS! error -3 tls_error 5
+```
+
+Dependencies
 
 ```
 brew install erlang elixir openssl expat libyaml libiconv libgd sqlite rebar rebar3 automake autoconf 
@@ -44,6 +52,8 @@ Build
 make 
 make install
 ```
+
+**Note**: ``--enable-sqlite``, ``--enable-user=`` resulted in error.
 
 ---
 
