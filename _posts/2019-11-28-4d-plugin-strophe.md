@@ -38,3 +38,4 @@ Create another user
 /usr/local/sbin/ejabberdctl register jimmy.fallon localhost nbc
 ```
 
+Login to web admin at [http://localhost:5280/admin/](http://localhost:5280/admin/)
