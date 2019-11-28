@@ -20,6 +20,33 @@ For example, on Mac:
 brew install ejabberd
 ```
 
+---
+
+**Note**: Tested 28 Nov. 2019. The installer (``19.09.1``) or ``brew`` seems to have compatibility issues on Catalina. Constantly getting TLS error from libstrophe. [Building from source](https://docs.ejabberd.im/developer/install-osx/) seems to be OK. My need to skip database option (``sqlite3`` in particular). Install dependency via ``brew``: 
+
+```
+brew install erlang elixir openssl expat libyaml libiconv libgd sqlite rebar rebar3 automake autoconf 
+```
+
+Setup
+
+```
+./autogen.sh
+export LDFLAGS="-L/usr/local/opt/openssl/lib -L/usr/local/lib -L/usr/local/opt/expat/lib"
+export CFLAGS="-I/usr/local/opt/openssl/include/ -I/usr/local/include -I/usr/local/opt/expat/include"
+export CPPFLAGS="-I/usr/local/opt/openssl/include/ -I/usr/local/include -I/usr/local/opt/expat/include"
+```
+
+Build
+
+```
+./configure
+make 
+make install
+```
+
+---
+
 Start it
 
 ```
