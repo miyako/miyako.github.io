@@ -99,10 +99,10 @@ acl:
     user_regexp: ""
   loopback:
     ip:
-      - 127.0.0.0/8
-      - ::1/128
+      - "127.0.0.0/8"
+      - "::1/128"
   admin:
-      - user: admin@localhost
+    - user: admin@localhost
 ```
 
 Restart server
