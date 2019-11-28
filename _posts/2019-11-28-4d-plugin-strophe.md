@@ -83,6 +83,20 @@ ejabberdctl register admin localhost cbs
 
 Login ad admin at [http://localhost:5280/admin/](http://localhost:5280/admin/)
 
+Edit ejabberd.yml
+
+```yml
+acl:
+  local:
+    user_regexp: ""
+  loopback:
+    ip:
+      - 127.0.0.0/8
+      - ::1/128
+  admin:
+      - user:admin@localhost
+```
+
 Restart server
 
 ```
