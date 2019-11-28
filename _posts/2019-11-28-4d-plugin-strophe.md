@@ -14,6 +14,14 @@ XMPP support based on [libstrophe](http://strophe.im/libstrophe/).
 
 Download and install an XMPP server, e.g. [ejabberd Community Server](https://www.ejabberd.im).
 
+For example, on Mac:
+
 ```
 brew install ejabberd
+```
+
+Start it
+
+```
+/usr/local/sbin/ejabberdctl start
 ```
