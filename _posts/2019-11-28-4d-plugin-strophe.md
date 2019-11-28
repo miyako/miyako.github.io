@@ -4,7 +4,7 @@ title: strophe
 tags: plugin network v17
 ---
 
-XMPP support based on [libstrophe](http://strophe.im/libstrophe/)
+XMPP support based on [libstrophe](http://strophe.im/libstrophe/).
 
 <!--more-->
 
