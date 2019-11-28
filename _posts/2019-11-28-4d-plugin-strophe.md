@@ -22,21 +22,23 @@ brew install ejabberd
 
 ---
 
-**Note**: Tested 28 Nov. 2019. The installer (``19.09.1``) or ``brew`` seems to have compatibility issues on Catalina. Constantly getting TLS error from libstrophe. [https://homebrew.bintray.com/bottles/ejabberd-19.05_1.catalina.bottle.tar.gz](https://homebrew.bintray.com/bottles/ejabberd-19.05_1.catalina.bottle.tar.gz)
+**Note**: Tested 28 Nov. 2019. 
 
-ERROR
+There seems to be an issue with ejabberd ``19.09.1`` (tried installer, [brew](https://homebrew.bintray.com/bottles/ejabberd-19.05_1.catalina.bottle.tar.gz), building from source) and libstrophe ``0.9.3`` on Catalina. 
 
 ```
 Couldn't start TLS! error -3 tls_error 5
 ```
 
-Dependencies
+Note on building:
+
+- Dependencies
 
 ```
 brew install erlang elixir openssl expat libyaml libiconv libgd sqlite rebar rebar3 automake autoconf 
 ```
 
-Setup
+- Setup
 
 ```
 ./autogen.sh
@@ -45,7 +47,7 @@ export CFLAGS="-I/usr/local/opt/openssl/include/ -I/usr/local/include -I/usr/loc
 export CPPFLAGS="-I/usr/local/opt/openssl/include/ -I/usr/local/include -I/usr/local/opt/expat/include"
 ```
 
-Build
+- Build
 
 ```
 ./configure
@@ -53,7 +55,7 @@ make
 make install
 ```
 
-**Note**: ``--enable-sqlite``, ``--enable-user=`` resulted in error.
+``--enable-sqlite``, ``--enable-user=`` resulted in error.
 
 ---
 
