@@ -46,6 +46,10 @@ cat localhost-ejabberd.key >> localhost-ejabberd.pem
 Edit ``/usr/local/etc/ejabberd/ejabberd.yml``
 
 ```yml
+#certfiles:
+#  - "/etc/letsencrypt/live/localhost/fullchain.pem"
+#  - "/etc/letsencrypt/live/localhost/privkey.pem"
+
 listen:
   -
     port: 5222
@@ -60,14 +64,6 @@ listen:
     tls_compression: false
     dhfile: "/usr/local/etc/ejabberd/dh2048.pem"
 ```
-
-
-
-
-
-
-
----
 
 Start it
 
