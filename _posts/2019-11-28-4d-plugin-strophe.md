@@ -28,7 +28,7 @@ You need 1 or more XMPP servers to relay your messages.
 
 For example, you could use [ejabberd Community Server](https://www.ejabberd.im) on Mac.
 
-* Install ``homebrew``[https://brew.sh]
+* Install [``homebrew``](https://brew.sh)
 
 * Install ``ejabberd``
 
