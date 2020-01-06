@@ -11,7 +11,7 @@ Convert PDF to PNG using [PDFium](https://pdfium.googlesource.com/pdfium/)
 [miyako/4d-plugin-pdfium](https://github.com/miyako/4d-plugin-pdfium/)
 
 ```
-images:=PDFium Tes (path{;options})
+images:=PDFium Test (path{;options})
 ```
 
 <div class="grid">
