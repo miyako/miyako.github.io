@@ -1,6 +1,6 @@
 ---
 layout: simple
-title: pdfium
+title: PDFium
 tags: plugin pdf graphics v17
 ---
 
