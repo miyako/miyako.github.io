@@ -4,7 +4,7 @@ title: PDFium
 tags: plugin pdf graphics v17
 ---
 
-Convert PDF to PNG using [PDFium](https://pdfium.googlesource.com/pdfium/)
+Convert PDF to PNG using [PDFium](https://pdfium.googlesource.com/pdfium/).
 
 <!--more-->
 
