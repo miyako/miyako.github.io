@@ -4,7 +4,7 @@ title: XML Minify
 tags: plugin xml v17
 ---
 
-Minify XML using [libxml2](http://xmlsoft.org)
+Minify XML using [libxml2](http://xmlsoft.org).
 
 <!--more-->
 
