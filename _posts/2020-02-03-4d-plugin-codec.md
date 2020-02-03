@@ -34,8 +34,8 @@ data:=codec decode (code;codec)
 
 Property|Type|Description
 ------------|------|----
-base64_rfc4648|LONGINT|
-base64_url|LONGINT|
+base64_rfc4648|LONGINT|0
+base64_url|LONGINT|1
 base64_url_unpadded|LONGINT|2
 base32_rfc4648|LONGINT|3
 base32_crockford|LONGINT|4
