@@ -1,7 +1,7 @@
 ---
 layout: simple
-title: XML Minify
-tags: plugin xml v17
+title: codec
+tags: plugin text v17
 ---
 
 Encode or decode data, using [cppcodec](https://github.com/tplgy/cppcodec).
