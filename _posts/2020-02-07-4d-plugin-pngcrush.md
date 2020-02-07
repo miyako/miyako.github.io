@@ -29,7 +29,7 @@ out:=Pngcrush (in{;chunk})
   <div class="syntax-td cell cell--8"></div>    
 </div> 
 
-#### QR Error Correction Level
+#### Pngcrush options
 
 Property|Type|Description
 ------------|------|----
