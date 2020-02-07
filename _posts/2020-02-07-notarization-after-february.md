@@ -18,7 +18,7 @@ Apple has announce that starting this month, [all submitted software must meet t
 - Its components should be signed with the **same Developer ID** as the app
 - Its code-signing signature must include a **secure timestamp**
 - The app must be built with an **SDK newer than 10.9**
-- The app should not include the ``com.apple.security.get-task-allow`` entitlement set to any variation of ``true``
+- The app should not include the **com.apple.security.get-task-allow** entitlement set to any variation of ``true``
 
 #### New reality for 4D v17 R6
 
