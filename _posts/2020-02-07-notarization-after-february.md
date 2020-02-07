@@ -36,3 +36,5 @@ Apple has announce that starting this month, [all submitted software must meet t
 ]
 }
 ```
+**Workaround**: remove the ``php`` folder if you don't need it.
+
