@@ -8,8 +8,6 @@ Simple PostgreSQL client based on [libpq](https://www.postgresql.org).
 
 <!--more-->
 
-Perhaps useful to extact PICT data without invoking QuickDraw API.
-
 [miyako/4d-plugin-simple-postgres-client-v2](https://github.com/miyako/4d-plugin-simple-postgres-client-v2/)
 
 ```
