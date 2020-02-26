@@ -34,3 +34,12 @@ status:=PQ EXECUTE (connect;sql{;params{;format}})
   <div class="syntax-td cell cell--2">OBJECT</div>
   <div class="syntax-td cell cell--8"></div>      
 </div> 
+
+#### Format 
+
+Property|Type|Description
+------------|------|----
+PQ_RESULT_TEXT | LONGINT| 0
+PQ_RESULT_BINARY | LONGINT| 1
+
+``resultFormat`` passed to [``PQexecParams()``](https://www.postgresql.org/docs/9.1/libpq-exec.html).
