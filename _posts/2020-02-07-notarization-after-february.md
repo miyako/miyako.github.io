@@ -20,7 +20,17 @@ Apple has announce that starting this month, [all submitted software must meet t
 - The app must be built with an **SDK newer than 10.9**
 - The app should not include the **com.apple.security.get-task-allow** entitlement set to any variation of ``true``
 
-#### New reality for 4D v17 R6
+#### New reality for 4D v17
+
+- As before, remove 4D Internet Commands or replace it with a version that uses 10.9 SDK or newer.
+
+- Nothing to do for PHP (i386).
+
+#### New reality for 4D Server v17
+
+- Nothing to do (notarization successful).
+
+#### New reality for 4D Volume Desktop v17 R6
 
 ```json
 {
