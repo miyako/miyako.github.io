@@ -22,13 +22,28 @@ Apple has announce that starting this month, [all submitted software must meet t
 
 #### New reality for 4D v17
 
-- As before, remove 4D Internet Commands or replace it with a version that uses 10.9 SDK or newer.
+```json
+{
+"issues": [
+  {
+    "severity": "error",
+    "code": null,
+    "path": "4D.dmg/4D.app/Contents/Plugins/4D InternetCommands.bundle/Contents/MacOS/4D InternetCommands",
+    "message": "The binary uses an SDK older than the 10.9 SDK.",
+    "docUrl": null,
+    "architecture": "i386"
+  }
+]
+}
+```
+
+**Workaround**: remove 4D Internet Commands or replace it with a version that uses 10.9 SDK or newer.
 
 - Nothing to do for PHP (i386).
 
 #### New reality for 4D Server v17
 
-- Nothing to do (notarization successful).
+- Nothing to do (no plugins are installed by default, notarization is successful).
 
 #### New reality for 4D Volume Desktop v17 R6
 
