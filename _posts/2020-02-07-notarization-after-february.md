@@ -63,3 +63,10 @@ Apple has announce that starting this month, [all submitted software must meet t
 ```
 **Workaround**: remove the ``php`` folder if you don't need it.
 
+#### New reality for 4D v17 R6
+
+- 4D Mobile frameworks (zipped) block notarization.
+
+- ``php-fcgi-4d`` uses an SDK older than the 10.9 SDK.
+
+**Workaround**: unarchive the 3 zips (``1.0``, ``TRMosaicLayout``, ``AnimatedCollectionViewLayout``), sign frameworks and debug symbols, zip to original location.
