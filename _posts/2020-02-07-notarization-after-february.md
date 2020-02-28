@@ -69,4 +69,4 @@ Apple has announce that starting this month, [all submitted software must meet t
 
 - ``php-fcgi-4d`` uses an SDK older than the 10.9 SDK.
 
-**Workaround**: unarchive the 3 zips (``1.0``, ``TRMosaicLayout``, ``AnimatedCollectionViewLayout``), sign frameworks and debug symbols, zip to original location.
+**Workaround**: unarchive the 3 zip files (``1.0``, ``TRMosaicLayout``, ``AnimatedCollectionViewLayout``), sign frameworks and debug symbols, zip to original location.
