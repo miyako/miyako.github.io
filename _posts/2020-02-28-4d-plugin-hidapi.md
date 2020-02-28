@@ -1,6 +1,6 @@
 ---
 layout: simple
-title: Simple PostgreSQL Client
+title: HIDAPI
 tags: plugin connectivity v17
 ---
 
