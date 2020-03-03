@@ -1,6 +1,6 @@
 ---
 layout: simple
-title: HIDAPI
+title: Simple SQLite Client
 tags: plugin connectivity v17
 ---
 
