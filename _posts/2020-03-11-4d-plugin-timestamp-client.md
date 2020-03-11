@@ -50,4 +50,3 @@ status:=Verify timestamp request(tsq;tsr;params)
   <div class="syntax-td cell cell--2">OBJECT</div>
   <div class="syntax-td cell cell--8"></div>       
 </div> 
-`
