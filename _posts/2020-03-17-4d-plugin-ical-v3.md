@@ -43,7 +43,7 @@ Parameters for ``options``
 
 * ``startDate``:  TEXT
 * ``endDate``: TEXT
-* ``calendars``: COLLECTION
+* ``calendars``: COLLECTION of calendar objects
 
 If ``status.success``, a collection of events will be returned in ``status.events[]``.
 
