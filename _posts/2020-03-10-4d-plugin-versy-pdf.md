@@ -1,7 +1,7 @@
 ---
 layout: simple
 title: PDF Signature (VersyPDF)
-tags: plugin PDF security v17
+tags: plugin pdf security v17
 ---
 
 Add digital signature to PDF using [sybrexsys/VersyPDF](https://github.com/sybrexsys/VersyPDF).
