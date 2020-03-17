@@ -11,7 +11,7 @@ Timestamp client based on OpenSSL [``ts``](https://github.com/openssl/openssl/bl
 [miyako/4d-plugin-timestamp-client](https://github.com/miyako/4d-plugin-timestamp-client/)
 
 ```
-tsq:=Create timestamp query(data;params)
+tsq:=Create timestamp query (data;params)
 ```
 
 <div class="grid">
@@ -30,7 +30,7 @@ tsq:=Create timestamp query(data;params)
 </div> 
 
 ```
-status:=Verify timestamp request(tsq;tsr;params)
+status:=Verify timestamp request (tsq;tsr;params)
 ```
 
 <div class="grid">

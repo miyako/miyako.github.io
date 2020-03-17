@@ -11,7 +11,7 @@ Add digital signature to PDF using [sybrexsys/VersyPDF](https://github.com/sybre
 [miyako/4d-plugin-sign-pdf-versy](https://github.com/miyako/4d-plugin-sign-pdf-versy/)
 
 ```
-status:=SIGN PDF(PDF;PFX;name;reason;password;PKCS7)
+status:=SIGN PDF (PDF;PFX;name;reason;password;PKCS7)
 ```
 
 <div class="grid">
