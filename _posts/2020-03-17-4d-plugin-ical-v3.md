@@ -84,6 +84,13 @@ Parameters for ``options``
 
 * ``calendar``: a calendar object. the object must have a ``uid`` (except for creating) or ``title`` property
 
+```
+status:=iCal Set event property(options)
+status:=iCal Get event property(options)
+status:=iCal Create event(options)
+status:=iCal Remove event(options)
+```
+
 Properties of an event:
 
 * ``uid``: read only
