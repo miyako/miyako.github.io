@@ -23,6 +23,8 @@ status:=iCal_Request_permisson
   <div class="syntax-td cell cell--8"></div>          
 </div>
 
+For this command to work, the main app (4D) must be signin your app with the ``com.apple.security.personal-information.calendars`` entitlement and have the ``NSCalendarsUsageDescription`` property list key.
+
 ```
 status:=iCal QUERY EVENT (options)
 ```
@@ -64,12 +66,12 @@ If ``status.success``, a collection of objects will be returned in ``status.cale
 
 Properties of a calendar:
 
-* ``uid``: read only
+* ``uid``: read only TEXT
 * ``title``: TEXT
 * ``notes``: TEXT
-* ``color``: LONGINT 
-* ``type``: read only
-* ``isEditable``: read only
+* ``color``: LONGINT (see below)
+* ``type``: read only TEXT
+* ``isEditable``: read only BOOLEAN
 
 **Note**:  ``color`` seems to be "write only" for some calendars.
 
@@ -93,14 +95,59 @@ status:=iCal Remove event(options)
 
 Properties of an event:
 
-* ``uid``: read only
+* ``uid``: read only TEXT
 * ``startDate``:  TEXT or DATE
 * ``endDate``:  TEXT or DATE
 * ``title``:  TEXT
 * ``location``: TEXT
 * ``url``: TEXT
 * ``notes``: TEXT
+* ``calendar``: OBJECT
+* ``alarms[]``: read only COLLECTION (see below)
+* ``attendees[]``: read only COLLECTION (see below)
+* ``recurrenceRule``: OBJECT
 * ``isAllDay``: BOOLEAN
-* ``isDetached``: read only
-* ``occurrence``: read only
-* ``dateStamp``: read only
+* ``isDetached``: read only BOOLEAN
+* ``occurrence``: read only TEXT
+* ``dateStamp``: read only TEXT
+
+**Note**:  ``alarms`` and ``attendees`` can only be updated vis scripting the Calendar app. The properties are read only for this plugin.
+
+Properties of a alarm:
+
+* ``action``: read only TEXT
+* ``emailAddress``: read only TEXT
+* ``sound``: read only TEXT
+* ``url``: read only TEXT
+* ``relativeTrigger``: read only REAL
+* ``absoluteTrigger``: read only DATE
+
+Properties of a attendee:
+
+* ``status``: read only TEXT
+* ``commonName``: read only TEXT
+* ``address``: read only TEXT
+
+Properties of a recurrenceRule:
+
+* ``recurrenceInterval``: LONGINT
+* ``firstDayOfTheWeek``: LONGINT
+* ``recurrenceType``: LONGINT
+* ``recurrenceEnd``: OBJECT
+* ``recurrenceEnd.usesEndDate``: BOOLEAN
+* ``recurrenceEnd.endDate``: DATE
+* ``recurrenceEnd.occurrenceCount``: LONGINT
+* ``dayOfTheWeek``: write only LONGINT
+* ``weekOfTheMonth``: write only LONGINT
+* ``daysOfTheWeek[]``: COLLECTION
+* ``daysOfTheMonth[]``: COLLECTION
+* ``nthWeekDaysOfTheMonth[]``: COLLECTION
+* ``monthsOfTheYear[]``: COLLECTION
+
+Properties of a status:
+
+* ``success``: BOOLEAN
+* ``error``: OBJECT (if ``success`` is ``false``)
+* ``error.code``: LONGINT
+* ``error.localizedDescription``: TEXT
+* ``error.localizedRecoverySuggestion``: TEXT
