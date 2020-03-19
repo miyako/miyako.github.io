@@ -4,7 +4,7 @@ title: iCal v3
 tags: plugin mac v17
 ---
 
-iCal
+iCal (basic read and write via deprecated API).
 
 <!--more-->
 
