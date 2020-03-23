@@ -4,11 +4,57 @@ title: COM4Dv3
 tags: plugin windows v17
 ---
 
-COM interface for 4D on Windows.
+A simple inter-process communication tool based on COM.
 
 <!--more-->
 
 [miyako/4d-plugin-com4d-v3](https://github.com/miyako/4d-plugin-com4d-v3/)
+
+まず，プラグインをカレントユーザーのレジストリに登録します。
+
+```
+status:=COM Setup (com register)
+```
+
+すでに登録されているか，調べるには``com get status``を指定します。
+
+```
+status:=COM Setup (com get status)
+```
+
+登録を解除するには``com unregister``を指定します。
+
+```
+status:=COM Setup (com unregister)
+```
+
+``status``オブジェクトには下記のプロパティが返されます。
+
+* ``clsid``: TEXT 定数（``23B91DD7-EB28-4EE6-809E526F7279516C``）
+* ``progid``: TEXT 定数（``COM4Dv3.Server``）
+* ``isRegistered``: BOOLEAN （ ``com get status``のみ）
+
+クライアント側は，COMに対応している言語であれば，何でも使用することができます。
+
+4Dをクライアントにする場合，``COM Write``が使用できます。
+
+
+```
+status:=COM Write (json)
+```
+
+サーバー側は，バッファに溜められたコレクションのコレクションを読むことができます。
+
+```
+status:=COM Read
+```
+
+``status``オブジェクトには下記のプロパティが返されます。
+
+* ``success``: BOOLEAN 
+* ``values``: COLLECTION of COLLECTION of OBJECT
+
+---
 
 クライアント側は，任意の``VARIANT``型をパラメーターとして渡すことができます。サーバー側（4D）は，オブジェクト型のコレクション（JSON）でパラメーターを受け取ります。要素の番号は，パラメーターの順序に対応します。
 
