@@ -269,5 +269,3 @@ status:=COM Read
 
 * ``success``: BOOLEAN 
 * ``values``: COLLECTION of COLLECTION of OBJECT
-
----
