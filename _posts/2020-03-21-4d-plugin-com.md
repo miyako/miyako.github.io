@@ -216,8 +216,9 @@ status:=COM Setup (com unregister)
 
 クライアント側は，COMに対応している言語であれば，何でも使用することができます。
 
-4Dをクライアントにする場合，``COM Write``が使用できます。
+---
 
+``COM Write``を使用すれば，4Dをクライアント（またはサーバー兼クライアント）にすることができます。
 
 ```
 status:=COM Write (params)
@@ -234,6 +235,20 @@ status:=COM Write (params)
   <div class="syntax-td cell cell--2">OBJECT</div>
   <div class="syntax-td cell cell--8"></div> 
 </div>
+
+コレクションの値は，下記のルールに従って``VARIANT``型に変換されます。
+
+* TEXT: VT_BSTR
+* DATE: VT_DATE（日付部のみ。互換性の設定で「オブジェクトではISO日付フォーマットの代わりに日付型を使用する」が有効にされている場合）
+* REAL, TIME, LONGINT: VT_R8
+* BOOLEAN: VT_BOOL
+* NULL: VT_NULL
+
+サポートされていないデータ型は``VT_EMPTY``となります。
+
+書き込みに成功した場合，``status.success``には``True``がセットされ，``status.data``には書き込まれたJSON文字列が返されます。
+
+---
 
 サーバー側は，バッファに溜められたコレクションのコレクションを読むことができます。
 
