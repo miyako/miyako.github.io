@@ -188,7 +188,7 @@ Property|Type|Description
 ------------|------|----
 com register|LONGINT|0
 com unregister|LONGINT|1
-om unregister|LONGINT|2 (default)
+com unregister|LONGINT|2 (default)
 
 プラグインをカレントユーザーのレジストリに登録するには``COM Setup``を使用します。
 
