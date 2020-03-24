@@ -239,7 +239,7 @@ status:=COM Write (params)
 コレクションの値は，下記のルールに従って``VARIANT``型に変換されます。
 
 * TEXT: VT_BSTR
-* DATE: VT_DATE（日付部のみ。互換性の設定で「オブジェクトではISO日付フォーマットの代わりに日付型を使用する」が有効にされている場合）
+* DATE: VT_DATE（日付部のみ。互換性の設定で「オブジェクトではISO日付フォーマットの代わりに日付型を使用する」が有効にされている場合。有効にされていなければVT_BSTR）
 * REAL, TIME, LONGINT: VT_R8
 * BOOLEAN: VT_BOOL
 * NULL: VT_NULL
