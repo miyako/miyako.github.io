@@ -138,7 +138,7 @@ DLLは，内部的にファイルマップ（``CreateFileMapping``）を使用�
 * VT_CY
 * VT_UI4
 * VT_DECIMAL
-* VT_BYREF | *
+* VT_BYREF | \*
 * VT_ARRAY
 * VT_UNKNOWN
 * VT_DISPATCH
