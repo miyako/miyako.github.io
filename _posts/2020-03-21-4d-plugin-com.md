@@ -1,6 +1,6 @@
 ---
 layout: simple
-title: COM4Dv3
+title: COM4D v3
 tags: plugin windows v17
 ---
 
