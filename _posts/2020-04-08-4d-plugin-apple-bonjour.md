@@ -1,6 +1,6 @@
 ---
 layout: simple
-title: Bonjour v3
+title: Bonjour
 tags: plugin mac network v17
 ---
 
