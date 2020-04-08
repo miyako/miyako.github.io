@@ -46,3 +46,63 @@ Bonjour サービスを公開します。``params``には，下記のプロパ�
 
 BluetoothおよびWi-Fiのピア・ツー・ピア交信で公開するには``true``を渡します。デフォルトは``false``です。
 
+Bonjourは，バックグラウンドプロセスでセットアップされます。メソッドのコールバックはありません。ワーカープロセスを起動し，定期的に下記のコマンドで状況をポーリングすることができます。
+
+```
+status:=Bonjour Status(params)
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">params</div>
+  <div class="syntax-td cell cell--2">OBJECT</div>
+  <div class="syntax-td cell cell--8"></div>      
+  <div class="syntax-td cell cell--2">status</div>
+  <div class="syntax-td cell cell--2">OBJECT</div>
+  <div class="syntax-td cell cell--8"></div>          
+</div>
+
+```
+status:=Bonjour Update(params)
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">params</div>
+  <div class="syntax-td cell cell--2">OBJECT</div>
+  <div class="syntax-td cell cell--8"></div>      
+  <div class="syntax-td cell cell--2">status</div>
+  <div class="syntax-td cell cell--2">OBJECT</div>
+  <div class="syntax-td cell cell--8"></div>          
+</div>
+
+TXTレコードを更新します。``params``の``data``プロパティに，``stringify``されたJSONオブジェクトを渡してください。``data``は，``1``レベルのオブジェクトで，プロパティ名は自由ですが，値は``base64``エンコードされたBLOBでなければなりません。
+
+```
+status:=Bonjour Clear(params)
+```
+
+サービスを停止し，すべてのリソースを解放します。なお，アプリケーション終了時には，すべてのサービスが自動的にクリアされます。
+
+```
+status:=Bonjour Clear(Discover)
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">params</div>
+  <div class="syntax-td cell cell--2">OBJECT</div>
+  <div class="syntax-td cell cell--8"></div>      
+  <div class="syntax-td cell cell--2">status</div>
+  <div class="syntax-td cell cell--2">OBJECT</div>
+  <div class="syntax-td cell cell--8"></div>          
+</div>
+
+指定したドメインでサービスを検出し，アドレスなどの情報を取得します。``params``に渡すことができるプロパティは``Bonjour Publish``と同じですが，``name``は使用されません。
+
