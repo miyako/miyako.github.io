@@ -4,7 +4,7 @@ title: Pseudo Random Number Generator
 tags: plugin security v17
 ---
 
- [暗号論的擬似乱数生成器](https://ja.wikipedia.org/wiki/暗号論的擬似乱数生成器)プラグイン.
+ [暗号論的擬似乱数生成器](https://ja.wikipedia.org/wiki/暗号論的擬似乱数生成器)プラグイン
 
 <!--more-->
 
