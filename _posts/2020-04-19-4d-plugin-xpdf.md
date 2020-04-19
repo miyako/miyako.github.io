@@ -29,4 +29,5 @@ status:=XPDF_Get_text(path{;params})
   <div class="syntax-td cell cell--8"></div>          
 </div>
 
-If ``status.success`` is ``true``, the result is returned in ``status.text``.
+If ``status.success`` is ``true``, the result is returned in ``status.text``. Port of ``pdftotext``.
+
