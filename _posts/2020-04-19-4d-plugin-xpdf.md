@@ -31,3 +31,8 @@ status:=XPDF_Get_text(path{;params})
 
 If ``status.success`` is ``true``, the result is returned in ``status.text``. Port of ``pdftotext``.
 
+```
+status:=XPDF_Get_images(path{;params})
+```
+
+If ``status.success`` is ``true``, the result is returned in ``status.images``. Port of ``pdftopng``.
