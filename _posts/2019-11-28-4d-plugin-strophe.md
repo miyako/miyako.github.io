@@ -132,7 +132,7 @@ ejabberdctl restart
 
 <img width="556" alt="スクリーンショット 2019-11-29 10 09 38" src="https://user-images.githubusercontent.com/1725068/69837076-6bb78000-1290-11ea-9bfa-b0a6b8354091.png">
 
-* Test that the server is woring, with an XMPP client
+* Test that the server is working, with an XMPP client
 
 For example, you could use [Adium](https://adium.im) on Mac.
 
