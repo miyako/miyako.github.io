@@ -4,7 +4,7 @@ title: zbar
 tags: plugin graphics v17
 ---
 
-ひらがな⇄カタカナ・半角⇄全角の変換
+Barcode scanner based on [zbar 0.11](http://zbar.sourceforge.net).
 
 <!--more-->
 
