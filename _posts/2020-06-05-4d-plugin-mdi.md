@@ -21,7 +21,7 @@ title:=MDI Get title
   <div class="syntax-th cell cell--8">Description</div>
   <div class="syntax-td cell cell--2">title</div>
   <div class="syntax-td cell cell--2">TEXT</div>  
-    <div class="syntax-td cell cell--2"></div>  
+    <div class="syntax-td cell cell--8"></div>  
 </div>
 
 ```
@@ -41,7 +41,7 @@ enabled:=MDI Get close box enabled
   <div class="syntax-th cell cell--8">Description</div>
   <div class="syntax-td cell cell--2">enabled</div>
   <div class="syntax-td cell cell--2">LONGINT</div>   
-   <div class="syntax-td cell cell--2"></div>  
+   <div class="syntax-td cell cell--8"></div>  
 </div>
 
 ```
@@ -54,7 +54,7 @@ MDI USE ICON FILE(iconPath)
   <div class="syntax-th cell cell--8">Description</div>
   <div class="syntax-td cell cell--2">iconPath</div>
   <div class="syntax-td cell cell--2">TEXT</div>
-   <div class="syntax-td cell cell--2"></div>  
+   <div class="syntax-td cell cell--8"></div>  
 </div>
 
 ```
@@ -68,22 +68,22 @@ MDI SET POSITION(positioning;left;top;width;height;zOrder)
   <div class="syntax-th cell cell--8">Description</div>
   <div class="syntax-td cell cell--2">left</div>
   <div class="syntax-td cell cell--2">LONGINT</div>  
-   <div class="syntax-td cell cell--2"></div>  
+   <div class="syntax-td cell cell--8"></div>  
   <div class="syntax-td cell cell--2">top</div>
   <div class="syntax-td cell cell--2">LONGINT</div>  
-   <div class="syntax-td cell cell--2"></div>  
+   <div class="syntax-td cell cell--8"></div>  
   <div class="syntax-td cell cell--2">width</div>
   <div class="syntax-td cell cell--2">LONGINT</div>  
-   <div class="syntax-td cell cell--2"></div>  
+   <div class="syntax-td cell cell--8"></div>  
   <div class="syntax-td cell cell--2">height</div>
   <div class="syntax-td cell cell--2">LONGINT</div>  
-   <div class="syntax-td cell cell--2"></div>  
+   <div class="syntax-td cell cell--8"></div>  
   <div class="syntax-td cell cell--2">positioning</div>
   <div class="syntax-td cell cell--2">LONGINT</div>  
-   <div class="syntax-td cell cell--2"></div>  
+   <div class="syntax-td cell cell--8"></div>  
   <div class="syntax-td cell cell--2">zOrder</div>
   <div class="syntax-td cell cell--2">LONGINT</div>    
-   <div class="syntax-td cell cell--2"></div>  
+   <div class="syntax-td cell cell--8"></div>  
 </div>
 
 
