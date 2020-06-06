@@ -4,13 +4,13 @@ title: iCal v3
 tags: plugin mac v17
 ---
 
-iCal (basic read and write via deprecated API).
+iCal (basic read and write).
 
 <!--more-->
 
 [miyako/4d-plugin-ical-v3](https://github.com/miyako/4d-plugin-ical-v3/)
 
-```
+```4d
 status:=iCal_Request_permisson
 ```
 
@@ -25,7 +25,7 @@ status:=iCal_Request_permisson
 
 For this command to work, the main app (4D) must be signin your app with the ``com.apple.security.personal-information.calendars`` entitlement and have the ``NSCalendarsUsageDescription`` property list key.
 
-```
+```4d
 status:=iCal QUERY EVENT (options)
 ```
 
@@ -49,7 +49,7 @@ Parameters for ``options``
 
 If ``status.success``, a collection of events will be returned in ``status.events[]``.
 
-```
+```4d
 status:=iCal GET CALENDAR LIST
 ```
 
@@ -64,25 +64,25 @@ status:=iCal GET CALENDAR LIST
 
 If ``status.success``, a collection of objects will be returned in ``status.calendars[]``.
 
-```
+```4d
 status:=iCal Get default calendar
 ```
 
 Retutns the default calendar and the list of available ``sources``. You can use one of them to create a new calendar.
 
-```
+```4d
 status:=iCal Create calendar(options)
 ```
 
 ``options``: Sepcify a calendar ``title``. By default, a "Local" type is created. You can optinally pass a source title, type or identifier in ``source``. A source identifier or type must match exactly. ``?`` and ``*`` are allowed as [wildcard characters](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Predicates/Articles/pSyntax.html#//apple_ref/doc/uid/TP40001795) for title.
 
-```
+```4d
 status:=iCal Set calendar property(options)
 ```
 
 ``options``:  Spepcify a calendar by its ``uid`` or ``title``. Only the ``title`` and ``coler`` are modifiable.
 
-```
+```4d
 status:=iCal Get calendar property(options)
 status:=iCal Remove calendar(options)
 ```
@@ -109,7 +109,7 @@ status:=iCal Remove calendar(options)
 
 ---
 
-```
+```4d
 status:=iCal Set event property(options)
 status:=iCal Get event property(options)
 status:=iCal Create event(options)
