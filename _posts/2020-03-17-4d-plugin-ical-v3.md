@@ -107,8 +107,6 @@ status:=iCal Remove calendar(options)
 * ``color`` seems to be "write only" for some calendars.
 * ``type`` can be Local, CalDAV, Exchange, Subscription, Birthday. "IMAP" is  ***Deprecated***  (``3.2.0``)
 
----
-
 ```4d
 status:=iCal Set event property(options)
 status:=iCal Get event property(options)
@@ -202,8 +200,6 @@ status:=iCal Remove event(options)
 * ``weeksOfTheYear[]``: COLLECTION of numbers
 * ``daysOfTheYear[]``: COLLECTION of numbers
 * ``setPositions[]``: COLLECTION of numbers
-
----
 
 ##### status properties
 
