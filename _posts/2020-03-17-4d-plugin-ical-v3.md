@@ -64,27 +64,50 @@ status:=iCal GET CALENDAR LIST
 
 If ``status.success``, a collection of objects will be returned in ``status.calendars[]``.
 
-Properties of a calendar:
+```
+status:=iCal Get default calendar
+```
 
-* ``uid``: read only TEXT
-* ``title``: TEXT
-* ``notes``: TEXT
-* ``color``: LONGINT (see below)
-* ``type``: read only TEXT
-* ``isEditable``: read only BOOLEAN
+Retutns the default calendar and the list of available ``sources``. You can use one of them to create a new calendar.
 
-**Note**:  ``color`` seems to be "write only" for some calendars.
+```
+status:=iCal Create calendar(options)
+```
+
+``options``: Sepcify a calendar ``title``. By default, a "Local" type is created. You can optinally pass a source title, type or identifier in ``source``. A source identifier or type must match exactly. ``?`` and ``*`` are allowed as [wildcard characters](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Predicates/Articles/pSyntax.html#//apple_ref/doc/uid/TP40001795) for title.
 
 ```
 status:=iCal Set calendar property(options)
+```
+
+``options``:  Spepcify a calendar by its ``uid`` or ``title``. Only the ``title`` and ``coler`` are modifiable.
+
+```
 status:=iCal Get calendar property(options)
-status:=iCal Create calendar(options)
 status:=iCal Remove calendar(options)
 ```
 
-Parameters for ``options``
+ ``options``: Sepcify a calendar by its ``uid`` or ``title``. 
 
-* ``calendar``: a calendar object. the object must have a ``uid`` (except for creating) or ``title`` property
+##### calendar properties
+
+* ``uid``: read only TEXT
+* ``color``: LONGINT (see below)
+* ``type``: read only TEXT (ee below )
+* ``title``: TEXT
+* ``subscribed``: read only BOOLEAN
+* ``immutable``: read only BOOLEAN
+* ``allowsContentModifications``: read only BOOLEAN
+* ``notes``: TEXT ***Deprecated***  (``3.2.0``)
+* ``isEditable``: read only BOOLEAN ***Deprecated***  (``3.2.0``)
+
+**Notes**
+
+* ``uid`` is mapped to [``calendarIdentifier``](https://developer.apple.com/documentation/eventkit/ekcalendar/1507380-calendaridentifier?language=objc)
+* ``color`` seems to be "write only" for some calendars.
+* ``type`` can be Local, CalDAV, Exchange, Subscription, Birthday. "IMAP" is  ***Deprecated***  (``3.2.0``)
+
+---
 
 ```
 status:=iCal Set event property(options)
@@ -93,58 +116,96 @@ status:=iCal Create event(options)
 status:=iCal Remove event(options)
 ```
 
-Properties of an event:
+##### event properties
 
-* ``uid``: read only TEXT
+* ``uid``: read only TEXT 
 * ``startDate``:  TEXT or DATE
 * ``endDate``:  TEXT or DATE
 * ``title``:  TEXT
 * ``location``: TEXT
-* ``url``: TEXT
 * ``notes``: TEXT
+* ``url``: TEXT
 * ``calendar``: OBJECT
-* ``alarms[]``: read only COLLECTION (see below)
-* ``attendees[]``: read only COLLECTION (see below)
+* ``timeZone``: read only OBJECT
 * ``recurrenceRule``: OBJECT
 * ``isAllDay``: BOOLEAN
 * ``isDetached``: read only BOOLEAN
 * ``occurrence``: read only TEXT
-* ``dateStamp``: read only TEXT
+* ``creationDate``: read only TEXT
+* ``dateStamp``: read only TEXT 
+* ``alarms[]``: read only COLLECTION (see below)
+* ``attendees[]``: read only COLLECTION (see below)
 
-**Note**:  ``alarms`` and ``attendees`` can only be updated vis scripting the Calendar app. The properties are read only for this plugin.
+**Notes**
 
-Properties of a alarm:
+* ``isAllDay`` is mapped to [``allDay``](https://developer.apple.com/documentation/eventkit/ekevent/1507482-allday?language=objc)
+* ``url`` is mapped to [``URL``](https://developer.apple.com/documentation/eventkit/ekcalendaritem/1507265-url?language=objc)
+* ``occurrence`` is mapped to [``occurrenceDate``](https://developer.apple.com/documentation/eventkit/ekevent/1507244-occurrencedate?language=objc)
+* ``dateStamp`` is mapped to [``lastModifiedDate``](https://developer.apple.com/documentation/eventkit/ekcalendaritem/1507374-lastmodifieddate?language=objc)
+* ``alarms`` is currently read-only.
+
+**TODO**: [``addAlarm:``](https://developer.apple.com/documentation/eventkit/ekcalendaritem/1507397-addalarm?language=objc), [``removeAlarm:``](https://developer.apple.com/documentation/eventkit/ekcalendaritem/1507133-removealarm?language=objc)
+
+> it is not possible to add attendees with Event Kit
+
+[attendees](https://developer.apple.com/documentation/eventkit/ekcalendaritem/1507140-attendees?language=objc)
+
+##### alarm properties
 
 * ``action``: read only TEXT
 * ``emailAddress``: read only TEXT
 * ``sound``: read only TEXT
-* ``url``: read only TEXT
+* ``url``: read only TEXT ***Deprecated***  (``3.2.0``)
 * ``relativeTrigger``: read only REAL
 * ``absoluteTrigger``: read only DATE
 
-Properties of a attendee:
+**Notes**
 
+* ``sound`` is mapped to [``soundName``](https://developer.apple.com/documentation/eventkit/ekalarm/1507227-soundname?language=objc)
+* ``relativeTrigger`` is mapped to [``relativeOffset``](https://developer.apple.com/documentation/eventkit/ekalarm/1507491-relativeoffset?language=objc)
+* ``absoluteTrigger`` is mapped to [``absoluteDate``](https://developer.apple.com/documentation/eventkit/ekalarm/1507486-absolutedate?language=objc)
+* ``action`` is mapped to [``type``](https://developer.apple.com/documentation/eventkit/ekalarm/1507242-type?language=objc). It can be Sound, Display, Email, Procedure. 
+
+##### attendee properties
+
+* ``isCurrentUser``: read only BOOL
+* ``role``: read only TEXT
+* ``type``: read only TEXT
 * ``status``: read only TEXT
 * ``commonName``: read only TEXT
 * ``address``: read only TEXT
 
-Properties of a recurrenceRule:
+**Notes**
+
+* ``isCurrentUser`` is mapped to [``currentUser``](https://developer.apple.com/documentation/eventkit/ekparticipant/1507248-currentuser?language=objc)
+* ``role`` is mapped to [``participantRole``](https://developer.apple.com/documentation/eventkit/ekparticipant/1507494-participantrole?language=objc)
+* ``type`` is mapped to [``participantRole``](https://developer.apple.com/documentation/eventkit/ekparticipant/1507364-participanttype?language=objc)
+* ``status`` is mapped to [``participantStatus``](https://developer.apple.com/documentation/eventkit/ekparticipant/1507533-participantstatus?language=objc)
+* ``commonName`` is mapped to [``name``](https://developer.apple.com/documentation/eventkit/ekparticipant/1507480-name?language=objc)
+* ``address`` is mapped to [``URL``](https://developer.apple.com/documentation/eventkit/ekparticipant/1507435-url?language=objc)
+
+##### recurrenceRule properties
 
 * ``recurrenceInterval``: LONGINT
 * ``firstDayOfTheWeek``: LONGINT
 * ``recurrenceType``: LONGINT
 * ``recurrenceEnd``: OBJECT
-* ``recurrenceEnd.usesEndDate``: BOOLEAN
+* ``recurrenceEnd.usesEndDate``: read only BOOLEAN ***Deprecated***  (``3.2.0``)
 * ``recurrenceEnd.endDate``: DATE
 * ``recurrenceEnd.occurrenceCount``: LONGINT
-* ``dayOfTheWeek``: write only LONGINT
-* ``weekOfTheMonth``: write only LONGINT
-* ``daysOfTheWeek[]``: COLLECTION
-* ``daysOfTheMonth[]``: COLLECTION
-* ``nthWeekDaysOfTheMonth[]``: COLLECTION
-* ``monthsOfTheYear[]``: COLLECTION
+* ``dayOfTheWeek``: LONGINT ***Deprecated***  (``3.2.0``)
+* ``weekOfTheMonth``: LONGINT ***Deprecated***  (``3.2.0``)
+* ``daysOfTheWeek[]``: COLLECTION of numbers
+* ``daysOfTheMonth[]``: COLLECTION of numbers
+* ``nthWeekDaysOfTheMonth[]``: read only COLLECTION of objects ***Deprecated***  (``3.2.0``)
+* ``monthsOfTheYear[]``: COLLECTION of numbers
+* ``weeksOfTheYear[]``: COLLECTION of numbers
+* ``daysOfTheYear[]``: COLLECTION of numbers
+* ``setPositions[]``: COLLECTION of numbers
 
-Properties of a status:
+---
+
+##### status properties
 
 * ``success``: BOOLEAN
 * ``error``: OBJECT (if ``success`` is ``false``)
