@@ -10,6 +10,30 @@ iCal (basic read and write).
 
 [miyako/4d-plugin-ical-v3](https://github.com/miyako/4d-plugin-ical-v3/)
 
+---
+
+#### Changes due to switching from CalendarStore to EventKit SDK:
+
+* removed
+  * ``calendar.notes``
+  * ``calendar.type`` "IMAP" (``CalCalendarTypeIMAP``)
+  * ``calendar.isEditable`` 
+  * ``event.dateStamp``
+  * ``recurrenceRule.recurrenceEnd.usesEndDate``
+
+* added 
+
+  * ``calendar.immutable``
+  * ``calendar.allowsContentModifications``
+  * ``calendar.subscribed``
+  * ``event.lastModifiedDate``
+  * ``event.creationDate``  
+  * ``recurrenceRule.weeksOfTheYear`` 
+  * ``recurrenceRule.daysOfTheYear`` 
+  * ``recurrenceRule.setPositions``
+
+---
+
 ```4d
 status:=iCal_Request_permisson
 ```
