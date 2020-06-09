@@ -8,7 +8,7 @@ tags: plugin japanese userinterface v17
 
 <!--more-->
 
-[miyako/4d-plugin-kana](https://github.com/miyako/4d-plugin-kana/)
+[miyako/4d-plugin-x-phonetic](https://github.com/miyako/4d-plugin-x-phonetic)
 
 ```4d
 result:=Phonetic(string)
