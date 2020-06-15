@@ -52,23 +52,23 @@ barcodes:=qrcode array (inData;inParams)
 
 Property|Type|Description
 ------------|------|----
-QR Mode Unicode|LONGINT|
-QR Mode Kanji|LONGINT|
-QR Mode Micro|LONGINT|
-QR Mode Latin|LONGINT|
+QR Mode Unicode|LONGINT|0
+QR Mode Kanji|LONGINT|1
+QR Mode Micro|LONGINT|2
+QR Mode Swiss|LONGINT|4
 
 #### QR Error Correction Level
 
 Property|Type|Description
 ------------|------|----
-QR Correction Level L|LONGINT|
-QR Correction Level M|LONGINT|
-QR Correction Level Q|LONGINT|
-QR Correction Level H|LONGINT|
+QR Correction Level L|LONGINT|0
+QR Correction Level M|LONGINT|1
+QR Correction Level Q|LONGINT|2
+QR Correction Level H|LONGINT|3
 
 #### QR Export Type
 
 Property|Type|Description
 ------------|------|----
-QR Format SVG|LONGINT|
-QR Format PNG|LONGINT|
+QR Format SVG|LONGINT|1
+QR Format PNG|LONGINT|2
