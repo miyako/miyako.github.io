@@ -24,7 +24,7 @@ tags: utility v18
 
     * Names that do not match the pattern ``[a-zA-Z][a-zA-Z0-9_]*`` are escaped.
 
-    * Reserved SQL names are escaped. The list of [SQL reserved names]() is based on the information displayed in the method editor. **Note**: The resource ``STR#:1123`` is incomplete.
+    * Reserved SQL names are escaped. The list of [SQL reserved names](https://github.com/miyako/4d-utility-structure-to-sql-converter-v2/blob/master/structure-to-sql-converter-v2.4dbase/Resources/sql.json) is based on the information displayed in the method editor. **Note**: The resource ``STR#:1123`` is incomplete.
 
 2. ``$params.string_quote_mode:="DQ"``
 
