@@ -55,3 +55,11 @@ Catalog|SQL|Remarks
 10 | VARCHAR| @limiting_length 
 10 | TEXT| 
 21 | TEXT| object 
+
+#### Field attributes
+
+* ``@not_null`` and ``@unique`` are always exported
+* ``PRIMARY KEY`` is always exported
+* ``AUTO_INCREMENT`` is exported by default (switch: ``with_autosequence``) 
+* ``AUTO_GENERATE`` is **not** exported by default (switch: ``with_autogenerate``) 
+* ``ENABLE REPLICATE`` is **not** exported by default (switch: ``with_replicate``) 
