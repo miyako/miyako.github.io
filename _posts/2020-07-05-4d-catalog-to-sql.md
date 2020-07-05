@@ -34,6 +34,12 @@ tags: utility v18
 
     * Use single quotes, duplicate quoted single quotes.
 
+#### Table attributes
+
+* Schema definition is exported by default (switch: ``with_schema``) 
+* Index definition is exported by default (switch: ``with_index``) 
+* Random index name is generated if index has no name (XSLT ``generate-id()``)
+
 #### Field type mapping
 
 Catalog|SQL|Remarks
