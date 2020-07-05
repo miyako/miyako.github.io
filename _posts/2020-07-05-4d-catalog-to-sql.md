@@ -14,7 +14,7 @@ tags: utility v18
 
 #### Escape reserved names
 
-3 kinds of escape modes + "no escape" node is implemented.
+3 kinds of escape modes are implemented (default=no escape).
 
 1. ``$params.string_quote_mode:="4D"``
 
