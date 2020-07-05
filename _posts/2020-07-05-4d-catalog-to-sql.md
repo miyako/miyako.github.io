@@ -33,3 +33,25 @@ tags: utility v18
 3. ``$params.string_quote_mode:="SQ"``
 
     * Use single quotes, duplicate quoted single quotes.
+
+#### Field type mapping
+
+Catalog|SQL|Remarks
+------------|------|----
+1 | BOOLEAN| 
+3 | SMALLINT| 16-bit
+4 | INT| 32-bit
+5 | NUMERIC| 64-bit
+6 | REAL| 
+7 | FLOAT| 
+8 | TIMESTAMP| 
+9 | DURATION| 
+12 | PICTURE| 
+14 | TEXT| outside record or data
+15 | INT| 
+16 | INT| 
+18 | BLOB| 
+10 | UUID| @store_as_UUID 
+10 | VARCHAR| @limiting_length 
+10 | TEXT| 
+21 | TEXT| object 
