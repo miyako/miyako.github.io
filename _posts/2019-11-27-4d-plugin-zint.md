@@ -55,3 +55,9 @@ ZINT_SJIS|BOOLEAN|
 ZINT_SMALL_TEXT|BOOLEAN|
 ZINT_DPI|LONGINT|
 ZINT_NO_BACKGROUND|BOOLEAN|
+
+#### Remarks
+
+* ``ZINT_VERSION`` is 1-based for ``BARCODE_MICROQR``. Default is ``4``.
+
+* ``ZINT_FORMAT`` is ``ZINT_OUTPUT_SVG`` if unspecified.
