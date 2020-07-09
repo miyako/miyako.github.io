@@ -67,10 +67,10 @@ There is nothing special to do other than to register a capable window. The cust
 
 When the plugin detects a ``WM_SETTINGCHANGE``, it iterates over all environment variables (``REG_SZ`` and ``REG_EXPAND_SZ``) in the following order:
 
-1. ``HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment``
+1. ``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment``
 
-1. ``HKEY_CURRENT_USER\\Environment``
+1. ``HKEY_CURRENT_USER\Environment``
 
-1. ``HKEY_CURRENT_USER\\Volatile Environment``
+1. ``HKEY_CURRENT_USER\Volatile Environment``
 
 The logic implies that removed environment variables are not updated in session.
