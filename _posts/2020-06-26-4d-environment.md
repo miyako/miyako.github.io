@@ -62,3 +62,15 @@ Normally, the plugins installs a custom event handler for the MDI window. This c
 **Note**: The window can not be a MDI child window. In MDI mode, use **Movable form dialog box**.
 
 There is nothing special to do other than to register a capable window. The custom event handler is disposed automatically when the window is closed.
+
+#### About registry keys
+
+When the plugin detects a ``WM_SETTINGCHANGE``, it iterates over all environment variables (``REG_SZ`` and ``REG_EXPAND_SZ``) in the following order:
+
+1. ``HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment``
+
+1. ``HKEY_CURRENT_USER\\Environment``
+
+1. ``HKEY_CURRENT_USER\\Volatile Environment``
+
+The logic implies that removed environment variables are not updated in session.
