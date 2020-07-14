@@ -73,4 +73,6 @@ When the plugin detects a ``WM_SETTINGCHANGE``, it iterates over all environment
 
 1. ``HKEY_CURRENT_USER\Volatile Environment``
 
+1. ``HKEY_CURRENT_USER\Volatile Environment\{number}``
+
 The logic implies that removed environment variables are not updated in session.
