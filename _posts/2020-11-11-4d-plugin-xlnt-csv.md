@@ -38,7 +38,6 @@ XLSXを単純にCSV変換する
   <div class="syntax-td cell cell--2">recDelimit</div>
   <div class="syntax-td cell cell--2">TEXT</div>
   <div class="syntax-td cell cell--8">レコード区切り文字（省略時: CRLF）</div>  
-</div>
 
   <div class="syntax-td cell cell--2">encoding</div>
   <div class="syntax-td cell cell--2">LONGINT</div>
