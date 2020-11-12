@@ -49,7 +49,7 @@ convert xlsx to csv(path;sheets;password;folder;fldDelimit;recDelimit;encoding)
 ```
 
 ```4d
-get xlsx sheets(&T;&Y;&T)(path;sheets;password)
+get xlsx sheets(path;sheets;password)
 ```
 #### エンコーディング
 
