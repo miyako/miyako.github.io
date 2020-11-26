@@ -29,3 +29,9 @@ status:=Set input scope (scope)
 #### Options
 
 [InputScope Enumeration](https://docs.microsoft.com/en-us/windows/win32/api/inputscope/ne-inputscope-inputscope)の定数をそのまま渡すことができます。
+
+```
+success:=Disable input method ()
+```
+
+進行中の入力コンテキストをキャンセルし，フォーカスオブジェクトから入力メソッドの関連付けを外します。``On Getting Focus``イベントで使用されることが想定されています。
