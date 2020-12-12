@@ -65,7 +65,7 @@ annotation.labels[].width|Number|position of the annotation
 annotation.labels[].height|Number|position of the annotation
 annotation.labels[].unit|Text|"mm", "in" or "pt" (default)
 annotation.labels[].font|Text|font name (optional) default is "Arial" non-standard fonts are entirely embedded and may result in larger size (i.e. not subset embed)
-annotation.labels[].fontSize|Number|
+annotation.labels[].fontSize|Number|optional; default is `5.0` 
 certFile |Text|system path to X509 certificate in PEM format; optional if `cert` is passed
 cert |Text|certificate in PEM format; optional if `certFile` is passed
 keyFile |Text|system path to X509 private key in PEM format; optional if `key` is passed
