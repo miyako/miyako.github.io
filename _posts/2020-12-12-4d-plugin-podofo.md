@@ -72,4 +72,25 @@ out | Picture|result PDF (when `params.in` is not passed)
 
 The signature date is the local timestamp (`PdfDate()`).
 
+TIFF images are not well supported The library API `PdfImage::LoadFromFile`.
 
+>   see https://github.com/svn2github/podofo/blob/master/src/doc/PdfImage.cpp#576
+
+```c
+case PHOTOMETRIC_RGB:
+if ( bitsPixel != 24 )
+{
+    TIFFClose(hInTiffHandle);
+    PODOFO_RAISE_ERROR( ePdfError_UnsupportedImageFormat );
+}
+```
+
+Supported annotation types are:
+
+* text
+* link
+* stamp
+
+#### Other
+
+Great resource: https://github.com/Universefei/podofomemo
