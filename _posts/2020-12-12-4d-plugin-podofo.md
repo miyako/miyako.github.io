@@ -40,7 +40,7 @@ Property|Type|Description
 in | Picture or Text|PDF content or input system file path
 out |Text|output system file path (optional) if omitted, the result is returned in `status.out`
 password |Text|password to open the PDF (optional)
-field |Text|field name for the signature; default is "PodofoSignatureField%"
+field |Text|field name for the signature; default is "PodofoSignatureField%" where `%` is the object number
 replace |Boolean|whether to update existing fields; default = false
 reason |Text|the message associated with the signature
 page |Integer|the page number (1-based) to place the annotation (optional)
