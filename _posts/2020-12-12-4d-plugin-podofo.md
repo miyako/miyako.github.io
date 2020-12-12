@@ -50,14 +50,14 @@ annotation.y |Number|position of the signature annotation
 annotation.width |Number|position of the annotation
 annotation.height |Number|position of the annotation
 annotation.unit |Text|"mm", "in" or "pt" (default)
-annotation.images |Collection of Text|paths to use as annotation images (optional)
+annotation.images |Collection of Text|images to used as visual representation of signature (optional)
 annotation.images[].path|Text|system path to image file of annotation content
 annotation.images[].x|Number|position of the annotation
 annotation.images[].y|Number|position of the annotation
 annotation.images[].width|Number|position of the annotation
 annotation.images[].height|Number|position of the annotation
 annotation.images[].unit|Text|"mm", "in" or "pt" (default)
-annotation.labels |Collection of Text|text to use as annotation labels (optional)
+annotation.labels |Collection of Text|text to used as visual representation of signature (optional)
 annotation.labels[].text|Text|annotation content
 annotation.labels[].x|Number|position of the annotation
 annotation.labels[].y|Number|position of the annotation
