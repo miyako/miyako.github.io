@@ -66,6 +66,14 @@ annotation.labels[].height|Number|position of the annotation
 annotation.labels[].unit|Text|"mm", "in" or "pt" (default)
 annotation.labels[].font|Text|font name (optional) default is "Arial" non-standard fonts are entirely embedded and may result in larger size (i.e. not subset embed)
 annotation.labels[].fontSize|Number|optional; default is `5.0` 
+annotation.labels[].color.r|Number|font color (r,g,b) 0.0-1.0
+annotation.labels[].color.g|Number|font color (r,g,b) 0.0-1.0
+annotation.labels[].color.b|Number|font color (r,g,b) 0.0-1.0
+annotation.labels[].color.c|Number|font color (c,m,y,k) 0.0-1.0
+annotation.labels[].color.m|Number|font color (c,m,y,k) 0.0-1.0
+annotation.labels[].color.y|Number|font color (c,m,y,k) 0.0-1.0
+annotation.labels[].color.k|Number|font color (c,m,y,k) 0.0-1.0
+annotation.labels[].color|Number|font color (grayscale) 0.0-1.0
 certFile |Text|system path to X509 certificate in PEM format; optional if `cert` is passed
 cert |Text|certificate in PEM format; optional if `certFile` is passed
 keyFile |Text|system path to X509 private key in PEM format; optional if `key` is passed
