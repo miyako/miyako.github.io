@@ -35,7 +35,7 @@ status:=podofo_sign_document(params)
 
 #### Param
 
-property|type|description
+Property|Type|Description
 ------------|------|----
 in | Picture or Text|PDF content or input system file path
 out |Text|output system file path (optional) if omitted, the result is returned in `status.out`
@@ -64,6 +64,8 @@ annotation.labels[].y|Number|position of the annotation
 annotation.labels[].width|Number|position of the annotation
 annotation.labels[].height|Number|position of the annotation
 annotation.labels[].unit|Text|"mm", "in" or "pt" (default)
+annotation.labels[].font|Text|
+annotation.labels[].fontSize|Number|
 certFile |Text|system path to X509 certificate in PEM format
 cert |Text|certificate in PEM format
 keyFile |Text|system path to X509 private key in PEM format
@@ -71,9 +73,17 @@ key |Text|private key in PEM format
 
 #### Status
 
-property|type|description
+Property|Type|Description
 ------------|------|----
 error | Integer|`PdfError::GetError()`
 errorDescription | Text|`PdfError::errorDescription()`
 errorMessage | Text|`PdfError::ErrorMessage`
 out | Picture|result PDF (when `param.in` is not passed)
+
+#### Remarks 
+
+`annotation.labels[]` does not print non-latin characters (e.g. Japanese). The library API `DrawMultiLineText` does not seem to render glyphs despite FreeType2 linkage.
+
+The signature date is the local timestamp (`PdfDate()`).
+
+
