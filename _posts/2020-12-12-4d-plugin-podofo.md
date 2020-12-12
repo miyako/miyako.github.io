@@ -33,7 +33,7 @@ status:=podofo_sign_document(params)
   <div class="syntax-td cell cell--8"></div>          
 </div>
 
-#### Param
+#### Params
 
 Property|Type|Description
 ------------|------|----
@@ -78,7 +78,7 @@ Property|Type|Description
 error | Integer|`PdfError::GetError()`
 errorDescription | Text|`PdfError::errorDescription()`
 errorMessage | Text|`PdfError::ErrorMessage`
-out | Picture|result PDF (when `param.in` is not passed)
+out | Picture|result PDF (when `params.in` is not passed)
 
 #### Remarks 
 
