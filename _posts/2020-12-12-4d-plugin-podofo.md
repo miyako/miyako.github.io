@@ -70,6 +70,7 @@ certFile |Text|system path to X509 certificate in PEM format; optional if `cert`
 cert |Text|certificate in PEM format; optional if `certFile` is passed
 keyFile |Text|system path to X509 private key in PEM format; optional if `key` is passed
 key |Text|private key in PEM format; optional if `keyFile` is passed
+keyPassword |Text|password to open the private key (optional)
 
 #### Status
 
