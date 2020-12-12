@@ -12,7 +12,7 @@ PDF tools based on [podofo 0.9.6](http://podofo.sourceforge.net).
 
 ### Features 
 
-* sign PDF
+* add signature to existing PDF document
 * read and write PDF form values (text field, push button, checkbox)
 
 #### Digital Signature
