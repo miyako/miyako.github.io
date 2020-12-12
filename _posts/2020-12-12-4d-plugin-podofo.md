@@ -43,37 +43,14 @@ password |Text|password to open the PDF (optional)
 field |Text|field name for the signature; default is "PodofoSignatureField%" where `%` is the object number
 replace |Boolean|whether to update existing fields; default = false; if passed, the specified `field` should be of a signature field type
 reason |Text|the message associated with the signature
-page |Integer|the page number (1-based) to place the annotation (optional)
-annotation |Object|parameters for the annotation (optional) annotation is invisible by default
-annotation.x |Number|position of the signature annotation
-annotation.y |Number|position of the signature annotation
-annotation.width |Number|position of the annotation
-annotation.height |Number|position of the annotation
-annotation.unit |Text|"mm", "in" or "pt" (default)
-annotation.images |Collection of Text|images to used as visual representation of signature (optional)
-annotation.images[].path|Text|system path to image file of annotation content
-annotation.images[].x|Number|position of the annotation
-annotation.images[].y|Number|position of the annotation
-annotation.images[].width|Number|position of the annotation
-annotation.images[].height|Number|position of the annotation
-annotation.images[].unit|Text|"mm", "in" or "pt" (default)
-annotation.labels |Collection of Text|text to used as visual representation of signature (optional)
-annotation.labels[].text|Text|annotation content
-annotation.labels[].x|Number|position of the annotation
-annotation.labels[].y|Number|position of the annotation
-annotation.labels[].width|Number|position of the annotation
-annotation.labels[].height|Number|position of the annotation
-annotation.labels[].unit|Text|"mm", "in" or "pt" (default)
-annotation.labels[].font|Text|font name (optional) default is "Arial" non-standard fonts are entirely embedded and may result in larger size (i.e. not subset embed)
-annotation.labels[].fontSize|Number|optional; default is `5.0` 
-annotation.labels[].color.r|Number|font color (r,g,b) 0.0-1.0
-annotation.labels[].color.g|Number|font color (r,g,b) 0.0-1.0
-annotation.labels[].color.b|Number|font color (r,g,b) 0.0-1.0
-annotation.labels[].color.c|Number|font color (c,m,y,k) 0.0-1.0
-annotation.labels[].color.m|Number|font color (c,m,y,k) 0.0-1.0
-annotation.labels[].color.y|Number|font color (c,m,y,k) 0.0-1.0
-annotation.labels[].color.k|Number|font color (c,m,y,k) 0.0-1.0
-annotation.labels[].color|Number|font color (grayscale) 0.0-1.0
+page |Integer|the page number (1-based) to place the annotation (optional) default is `1`
+x |Number|position of the signature annotation
+y |Number|position of the signature annotation
+width |Number|position of the annotation
+height |Number|position of the annotation
+unit |Text|"mm", "in" or "pt" (default)
+pages |Collection of Collections|visible annotations
+pages[].annotation |Collection of Objects|visible annotations
 certFile |Text|system path to X509 certificate in PEM format; optional if `cert` is passed
 cert |Text|certificate in PEM format; optional if `certFile` is passed
 keyFile |Text|system path to X509 private key in PEM format; optional if `key` is passed
