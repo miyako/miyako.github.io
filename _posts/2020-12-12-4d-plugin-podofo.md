@@ -66,10 +66,10 @@ annotation.labels[].height|Number|position of the annotation
 annotation.labels[].unit|Text|"mm", "in" or "pt" (default)
 annotation.labels[].font|Text|
 annotation.labels[].fontSize|Number|
-certFile |Text|system path to X509 certificate in PEM format
-cert |Text|certificate in PEM format
-keyFile |Text|system path to X509 private key in PEM format
-key |Text|private key in PEM format
+certFile |Text|system path to X509 certificate in PEM format; optional if `cert` is passed
+cert |Text|certificate in PEM format; optional if `certFile` is passed
+keyFile |Text|system path to X509 private key in PEM format; optional if `key` is passed
+key |Text|private key in PEM format; optional if `keyFile` is passed
 
 #### Status
 
