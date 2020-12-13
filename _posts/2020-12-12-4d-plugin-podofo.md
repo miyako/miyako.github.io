@@ -50,7 +50,7 @@ x |Number|position of the signature annotation (optional)
 y |Number|position of the signature annotation (optional)
 width |Number|position of the annotation (optional)
 height |Number|position of the annotation (optional)
-unit |Text|"mm", "in" or "pt" (default)
+unit |Text|`mm`, `in` or `pt` (default)
 pages |Collection of Collections|visible annotations
 pages[].annotation |Collection of Objects|visible annotations
 pages[].text |Collection of Objects|visible text (latin characters only)
