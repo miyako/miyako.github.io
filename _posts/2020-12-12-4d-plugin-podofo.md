@@ -215,4 +215,4 @@ Supported annotation types are:
 
 #### Other
 
-Great resource: https://github.com/Universefei/podofomemo
+Great resource: [https://github.com/Universefei/podofomemo](https://github.com/Universefei/podofomemo)
