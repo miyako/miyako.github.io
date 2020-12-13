@@ -194,7 +194,7 @@ events[].event |Text|`mouseEnter` `mouseLeave` `mouseDown` `mouseUp` `focusEnter
 
 The signature date is the local timestamp (`PdfDate()`).
 
-TIFF images are not well supported The library API `PdfImage::LoadFromFile`.
+TIFF images are not well supported by the library API `PdfImage::LoadFromFile`.
 
 >   see https://github.com/svn2github/podofo/blob/master/src/doc/PdfImage.cpp#576
 
