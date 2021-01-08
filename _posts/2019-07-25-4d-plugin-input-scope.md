@@ -35,3 +35,14 @@ success:=Disable input method ()
 ```
 
 進行中の入力コンテキストをキャンセルし，フォーカスオブジェクトから入力メソッドの関連付けを外します。``On Getting Focus``イベントで使用されることが想定されています。
+
+**注記**: `On Getting Focus`でカレントのテキスト入力のIMEを`disable`することはできないようです（イベント後に4DがIMEコンテキストを関連づけている疑い）。下記のように回避することができます。
+
+```4d
+Case of 
+    : (FORM Event.code=On Getting Focus)
+
+        CALL FORM(current form window;"Disable input methodを呼ぶだけのプロジェクトメソッド")
+
+End case 
+```
