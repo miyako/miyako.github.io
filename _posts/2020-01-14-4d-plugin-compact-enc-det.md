@@ -28,3 +28,21 @@ status:=CED Detect encoding (data{;options})
   <div class="syntax-td cell cell--2">OBJECT</div>
   <div class="syntax-td cell cell--8"></div>    
 </div>
+
+#### Params
+
+Property|Type|Description
+------------|------|----
+ignore7bitMailEncodings | Boolean|
+httpCharsetHint | Text|
+metaCharsetHint | Text|
+urlHint | Text|
+corpus | Text|oen of `WEB_CORPUS` `XML_CORPUS` `QUERY_CORPUS` `EMAIL_CORPUS`
+
+#### Results
+
+Property|Type|Description
+------------|------|----
+isReliable | Boolean|
+bytesConsumed | Number|
+encoding | Text|
