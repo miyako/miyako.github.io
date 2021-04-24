@@ -1,18 +1,14 @@
 ---
 layout: simple
-title: podofo
-tags: plugin pdf v17
+title: Native Encoding Detection
+tags: plugin text v17
 ---
 
-PDF tools based on [podofo 0.9.6](http://podofo.sourceforge.net).
+Detect text encoding of BLOB.
 
 <!--more-->
 
 [miyako/4d-plugin-native-encoding-detection](https://github.com/miyako/4d-plugin-native-encoding-detection/)
-
-### Features 
-
-* detect text encoding of BLOB
 
 ```
 status:=NED Detect encoding(data;params)
