@@ -37,7 +37,7 @@ ignore7bitMailEncodings | Boolean|
 httpCharsetHint | Text|
 metaCharsetHint | Text|
 urlHint | Text|
-corpus | Text|oen of `WEB_CORPUS` `XML_CORPUS` `QUERY_CORPUS` `EMAIL_CORPUS`
+corpus | Text|one of `WEB_CORPUS` `XML_CORPUS` `QUERY_CORPUS` `EMAIL_CORPUS`
 
 #### Results
 
