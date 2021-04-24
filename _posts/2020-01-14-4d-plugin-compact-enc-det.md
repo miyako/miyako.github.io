@@ -11,14 +11,14 @@ Detect text encoding using [CED](https://github.com/google/compact_enc_det).
 [miyako/4d-plugin-compact-enc-det](https://github.com/miyako/4d-plugin-compact-enc-det)
 
 ```
-status:=CED Detect encoding (bytes{;options})
+status:=CED Detect encoding (data{;options})
 ```
 
 <div class="grid">
   <div class="syntax-th cell cell--2">Parameter</div>
   <div class="syntax-th cell cell--2">Type</div>
   <div class="syntax-th cell cell--8">Description</div>
-  <div class="syntax-td cell cell--2">bytes</div>
+  <div class="syntax-td cell cell--2">data</div>
   <div class="syntax-td cell cell--2">BLOB</div>
   <div class="syntax-td cell cell--8"></div>  
   <div class="syntax-td cell cell--2">options</div>
