@@ -11,14 +11,14 @@ Detect text encoding of BLOB.
 [miyako/4d-plugin-native-encoding-detection](https://github.com/miyako/4d-plugin-native-encoding-detection/)
 
 ```
-status:=NED Detect encoding(data;params)
+status:=NED Detect encoding(data{;params})
 ```
 
 <div class="grid">
   <div class="syntax-th cell cell--2">Parameter</div>
   <div class="syntax-th cell cell--2">Type</div>
   <div class="syntax-th cell cell--8">Description</div>
-  <div class="syntax-td cell cell--2">params</div>
+  <div class="syntax-td cell cell--2">data</div>
   <div class="syntax-td cell cell--2">BLOB</div>
   <div class="syntax-td cell cell--8">source text</div>      
   <div class="syntax-td cell cell--2">params</div>
