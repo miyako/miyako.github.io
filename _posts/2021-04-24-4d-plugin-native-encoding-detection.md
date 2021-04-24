@@ -40,12 +40,12 @@ preferredCodePage | Number|Windows only
 
 Property|Type|Description
 ------------|------|----
-code | Number|can be `-1` on Mac (`kCFStringEncodingInvalidId`)
-language | Text|platform specific identifier; can be `-1` on Windows
-charset | Text|IANA charset name
-name | Text|platform specific identifier
-script | Text|Mac only
-percentage | Number|Windows only
-confidence | Number|Windows only
-fixedWidthFont | Text|Windows only
-proportionalFont | Text|Windows only
+encodings[].code | Number|can be `-1` on Mac (`kCFStringEncodingInvalidId`)
+encodings[].language | Text|platform specific identifier; can be `-1` on Windows
+encodings[].charset | Text|IANA charset name
+encodings[].name | Text|platform specific identifier
+encodings[].script | Text|Mac only
+encodings[].percentage | Number|Windows only
+encodings[].confidence | Number|Windows only
+encodings[].fixedWidthFont | Text|Windows only
+encodings[].proportionalFont | Text|Windows only
