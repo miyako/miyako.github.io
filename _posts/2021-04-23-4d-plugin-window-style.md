@@ -36,3 +36,9 @@ movableByWindowBackground | Boolean|`setMovableByWindowBackground:`
 backgroundColor | Object|`red` `green` `blue` `alpha`
 backgroundImage | Picture|
 backgroundImagePath | Text|
+
+#### Discussions
+
+It seems like `setStyleMask:` with the `NSWindowStyleMaskFullSizeContentView` no longer has effect on v19. The content view is always places below the title bar, no under it. 
+
+To remove the title bar design in v19, it is necessary to assign an opaque colour to the window background or else add an image layer.
