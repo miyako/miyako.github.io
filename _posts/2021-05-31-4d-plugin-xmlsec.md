@@ -8,7 +8,7 @@ XML signature based on [xmlsec](https://www.aleksey.com/xmlsec/).
 
 <!--more-->
 
-[miyako/4d-plugin-native-encoding-detection](https://github.com/miyako/4d-plugin-xmlsec/)
+[miyako/4d-plugin-xmlsec](https://github.com/miyako/4d-plugin-xmlsec/)
 
 ```
 status:=xmlsec sign(params{;key{;certs{;policy}}})
