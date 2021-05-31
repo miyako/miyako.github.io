@@ -29,7 +29,7 @@ status:=xmlsec sign(params{;key{;certs{;policy}}})
   <div class="syntax-td cell cell--8">an array of chained certificates that qualify the signer. not used if key is P12. the order doesn't matter, but element 0 must be the signing certficate (so the same value will appear  twice in the array) for XAdES</div>   
   <div class="syntax-td cell cell--2">policy</div>
   <div class="syntax-td cell cell--2">BLOB</div>
-  <div class="syntax-td cell cell--8">the signing document for XAdES. it is used to compute the policy identifier hash</div>     
+  <div class="syntax-td cell cell--8">the signing policy document for XAdES. it is used to compute the policy identifier hash</div>     
 </div>
 
 #### Params ([**XMLDsig**](http://www.w3.org/TR/xmldsig-core/))
