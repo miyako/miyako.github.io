@@ -20,25 +20,17 @@ status:=xmlsec sign(params{;key{;certs{;policy}}})
   <div class="syntax-th cell cell--8">Description</div>
   <div class="syntax-td cell cell--2">params</div>
   <div class="syntax-td cell cell--2">Object</div>
-  <div class="syntax-td cell cell--8"></div>      
+  <div class="syntax-td cell cell--8">see below</div>      
   <div class="syntax-td cell cell--2">key</div>
   <div class="syntax-td cell cell--2">BLOB</div>
-  <div class="syntax-td cell cell--8"></div>         
+  <div class="syntax-td cell cell--8">key used to sign the XML. typically PEM, DER or P12</div>         
   <div class="syntax-td cell cell--2">certs</div>
   <div class="syntax-td cell cell--2">ARRAY BLOB</div>
-  <div class="syntax-td cell cell--8"></div>   
+  <div class="syntax-td cell cell--8">an array of chained certificates that qualify the signer. not used if key is P12. the order doesn't matter, but element 0 must be the signing certficate (so the same value will appear  twice in the array) for XAdES</div>   
   <div class="syntax-td cell cell--2">policy</div>
   <div class="syntax-td cell cell--2">BLOB</div>
-  <div class="syntax-td cell cell--8"></div>     
+  <div class="syntax-td cell cell--8">the signing document for XAdES. it is used to compute the policy identifier hash</div>     
 </div>
-
-* key/cert=pem or key/cert=der
-
-pass key in `key` and an array of certificates in `certs`. in addition. pass signing certificate element `0` for XAdES.
-
-* key=pkcs12
-
-pass a P12 of key and certificates in `key`. `certs` is not used.
 
 #### Params ([**XMLDsig**](http://www.w3.org/TR/xmldsig-core/))
 
