@@ -119,3 +119,4 @@ Property|Type|Description
 crypto | Text|crypto engine name `openssl`
 success | Boolean|
 error | Text|error message
+xml | Text|signed XML
