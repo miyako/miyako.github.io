@@ -50,7 +50,7 @@ xmldsig.ref.uri | Text|`dsig:Reference@URI`
 xmldsig.ref.type | Text|`dsig:Reference@Type`
 xmldsig.sign | Text|[`dsig:SignatureMethod`](https://www.w3.org/TR/xmldsig-core/#sec-SignatureMethod) `rsa-sha1*` `rsa-sha224` `rsa-sha256` `rsa-sha384` `rsa-sha512` `hmac-sha1` `hmac-sha224` `hmac-sha256` `hmac-sha384` `hmac-sha512` `dsa-sha1` `dsa-sha256` `ecdsa-sha1` `ecdsa-sha224` `ecdsa-sha256` `ecdsa-sha384` `ecdsa-sha512`
 xmldsig.c14n | Text|[`dsig:CanonicalizationMethod`](https://www.w3.org/TR/xmldsig-core/#sec-CanonicalizationMethod) `1.0*` `1.0.c` `1.1` `1.1.c` `1.0.e` `1.0.e.c`
-xmldsig.ns | Text|[XMLDsig namespace](https://www.w3.org/TR/xmldsig-core/#sec-Versions) `ds*`
+xmldsig.ns | Text|[namespace `ds*`
 xmldsig.id | Text|[`xmldsig:Signature@Id`](https://www.w3.org/TR/xmldsig-core/#sec-Signature) 
 xmldsig.ski | Boolean|`false*`
 xmldsig.crl | Boolean|`false*`
