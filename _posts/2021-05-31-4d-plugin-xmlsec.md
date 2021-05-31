@@ -41,7 +41,7 @@ Property|Type|Description
 xml | Text|source text
 key | Text|format of private key `pem*` `der` `pkcs12` 
 password | Text|password to read private key 
-cert | Text|format of certificates
+cert | Text|format of certificates  `pem*` `der`
 xmldsig | Object|root object for XMLDsig
 xmldsig.digest | Text|[`dsig:DigestMethod@Algorithm`](https://www.w3.org/TR/xmldsig-core/#sec-DigestMethod) `sha1*` `sha224` `sha256` `sha384` `sha512`
 xmldsig.ref | Object|[`dsig:Reference`](https://www.w3.org/TR/xmldsig-core/#sec-Reference)
