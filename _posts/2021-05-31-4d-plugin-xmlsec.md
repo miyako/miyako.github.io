@@ -1,7 +1,7 @@
 ---
 layout: simple
 title: XMLDsig and XAdES
-tags: plugin xml v17
+tags: plugin xml v18
 ---
 
 XML signature based on [xmlsec](https://www.aleksey.com/xmlsec/).
