@@ -28,6 +28,27 @@ status:=xmlsec sign(params{;key{;certs}})
   <div class="syntax-td cell cell--2">ARRAY BLOB</div>
   <div class="syntax-td cell cell--8">an array of chained certificates that qualify the signer. not used if key is P12. the order doesn't matter, but element 0 must be the signing certficate (so the same value will appear  twice in the array) for XAdES</div>   
  </div>
+ 
+ ```
+ hash:=xmlsec hash(data{;algorithm})
+ ```
+ 
+ <div class="grid">
+   <div class="syntax-th cell cell--2">Parameter</div>
+   <div class="syntax-th cell cell--2">Type</div>
+   <div class="syntax-th cell cell--8">Description</div>
+   <div class="syntax-td cell cell--2">v</div>
+   <div class="syntax-td cell cell--2">BLOB</div>
+   <div class="syntax-td cell cell--8">data to hash</div>      
+   <div class="syntax-td cell cell--2">algorithm</div>
+   <div class="syntax-td cell cell--2">Text</div>
+   <div class="syntax-td cell cell--8">sha1 (default), sha224, sha256, sha384 or sha512</div>         
+   <div class="syntax-td cell cell--2">hash</div>
+   <div class="syntax-td cell cell--2">Text</div>
+   <div class="syntax-td cell cell--8">base64 encoded hash</div>   
+  </div>
+  
+  This is a convenience method to hash a BLOB. 
 
 #### Params ([**XMLDsig**](http://www.w3.org/TR/xmldsig-core/))
 
