@@ -97,8 +97,9 @@ xades.qualifyingProperties.signedProperties.signedSignatureProperties.signingTim
 xades.qualifyingProperties.signedProperties.signedSignatureProperties.signaturePolicyIdentifer | Object|
 xades.qualifyingProperties.signedProperties.signedSignatureProperties.signaturePolicyIdentifer.signaturePolicyId[] | Collection
 xades.qualifyingProperties.signedProperties.signedSignatureProperties.signaturePolicyIdentifer.signaturePolicyId[].sigPolicyId |Object
-xades.qualifyingProperties.signedProperties.signedSignatureProperties.signaturePolicyIdentifer.signaturePolicyId[].sigPolicyId.identifier |
-xades.qualifyingProperties.signedProperties.signedSignatureProperties.signaturePolicyIdentifer.signaturePolicyId[].sigPolicyId.description |
+xades.qualifyingProperties.signedProperties.signedSignatureProperties.signaturePolicyIdentifer.signaturePolicyId[].sigPolicyId.identifier | Text|
+xades.qualifyingProperties.signedProperties.signedSignatureProperties.signaturePolicyIdentifer.signaturePolicyId[].sigPolicyId.digest | Text|
+xades.qualifyingProperties.signedProperties.signedSignatureProperties.signaturePolicyIdentifer.signaturePolicyId[].sigPolicyId.description | Text|
 xades.qualifyingProperties.signedProperties.signedSignatureProperties.signaturePolicyIdentifer.signaturePolicyId[].sigPolicyId.documentationReferences[] | Collection
 xades.qualifyingProperties.signedProperties.signedSignatureProperties.signaturePolicyIdentifer.signaturePolicyId[].sigPolicyId.documentationReferences[].documentationReference | Text
 xades.qualifyingProperties.signedProperties.signedDataObjectProperties | Object|
