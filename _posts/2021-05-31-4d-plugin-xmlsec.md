@@ -11,7 +11,7 @@ XML signature based on [xmlsec](https://www.aleksey.com/xmlsec/).
 [miyako/4d-plugin-xmlsec](https://github.com/miyako/4d-plugin-xmlsec/)
 
 ```
-status:=xmlsec sign(params{;key{;certs{;policy}}})
+status:=xmlsec sign(params{;key{;certs}})
 ```
 
 <div class="grid">
@@ -27,10 +27,7 @@ status:=xmlsec sign(params{;key{;certs{;policy}}})
   <div class="syntax-td cell cell--2">certs</div>
   <div class="syntax-td cell cell--2">ARRAY BLOB</div>
   <div class="syntax-td cell cell--8">an array of chained certificates that qualify the signer. not used if key is P12. the order doesn't matter, but element 0 must be the signing certficate (so the same value will appear  twice in the array) for XAdES</div>   
-  <div class="syntax-td cell cell--2">policy</div>
-  <div class="syntax-td cell cell--2">BLOB</div>
-  <div class="syntax-td cell cell--8">the signing policy document for XAdES. it is used to compute the policy identifier hash</div>     
-</div>
+ </div>
 
 #### Params ([**XMLDsig**](http://www.w3.org/TR/xmldsig-core/))
 
@@ -70,6 +67,7 @@ Property|Type|Description
 ------------|------|----
 xades | Text|root object for XAdES
 xades.ns | Text|namespace `xades*`
+xades.digest | Text|[`xades:DigestValue@Algorithm`](https://www.w3.org/TR/XAdES/#Syntax_for_XAdES_The_SignaturePolicyIdentifier_element) `sha1*` `sha224` `sha256` `sha384` `sha512`
 xades.qualifyingProperties | Object|[`xades:QualifyingProperties`](https://www.w3.org/TR/XAdES/#Syntax_overview_The_QualifyingProperties)
 xades.qualifyingProperties.signedProperties | Object|[`xades:SignedProperties`](https://www.w3.org/TR/XAdES/#Syntax_overview_The_QualifyingProperties_SignedProperties)
 xades.qualifyingProperties.signedProperties.id | Object|
