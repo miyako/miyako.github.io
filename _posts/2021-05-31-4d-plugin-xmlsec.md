@@ -30,14 +30,14 @@ status:=xmlsec sign(params{;key{;certs}})
  </div>
  
  ```
- hash:=xmlsec hash(data{;algorithm})
+hash:=xmlsec hash(data{;algorithm})
  ```
  
  <div class="grid">
    <div class="syntax-th cell cell--2">Parameter</div>
    <div class="syntax-th cell cell--2">Type</div>
    <div class="syntax-th cell cell--8">Description</div>
-   <div class="syntax-td cell cell--2">v</div>
+   <div class="syntax-td cell cell--2">data</div>
    <div class="syntax-td cell cell--2">BLOB</div>
    <div class="syntax-td cell cell--8">data to hash</div>      
    <div class="syntax-td cell cell--2">algorithm</div>
@@ -140,3 +140,41 @@ crypto | Text|crypto engine name `openssl`
 success | Boolean|
 error | Text|error message
 xml | Text|signed XML
+
+```
+status:=xmlsec x509(cert;params)
+```
+
+<div class="grid">
+  <div class="syntax-th cell cell--2">Parameter</div>
+  <div class="syntax-th cell cell--2">Type</div>
+  <div class="syntax-th cell cell--8">Description</div>
+  <div class="syntax-td cell cell--2">cert</div>
+  <div class="syntax-td cell cell--2">BLOB</div>
+  <div class="syntax-td cell cell--8">der, pem or p12</div>      
+  <div class="syntax-td cell cell--2">params</div>
+  <div class="syntax-td cell cell--2">Object</div>
+  <div class="syntax-td cell cell--8"></div>         
+  <div class="syntax-td cell cell--2">status</div>
+  <div class="syntax-td cell cell--2">Object</div>
+  <div class="syntax-td cell cell--8"></div>   
+ </div>
+ 
+ This is a convenience method to get the certificate expire date. 
+
+#### Params
+
+`*` indicates default value
+
+Property|Type|Description
+------------|------|----
+cert | Text|format of certificate `pem*` `der` `pkcs12` 
+password | Text|password to read pkcs12 
+
+#### Results
+
+Property|Type|Description
+------------|------|----
+success | Boolean|
+notBefore | Text|
+notAfter | Text|
