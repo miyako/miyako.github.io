@@ -62,3 +62,11 @@ Window close button|LONGINT|
 Window minimize button|LONGINT|
 Window zoom button|LONGINT|
 Window document modified|LONGINT|
+
+#### Added in 2.2.0
+
+```
+WINDOW MINIATURIZE(window) 
+WINDOW DEMINIATURIZE(window) 
+isMiniaturized:=WINDOW Is miniaturized(window)
+```
