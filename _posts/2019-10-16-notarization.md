@@ -144,16 +144,23 @@ Xcodeを起動し，アプリケーションメニューの「Preferences」か�
 
 配付用アプリの公証は，ビルド毎に実行する必要があるので，自動化しておくと便利です。その場合，パスワードの入力を自動化するために，**App用パスワード**を作成しておきます。パスワードは，Apple IDのアカウントページにログインし，「セキュリティ」セクションの「App 用パスワード」の下の「パスワードを生成」をクリックすれば自動的に作成されます。「このパスワードのラベルを入力」には，後で参照できる簡単な文字列（例：``abcde``）を入力します。
 
-生成されたパスワードをコピーし，Macのターミナルを起動して，下記のようなコマンドラインを実行します。``AC_USERNAME``は，Apple Developer IDです。
+生成されたパスワードをコピーし，Macのターミナルを起動して，下記のようなコマンドラインを実行します。
+
 
 ```
-xcrun altool --store-password-in-keychain-item "abcde" -u "AC_USERNAME" -p <secret_password>
+xcrun altool --store-password-in-keychain-item <item_name> -u <apple_developer_id> -p <secret_password>
+```
+
+うまくいかない場合：
+
+```
+security add-generic-password -a <apple_developer_id> -w <secret_password> -s <item_name>
 ```
 
 これにより，**キーチェーン**にアプリ用のパスワードが保存され，下記のようなコマンドラインでパスワードが参照できるようになります。
 
 ```
-xcrun altool --notarize-app -u "AC_USERNAME" -p "@keychain:AC_PASSWORD"
+xcrun altool --notarize-app -u <apple_developer_id> -p "@keychain:<item_name>"
 ```
 
 これでアプリの署名と公証に必要な準備が整いました！
