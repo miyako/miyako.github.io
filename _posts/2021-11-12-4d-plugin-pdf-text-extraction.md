@@ -44,6 +44,6 @@ bidi |Text|`LTR` or `RTL`
 
 Property|Type|Description
 ------------|------|----
-success | Number|
+success | Boolean|
 text |Text|
 status |Number|
