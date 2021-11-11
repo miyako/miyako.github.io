@@ -39,3 +39,11 @@ Property|Type|Description
 start | Number|
 end |Number|
 bidi |Text|`LTR` or `RTL`
+
+#### Status
+
+Property|Type|Description
+------------|------|----
+success | Number|
+text |Text|
+status |Number|
