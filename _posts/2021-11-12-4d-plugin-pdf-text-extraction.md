@@ -11,7 +11,7 @@ PDF text extraction based on [galkahana/pdf-text-extraction](https://github.com/
 [miyako/4d-plugin-pdf-text-extraction](https://github.com/miyako/4d-plugin-pdf-text-extraction/)
 
 
-#### Digital Signature
+#### Extract Text
 
 ```
 status:=PDF Text Extraction(path;options)
