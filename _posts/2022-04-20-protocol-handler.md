@@ -29,6 +29,8 @@ REGISTER PROTOCOL(scheme)
 
 * [Defining a Custom URL Scheme for Your App](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app)
 
+* Universal Links, or 2-way association between domain and app, is an alternative to custom URL schemes (not implemented).
+
 * [Supporting Universal Links in Your App](https://developer.apple.com/documentation/xcode/supporting-universal-links-in-your-app)
 
 ### Windows
