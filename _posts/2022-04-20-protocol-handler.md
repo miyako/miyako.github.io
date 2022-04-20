@@ -4,7 +4,7 @@ title: Custom URL
 tags: windows mac plugin
 ---
 
-Register a custom URL scheme
+Register a custom URL scheme.
 
 <!--more-->
 
