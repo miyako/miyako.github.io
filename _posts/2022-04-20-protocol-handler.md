@@ -71,14 +71,7 @@ CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(),
 
 ### Windows
 
-(concept)
+A custom app is added to the registry. The app sends a custom notification to a message-only window created by the plugin. 
 
-Send `HWND_BROADCAST` scope.
+**Important**: You must run as Administrator to edit the registry.
 
-* [ブラウザ上のリンクから任意のデスクトップアプリのファイルを開けると超便利](https://qiita.com/kojimadev/items/74100c8557a92939ef69)
-
-* [`UrlAssociations`](https://docs.microsoft.com/en-us/windows/win32/shell/default-programs#urlassociations) subkey
-
-* [Launch the default app for a URI](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/launch-default-app)
-
-* https://stackoverflow.com/questions/37702082/internet-explorer-or-edge-how-to-display-the-warning-that-appear-if-you-open-c
