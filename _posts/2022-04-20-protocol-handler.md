@@ -29,7 +29,6 @@ REGISTER PROTOCOL(scheme;method)
 #### Usage
 
 ```
-
 $scheme:="fourd"
 
 REGISTER PROTOCOL($scheme;"MYCALLBACK")
@@ -73,5 +72,19 @@ CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(),
 
 A custom app is added to the registry. The app sends a custom notification to a message-only window created by the plugin. 
 
+In addition, the `HKEY_LOCAL_MACHINE` registry is modified to surpress the browser confirmation prompt. 
+
+```
+HKEY_CLASSES_ROOT/
+  your-protocol-name/
+    (Default) 
+    URL Protocol 
+    shell/
+      open/
+        command/
+          (Default) {PathToExecutable}
+```
+
 **Important**: You must run as Administrator to edit the registry.
 
+Once the custom URL scheme is registered, and the app location doesn't change, the plugin can be used without administrator privileges.
