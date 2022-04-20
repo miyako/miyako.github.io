@@ -23,15 +23,48 @@ REGISTER PROTOCOL(scheme)
   <div class="syntax-td cell cell--8"></div>             
 </div>
 
-調査中
+#### Usage
+
+```4d
+
+$scheme:="fourd"
+
+REGISTER PROTOCOL($scheme)
+
+//generate test page with custom hyperlinks
+
+var $file : 4D.File
+var $HTML : Text
+
+$file:=Folder(fk resources folder).file("template.html")
+$HTML:=$file.getText()
+PROCESS 4D TAGS($HTML; $HTML; $scheme)
+$file:=Folder(fk resources folder).file("example.html")
+$file.setText($HTML)
+
+OPEN URL($file.platformPath)
+```
 
 ### macOS
 
-* [Defining a Custom URL Scheme for Your App](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app)
+A custom app is used to updated Launch Services. The app does not have any URL schemes in its `info.plist` but we need it to call `LSSetDefaultHandlerForURLScheme`.
 
-* Universal Links, or 2-way association between domain and app, is an alternative to custom URL schemes (not implemented).
+The app serves as a delegate. It sends the system-wide notification which is caught by the plugin.
 
-* [Supporting Universal Links in Your App](https://developer.apple.com/documentation/xcode/supporting-universal-links-in-your-app)
+The notification is sent like:
+
+```
+CFDictionaryRef userInfo = CFDictionaryCreate(kCFAllocatorDefault,
+                                              {CFSTR("url")},
+                                              {(CFStringRef)urlString},
+                                              1, NULL, NULL);
+CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(),
+                                     (CFStringRef)notificationId,
+                                     NULL,
+                                     (CFDictionaryRef)userInfo,
+                                     true);
+
+```
 
 ### Windows
 
