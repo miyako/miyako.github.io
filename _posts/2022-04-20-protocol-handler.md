@@ -4,7 +4,7 @@ title: Custom URL
 tags: Windows macOS
 ---
 
-What is required to register a custom URL for 4D application?
+Register a custom URL scheme
 
 <!--more-->
 
@@ -28,11 +28,11 @@ REGISTER PROTOCOL(scheme;method)
 
 #### Usage
 
-```4d
+```
 
 $scheme:="fourd"
 
-REGISTER PROTOCOL($scheme)
+REGISTER PROTOCOL($scheme;"MYCALLBACK")
 
 //generate test page with custom hyperlinks
 
@@ -50,7 +50,7 @@ OPEN URL($file.platformPath)
 
 ### macOS
 
-A custom app is used to updated Launch Services. The app does not have any URL schemes in its `info.plist` but we need it to call `LSSetDefaultHandlerForURLScheme`.
+A custom app is used to updated Launch Services. The app does not have any URL schemes in its `info.plist` but we need it to call `LSSetDefaultHandlerForURLScheme`. It is launched automatically in the background when necessary.
 
 The app serves as a delegate. It sends the system-wide notification which is caught by the plugin. The notification identifier is `com.4D.Protocol`.
 
