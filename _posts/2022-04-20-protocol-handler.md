@@ -71,6 +71,10 @@ CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(),
 
 ### Windows
 
+(concept)
+
+Send `HWND_BROADCAST` scope.
+
 * [ブラウザ上のリンクから任意のデスクトップアプリのファイルを開けると超便利](https://qiita.com/kojimadev/items/74100c8557a92939ef69)
 
 * [`UrlAssociations`](https://docs.microsoft.com/en-us/windows/win32/shell/default-programs#urlassociations) subkey
