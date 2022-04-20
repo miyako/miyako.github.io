@@ -90,3 +90,5 @@ HKEY_CLASSES_ROOT/
 **Important**: You must run as Administrator to edit the registry.
 
 Once the custom URL scheme is registered, and the app location doesn't change, the plugin can be used without administrator privileges.
+
+On bothn platforms, the URL is handled by a helper app, not 4D (or your custom application) itself. If the 4D app is not running, it will not be launched by the system in response to custom URL invokation.
