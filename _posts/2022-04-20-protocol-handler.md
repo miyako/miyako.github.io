@@ -1,7 +1,7 @@
 ---
 layout: simple
 title: Custom URL
-tags: Windows macOS
+tags: windows mac plugin
 ---
 
 Register a custom URL scheme
