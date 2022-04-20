@@ -11,16 +11,19 @@ What is required to register a custom URL for 4D application?
 #### Syntax
 
 ```
-REGISTER PROTOCOL(scheme)
+REGISTER PROTOCOL(scheme;method)
 ```
 
 <div class="grid">
-  <div class="syntax-th cell cell--2">Parameter</div>
-  <div class="syntax-th cell cell--2">Type</div>
-  <div class="syntax-th cell cell--8">Description</div>
-  <div class="syntax-td cell cell--2">scheme</div>
-  <div class="syntax-td cell cell--2">TEXT</div>
-  <div class="syntax-td cell cell--8"></div>             
+<div class="syntax-th cell cell--2">Parameter</div>
+<div class="syntax-th cell cell--2">Type</div>
+<div class="syntax-th cell cell--8">Description</div>
+<div class="syntax-td cell cell--2">scheme</div>
+<div class="syntax-td cell cell--2">TEXT</div>
+<div class="syntax-td cell cell--8"></div>  
+<div class="syntax-td cell cell--2">method</div>
+<div class="syntax-td cell cell--2">TEXT</div>
+<div class="syntax-td cell cell--8">callback method name. signature is C_TEXT($1)</div>    
 </div>
 
 #### Usage
