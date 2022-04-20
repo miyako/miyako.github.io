@@ -49,7 +49,7 @@ OPEN URL($file.platformPath)
 
 A custom app is used to updated Launch Services. The app does not have any URL schemes in its `info.plist` but we need it to call `LSSetDefaultHandlerForURLScheme`.
 
-The app serves as a delegate. It sends the system-wide notification which is caught by the plugin.
+The app serves as a delegate. It sends the system-wide notification which is caught by the plugin. The notification identifier is `com.4D.Protocol`.
 
 The notification is sent like:
 
