@@ -53,6 +53,8 @@ A custom app is used to updated Launch Services. The app does not have any URL s
 
 The app serves as a delegate. It sends the system-wide notification which is caught by the plugin. The notification identifier is `com.4D.Protocol`.
 
+It might be necessary to launch the *url-redirect* app once.
+
 The notification is sent like:
 
 ```
