@@ -47,48 +47,18 @@ $file.setText($HTML)
 OPEN URL($file.platformPath)
 ```
 
-### macOS
+#### Getting started on macOS
 
-A custom app is used to updated Launch Services. The app does not have any URL schemes in its `info.plist` but we need it to call `LSSetDefaultHandlerForURLScheme`. It is launched automatically in the background when necessary.
+Launch the *url-redirect* app once. It is important to do this manually for Finder to recognise the app as as a custom URL handler.
 
-The app serves as a delegate. It sends the system-wide notification which is caught by the plugin. The notification identifier is `com.4D.Protocol`.
+Run the command to register your custom URL scheme.
 
-It might be necessary to launch the *url-redirect* app once.
+#### Getting started on Windows
 
-The notification is sent like:
+Launch 4D as Administrator. This is necessary as the command needs to edit some registry keys.
 
-```
-CFDictionaryRef userInfo = CFDictionaryCreate(kCFAllocatorDefault,
-                                              {CFSTR("url")},
-                                              {(CFStringRef)urlString},
-                                              1, NULL, NULL);
-CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(),
-                                     (CFStringRef)notificationId,
-                                     NULL,
-                                     (CFDictionaryRef)userInfo,
-                                     true);
+Once registered, you can use the command as a regular user.
 
-```
+---
 
-### Windows
-
-A custom app is added to the registry. The app sends a custom notification to a message-only window created by the plugin. 
-
-In addition, the `HKEY_LOCAL_MACHINE` registry is modified to surpress the browser confirmation prompt. 
-
-```
-HKEY_CLASSES_ROOT/
-  your-protocol-name/
-    (Default) 
-    URL Protocol 
-    shell/
-      open/
-        command/
-          (Default) {PathToExecutable}
-```
-
-**Important**: You must run as Administrator to edit the registry.
-
-Once the custom URL scheme is registered, and the app location doesn't change, the plugin can be used without administrator privileges.
-
-On bothn platforms, the URL is handled by a helper app, not 4D (or your custom application) itself. If the 4D app is not running, it will not be launched by the system in response to custom URL invokation.
+On both platforms, the 4D app itself is **not** the URL handler. Instead, a small helper app with no UI redirects the event using a platform specific messaging system. Your app will receive this notification if it uses the plugin and already runnining.
