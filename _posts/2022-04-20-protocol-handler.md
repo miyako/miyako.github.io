@@ -61,4 +61,4 @@ Once registered, you can use the command as a regular user.
 
 ---
 
-On both platforms, the 4D app itself is **not** the URL handler. Instead, a small helper app with no UI redirects the event using a platform specific messaging system. Your app will receive this notification if it uses the plugin and already runnining.
+On both platforms, the 4D app itself is **not** the URL handler. Instead, a small helper app with no UI redirects the event using a platform specific messaging system. Your app will receive this notification if it is using the plugin and already runnining.
