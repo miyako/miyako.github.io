@@ -14,6 +14,7 @@ https://github.com/miyako/4d-plugin-appearance
 
 ```
 scheme:=Get system color scheme
+scheme:=Get effective color scheme
 ```
 
 <div class="grid">
