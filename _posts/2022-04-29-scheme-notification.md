@@ -8,7 +8,7 @@ Switch from dark to light.
 
 <!--more-->
 
-https://github.com/miyako/4d-plugin-appearance
+[miyako/4d-plugin-appearance](https://github.com/miyako/4d-plugin-appearance)
 
 #### Syntax
 

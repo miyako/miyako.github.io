@@ -8,7 +8,7 @@ Decode QR code with OpenCV.
 
 <!--more-->
 
-[https://github.com/miyako/4d-plugin-opencv-qr](https://github.com/miyako/4d-plugin-opencv-qr)
+[miyako/4d-plugin-opencv-qr](https://github.com/miyako/4d-plugin-opencv-qr)
 
 #### Syntax
 
