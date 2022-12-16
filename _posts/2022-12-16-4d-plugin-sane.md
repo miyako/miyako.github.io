@@ -50,7 +50,7 @@ images:=SANE Scan(scannerName; type)
 <div class="syntax-td cell cell--8"></div>   
 <div class="syntax-td cell cell--2">type</div>
 <div class="syntax-td cell cell--2">LONGINT</div>
-<div class="syntax-td cell cell--8">`image_type_jpg(0)` or `image_type_png(0)`</div>  
+<div class="syntax-td cell cell--8">`image_type_jpg(0)` or `image_type_png(2)`</div>  
 </div>
 
 ```
