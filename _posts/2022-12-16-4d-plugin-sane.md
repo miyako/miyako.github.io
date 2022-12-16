@@ -4,7 +4,7 @@ title: SANE
 tags: plugin scanner
 ---
 
-Decode QR code with OpenCV.
+SANE for macOS
 
 <!--more-->
 
