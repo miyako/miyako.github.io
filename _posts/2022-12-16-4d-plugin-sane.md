@@ -4,11 +4,9 @@ title: SANE
 tags: plugin scanner
 ---
 
-SANE for macOS
+SANE ([Scanner Access Now Easy](http://www.sane-project.org)) for macOS
 
 <!--more-->
-
-SANE ([Scanner Access Now Easy](http://www.sane-project.org)) for macOS
 
 #### Syntax
 
