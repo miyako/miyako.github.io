@@ -8,6 +8,8 @@ SANE ([Scanner Access Now Easy](http://www.sane-project.org)) for macOS
 
 <!--more-->
 
+[miyako/4d-plugin-sane](https://github.com/miyako/4d-plugin-sane)
+
 #### Syntax
 
 ```

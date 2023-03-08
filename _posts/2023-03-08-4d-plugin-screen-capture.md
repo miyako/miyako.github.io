@@ -8,6 +8,8 @@ Screen capture the desktop or a specified window.
 
 <!--more-->
 
+[miyako/4d-plugin-screen-capture](https://github.com/miyako/4d-plugin-screen-capture)
+
 #### Syntax
 
 ```
