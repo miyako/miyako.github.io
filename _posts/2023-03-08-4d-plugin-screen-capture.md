@@ -38,3 +38,6 @@ image:=Capture window (window)
 
 * [Windows の 3 種類のスクリーンキャプチャ API を検証する](https://qiita.com/i_saint/items/ad5b0545873d0cff4604)
 
+* [BitBlt()](): 上に重なっているウィンドウが映ってしまう決定がある。またメインモニターの右または下しか撮影できない。GPUを使用しているWebエリアなどは黒く塗られた領域となる。
+
+* [PrintWindow()](): Windows 8.1で追加された。
