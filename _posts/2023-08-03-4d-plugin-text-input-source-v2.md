@@ -54,7 +54,7 @@ source:=INPUT Get source ({identifier})
 * pass the string "ASCII" to request the current ascii capable keyboard input source.
 
 ```
-INPUT SOURCE LIST (sources)
+sources:=INPUT Sources list ()
 ```
 
 <div class="grid">
