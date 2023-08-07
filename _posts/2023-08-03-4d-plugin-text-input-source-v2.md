@@ -1,6 +1,6 @@
 ---
 layout: simple
-title: Input
+title: Text Input Service v2
 tags: plugin userinteraface
 ---
 
