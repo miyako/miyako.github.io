@@ -8,7 +8,7 @@ Macの日本語入力プログラムを簡単に制御するプラグイン
 
 <!--more-->
 
-[miyako/44d-tips-japanese-input](https://github.com/miyako/4d-tips-japanese-input)
+[miyako/4d-tips-japanese-input](https://github.com/miyako/4d-tips-japanese-input)
 
 #### Syntax
 
