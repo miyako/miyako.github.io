@@ -179,8 +179,15 @@ analytics:
 
 ## => Build
 ##############################
-markdown    : kramdown
-highlighter : rouge
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  syntax_highlighter_opts:
+    disable : true
+  
+# highlighter : rouge
 permalink   : date
 
 exclude:
