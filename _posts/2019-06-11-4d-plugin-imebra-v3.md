@@ -12,7 +12,7 @@ Simple DICOM reader using [Imebra](https://imebra.com) with some [LibGD](https:/
 
 ---
 
-```
+```4d
 images:=Imebra Get images (data{;options})
 ```
 
@@ -57,7 +57,7 @@ images\[\].image|PICTURE|
 
 ``fg``, ``quality``, ``level``, ``compression`` are optional
 
-```
+```4d
 images:=Imebra Apply filters (data{;options})
 ```
 
