@@ -85,7 +85,7 @@
     & > code {
       padding: 0;
       word-wrap: normal;
-      background-color: $background-color-code;
+      background-color: rgba(51, 51, 51, 1);
       &.language-mermaid, &.language-chart {
         svg {
           width: 100%;
