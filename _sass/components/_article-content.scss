@@ -73,7 +73,7 @@
   }
   code {
     padding: map-get($spacers, 1) map-get($spacers, 2);
-    // background-color: $text-background-color;
+    background-color: $text-background-color;
     border-radius: map-get($base, border-radius);
     span {
       padding: 0;
@@ -85,7 +85,7 @@
     & > code {
       padding: 0;
       word-wrap: normal;
-      // background-color: transparent;
+      background-color: transparent;
       &.language-mermaid, &.language-chart {
         svg {
           width: 100%;
