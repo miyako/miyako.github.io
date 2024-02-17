@@ -80,6 +80,23 @@
       margin: 0;
     }
   }
+  pre {
+    @include overflow(auto);
+    & > code {
+      padding: 0;
+      word-wrap: normal;
+      background-color: rgba(51, 51, 51, 1);
+      &.language-mermaid, &.language-chart {
+        svg {
+          width: 100%;
+        }
+        display: none;
+        &[data-processed] {
+          display: block;
+        }
+      }
+    }
+  }
   .highlighter-rouge > .highlight, figure.highlight {
     & > pre {
       padding: map-get($spacers, 3) 0 map-get($spacers, 3) map-get($spacers, 3);
