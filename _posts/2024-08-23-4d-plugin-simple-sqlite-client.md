@@ -40,6 +40,8 @@ status:=SQLite EXECUTE (path;sql{;values{;format}})
 * Float is returned as double
 * Text is returned as text
 * Other types are ignored
+* Blob binding is not supported (result only)
+* Integer64 binding is not supported(result only)
 
 #### Integer Format 
 
