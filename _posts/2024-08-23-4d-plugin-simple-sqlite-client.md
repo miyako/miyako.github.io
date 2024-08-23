@@ -35,11 +35,11 @@ status:=SQLite EXECUTE (path;sql{;values{;format}})
   <div class="syntax-td cell cell--8"></div>      
 </div>
 
-* Blob is returned as base64 text.
-* Null is returned as null.
-* Float is returned as double.
-* Text is returned as text.
-* Other types are ignored.
+* Blob is returned as base64 text
+* Null is returned as null
+* Float is returned as double
+* Text is returned as text
+* Other types are ignored
 
 #### Integer Format 
 
